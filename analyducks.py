@@ -1,16 +1,14 @@
-import dash
-from dash import html, dcc, dash_table
-from dash import dcc
-from dash.dependencies import Input, Output, State
-
-import pandas as pd
-import plotly.graph_objs as go
-import plotly.express as px
-import numpy as np
 import datetime as dt
+import os
 from datetime import timedelta
 
-import os
+import dash
+import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objs as go
+from dash import dash_table, dcc, html
+from dash.dependencies import Input, Output, State
 
 app = dash.Dash()
 server=app.server
@@ -57,6 +55,7 @@ data = {'col_1': ['Webbed developer','Spy Museum',43134,'','Allan','',1,5,2,2],
 
 df = pd.DataFrame.from_dict(data, orient='index',columns=['Name', 'Location', 'Date Bought', 'Fact','Buyer','Phrase','Qty','Weight','Height','Width'])
 df['Date Bought'] = pd.TimedeltaIndex(df['Date Bought'], unit='d') + dt.datetime(1899, 12, 30)
+df['year'] = pd.DatetimeIndex(df['Date Bought']).year
 
 print(df)
 
@@ -119,6 +118,15 @@ print(df)
 
 # weight_fig.update_layout({'annotations': [annotation]})
 
+## year bar plot
+
+owner_bar = px.bar(df,x="Buyer", y="Qty")
+
+
+
+## year bar plot
+
+year_bar = px.bar(df,x="year", y="Qty")
 
 # ### exercise plot
 
@@ -233,9 +241,9 @@ exercise_fig = px.scatter(df, x="Height", y="Weight")
 # ### App layout
 
 app.layout = html.Div([
-    html.Div(dcc.Graph(id='height-scatter',figure=exercise_fig))
-
-
+    html.Div(dcc.Graph(id='height-scatter',figure=exercise_fig)),
+    html.Div(dcc.Graph(id='year-bar',figure=year_bar)),
+    html.Div(dcc.Graph(id='owner-bar',figure=owner_bar))
 ])
 
 # app.layout = html.Div([
