@@ -56,10 +56,8 @@ data = {'col_1': ['Webbed developer','Spy Museum',43134,'','Allan','',1,5,2,2],
         }
 
 df = pd.DataFrame.from_dict(data, orient='index',columns=['Name', 'Location', 'Date Bought', 'Fact','Buyer','Phrase','Qty','Weight','Height','Width'])
-# df['Date Bought'] = df['Date Bought'].apply(lambda x:dt.datetime.strptime(x,'%Y-%d-%m').date())
 df['Date Bought'] = pd.TimedeltaIndex(df['Date Bought'], unit='d') + dt.datetime(1899, 12, 30)
 
-# df.astype({'Date Bought': 'date'}).dtypes
 print(df)
 
 # ------------------------------------------------------------------------------------------------
