@@ -9,50 +9,12 @@ import plotly.express as px
 import plotly.graph_objs as go
 from dash import dash_table, dcc, html
 from dash.dependencies import Input, Output, State
+from PIL import Image
 
 app = dash.Dash()
 server=app.server
-data = {'col_1':['Webbed developer','Spy Museum',43134,'????????','Allan','????????',1,5,2,2],'col_2':['Cannes-ard','Paris',44743,'je ne sais quack','Yev','????????',1,1,6,5],'col_3':['Iron Duck','Israel',44682,'????????','Allan','????????',1,1,6,1],'col_4':['Andy Rodduck','NY US Open',42979,'Game, Set Quack!','Allan','????????',1,7,1,7],'col_5':['Mini Mallards','Big E',44805,'????????','Allan','????????',2,2,3,5],'col_6':['Flights of the Round Table','DC/Bethesda',43160,'????????','Allan','????????',12,6,2,1],'col_7':['????????','Fuse',44228,'????????','Allan','????????',1,1,5,2],'col_8':['Creeper','????????',47484,'????????','Allan','????????',1,5,2,2],'col_9':['Beak-a-boos','STL',44501,'????????','Diana','????????',6,6,6,7],'col_10':['Universiduck','????????',47484,'Carnegie Mallard University','??????','????????',1,1,4,1],'col_11':['Evel Ksqueakel??????????????','Burlington',44774,'????????','Allan','????????',1,2,3,2],'col_12':['????????','Plymouth musem',44136,'????????','Allan','????????',1,6,4,7],'col_13':['Bill Bean','Cruise Ship',43070,'????????','Allan','????????',1,3,2,1],'col_14':['Liberduck','NY Trip',43435,'????????','Allan','????????',1,4,7,4],'col_15':["Quack's Guard",'London',43617,'????????','Allan','????????',1,2,6,6],'col_16':['RagnoQuack','Israel',44682,'????????','Allan','????????',1,2,4,6],'col_17':['Starducks','ice cream marblehead',44378,'????????','Allan','????????',1,5,4,7],'col_18':['Billcelona Bunch','Spain',43252,'????????','Marina','????????',2,7,6,7],'col_19':['Duck Lord / Lord of the wings','Fuse',43977,'Wing of Power  one wing to rule them all','Allan','????????',1,1,5,6],'col_20':['AnaQuack Skyflocker','Israel',44682,'????????','Allan','????????',1,4,5,5],'col_21':['Orduck 66','Israel',44682,'????????','Allan','????????',1,6,7,5],'col_22':['Spyduck','Spy Museum',43134,'License to Bill. No Time to Fly.','Allan','????????',1,1,1,4],'col_23':['Neil Wingstrong','Cape Canaveral',43101,'Cape CaQuackeral','Allan','????????',1,1,4,6],'col_24':['Constable Quack','Montreal',44774,'Royal Mounted Fowlice','Julia','????????',1,5,5,5],'col_25':['Extruduck','Fuse',44455,'????????','Allan','????????',1,1,6,2],'col_26':['Quack-O-Lantern','Ballston',43374,'????????','Allan','????????',1,2,1,7],'col_27':['LeDuckhosen','Austria',43617,'????????','Parents','????????',1,1,4,2],'col_28':['????????','DCA',43617,'????????','Allan','????????',1,3,3,2],'col_29':['Orthoduck','Israel museum',44682,'????????','Allan','????????',1,7,2,5],'col_30':['Arquackologist','Israel',44682,'????????','Allan','????????',1,6,3,3],'col_31':['Froduck','Fuse',43977,'????????','Allan','????????',1,6,3,5],'col_32':['Punk Duck','NY Essex Pizza Salem',44805,"We're up all night to get ducky",'Allan','????????',1,6,1,6],'col_33':['Fireflighter','AEPi',42795,'????????','Allan','????????',1,3,2,4],'col_34':['James Pond','Spy Museum',43134,'????????','Allan','????????',1,7,1,7],'col_35':['Duckdive','???????',47484,'????????','???','????????',1,6,7,2],'col_36':['????????','???????',47484,'????????','???','????????',1,7,4,3],'col_37':['Disco Bill','???????',47484,'????????','???','????????',1,7,4,3],'col_38':['????????','????????',44872,'????????','Rescue','????????',1,2,3,4],'col_39':['????????','????????',44872,'????????','Rescue','????????',1,2,1,4],}
+data = {'col_1':['Webbed developer','Spy Museum',43134,'????????','Allan','????????',1,7,2,2],'col_2':['Cannes-ard','Paris',44743,'je ne sais quack','Yev','????????',1,1,6,5],'col_3':['Iron Duck','Israel',44682,'????????','Allan','????????',1,1,6,1],'col_4':['Andy Rodduck','NY US Open',42979,'Game, Set Quack!','Allan','????????',1,7,1,7],'col_5':['Mini Mallards','Big E',44805,'????????','Allan','????????',2,2,3,5],'col_6':['Flights of the Round Table','DC/Bethesda',43160,'????????','Allan','????????',12,6,2,1],'col_7':['????????','Fuse',44228,'????????','Allan','????????',1,1,5,2],'col_8':['Creeper','????????',47484,'????????','Allan','????????',1,5,2,2],'col_9':['Beak-a-boos','STL',44501,'????????','Diana','????????',6,6,6,7],'col_10':['Universiduck','????????',47484,'Carnegie Mallard University','??????','????????',1,1,4,1],'col_11':['Evel Ksqueakel??????????????','Burlington',44774,'????????','Allan','????????',1,2,3,2],'col_12':['????????','Plymouth musem',44136,'????????','Allan','????????',1,6,4,7],'col_13':['Bill Bean','Cruise Ship',43070,'????????','Allan','????????',1,3,2,1],'col_14':['Liberduck','NY Trip',43435,'????????','Allan','????????',1,4,7,4],'col_15':["Quack's Guard",'London',43617,'????????','Allan','????????',1,2,6,6],'col_16':['RagnoQuack','Israel',44682,'????????','Allan','????????',1,2,4,6],'col_17':['Starducks','ice cream marblehead',44378,'????????','Allan','????????',1,5,4,7],'col_18':['Billcelona Bunch','Spain',43252,'????????','Marina','????????',2,7,6,7],'col_19':['Duck Lord / Lord of the wings','Fuse',43977,'Wing of Power  one wing to rule them all','Allan','????????',1,1,5,6],'col_20':['AnaQuack Skyflocker','Israel',44682,'????????','Allan','????????',1,4,5,5],'col_21':['Orduck 66','Israel',44682,'????????','Allan','????????',1,6,7,5],'col_22':['Spyduck','Spy Museum',43134,'License to Bill. No Time to Fly.','Allan','????????',1,1,1,4],'col_23':['Neil Wingstrong','Cape Canaveral',43101,'Cape CaQuackeral','Allan','????????',1,1,4,6],'col_24':['Constable Quack','Montreal',44774,'Royal Mounted Fowlice','Julia','????????',1,5,5,5],'col_25':['Extruduck','Fuse',44455,'????????','Allan','????????',1,1,6,2],'col_26':['Quack-O-Lantern','Ballston',43374,'????????','Allan','????????',1,2,1,7],'col_27':['LeDuckhosen','Austria',43617,'????????','Parents','????????',1,1,4,2],'col_28':['????????','DCA',43617,'????????','Allan','????????',1,3,3,2],'col_29':['Orthoduck','Israel museum',44682,'????????','Allan','????????',1,7,2,5],'col_30':['Arquackologist','Israel',44682,'????????','Allan','????????',1,6,3,3],'col_31':['Froduck','Fuse',43977,'????????','Allan','????????',1,6,3,5],'col_32':['Punk Duck','NY Essex Pizza Salem',44805,"We're up all night to get ducky",'Allan','????????',1,6,1,6],'col_33':['Fireflighter','AEPi',42795,'????????','Allan','????????',1,3,2,4],'col_34':['James Pond','Spy Museum',43134,'????????','Allan','????????',1,7,1,7],'col_35':['Duckdive','???????',47484,'????????','???','????????',1,6,7,2],'col_36':['????????','???????',47484,'????????','???','????????',1,7,4,3],'col_37':['Disco Bill','???????',47484,'????????','???','????????',1,7,4,3],'col_38':['????????','????????',44872,'????????','Rescue','????????',1,2,3,4],'col_39':['????????','????????',44872,'????????','Rescue','????????',1,2,1,4],}
 
-# data = {'col_1': ['Webbed developer','Spy Museum',43134,'','Allan','',1,5,2,2],
-#         'col_2': ['Cannes-ard','Paris',44743,'je ne sais quack','Yev','',1,1,6,5],
-#         'col_3': ['Iron Duck','Israel',44682,'','Allan','',1,1,6,1],
-#         'col_4': ['Andy Rodduck','NY US Open',42979,'Game, Set Quack!','Allan','',1,7,1,7]
-        # 'col_5': ['Mini Mallards','Big E','44805','','Allan','',2,2,3,5],
-        # 'col_6': ['Flights of the Round Table','DC/Bethesda','43160','','Allan','',12,6,2,1],
-        # 'col_7': ['','Fuse','44228','','Allan','',1,1,5,2],'col_8':['Creeper','????????','','','Allan','',1,5,2,2],
-        # 'col_9': ['Beak-a-boos','STL','44501','','Diana','',6,6,6,7],
-        # 'col_10': ['Universiduck','????????','','Carnegie Mallard University','??????','',1,1,4,1],
-        # 'col_11': ['Evel Ksqueakel??????????????','Burlington',44774,'','Allan','',1,2,3,2],
-        # 'col_12': ['','Plymouth musem','44136','','Allan','',1,6,4,7],
-        # 'col_13': ['Bill Bean','Cruise Ship','43070','','Allan','',1,3,2,1],
-        # 'col_14': ['Liberduck','NY Trip','43435','','Allan','',1,4,7,4],
-        # 'col_15': ["Quack's Guard",'London','43617','','Allan','',1,2,6,6],
-        # 'col_16': ['RagnoQuack','Israel','44682','','Allan','',1,2,4,6],
-        # 'col_17': ['Starducks','ice cream marblehead','44378','','Allan','',1,5,4,7],
-        # 'col_18': ['Billcelona Bunch','Spain','43252','','Marina','',2,7,6,7],
-        # 'col_19': ['Duck Lord / Lord of the wings','Fuse','43977','Wing of Power  one wing to rule them all','Allan','',1,1,5,6],
-        # 'col_20': ['AnaQuack Skyflocker','Israel','44682','','Allan','',1,4,5,5],
-        # 'col_21': ['Orduck 66','Israel','44682','','Allan','',1,6,7,5],
-        # 'col_22': ['Spyduck','Spy Museum','43134','License to Bill. No Time to Fly.','Allan','',1,1,1,4],
-        # 'col_23': ['Neil Wingstrong','Cape Canaveral','43101','Cape CaQuackeral','Allan','',1,1,4,6],
-        # 'col_24': ['Constable Quack','Montreal','44774','Royal Mounted Fowlice','Julia','',1,5,5,5],
-        # 'col_25': ['Extruduck','Fuse','44455','','Allan','',1,1,6,2],
-        # 'col_26': ['Quack-O-Lantern','Ballston','43374','','Allan','',1,2,1,7],
-        # 'col_27': ['LeDuckhosen','Austria','43617','','Parents','',1,1,4,2],
-        # 'col_28': ['','DCA','43617','','Allan','',1,3,3,2],
-        # 'col_29': ['Orthoduck','Israel museum','44682','','Allan','',1,7,2,5],
-        # 'col_30': ['Arquackologist','Israel','44682','','Allan','',1,6,3,3],
-        # 'col_31': ['Froduck','Fuse','43977','','Allan','',1,6,3,5],
-        # 'col_32': ['Punk Duck','NY Essex Pizza Salem','44805',"We're up all night to get ducky",'Allan','',1,6,1,6],
-        # 'col_33': ['Fireflighter','AEPi','42795','','Allan','',1,3,2,4],
-        # 'col_34': ['James Pond','Spy Museum','43134','','Allan','',1,7,1,7],
-        # 'col_35': ['Duckdive','???????','','','???','',1,6,7,2],
-        # 'col_36': ['','???????','','','???','',1,7,4,3],
-        # 'col_37': ['Disco Bill','???????','','','???','',1,7,4,3],
-        # 'col_38': ['','','44872','','Rescue','',1,2,3,4],
-        # 'col_39': ['','','44872','','Rescue','',1,2,1,4]
-        # }
 
 df = pd.DataFrame.from_dict(data, orient='index',columns=['Name', 'Location', 'Date Bought', 'Fact','Buyer','Phrase','Qty','Weight','Height','Width'])
 df['Date Bought'] = pd.TimedeltaIndex(df['Date Bought'], unit='d') + dt.datetime(1899, 12, 30)
@@ -134,8 +96,6 @@ weight_bar = px.bar(df,x="year", y="total weight")
 
 weight_bar_cumulative = px.bar(df2,x="year", y="total weight")
 
-
-
 ## year bar plot
 
 year_bar = px.bar(df,x="year", y="Qty")
@@ -144,121 +104,44 @@ year_bar = px.bar(df,x="year", y="Qty")
 
 year_bar_cumulative = px.bar(df2,x="year", y="Qty")
 
+### height width scatter plot
 
-# ### exercise plot
+height_width_fig = px.scatter(df, x="Height", y="Width")
+height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False)
 
-height_weight_fig = px.scatter(df, x="Height", y="Weight")
-# exercise_fig.update_traces(marker=dict(color='rgba(0,100,0,0)'), showlegend=False)
-# for i,row in df[['Height','Weight']].iteritems():
-#    exercise_fig.add_layout_image(
-#       dict(
-#          source="https://toppng.com/uploads/preview/rubber-ducky-clip-art-rubber-duck-11563528948tvcy0gn3cb.png",
-#          x=row['Height'],
-#          y=row["Width"],
-#          xref="x",
-#          yref="y",
-#          xanchor="center",
-#          yanchor="middle",
-#          sizex=1.10,
-#          sizey=1.10,
-#          sizing="contain",
-#          opacity=1.0,
-#          layer="above"
-#       )
-#    )
-# exercise_fig.update_layout(yaxis_range=[0,1500])
-# exercise_fig.update_layout(title_text="Steps", title_x=0.5)
+# maxDim = df[["Height", "Weight"]].max().idxmax()
+# maxi = df[maxDim].max()
+min_weight = df["Weight"].min()
+max_weight = df["Weight"].max()
 
-# ### calorie breakdown chart
+for i, row in df.iterrows():
+    # country = row['country'].replace(" ", "-")
+    height_width_fig.add_layout_image(
+        dict(
+            source=Image.open(f"ducks/png/duck2.png"),
+            xref="x",
+            yref="y",
+            xanchor="center",
+            yanchor="middle",
+            x=row["Height"],
+            y=row["Width"],
+            sizex=(row["Weight"] - min_weight) / (max_weight - min_weight),
+            sizey=(row["Weight"] - min_weight) / (max_weight - min_weight),
+            sizing="contain",
+            opacity=0.8,
+            layer="above"
+        )
+    )
 
-# breakfast_total = sum(df.Breakfast_Green+df.Breakfast_Yellow+df.Breakfast_Red)
-# if breakfast_total:
-#     breakfast_green_pct = 100*sum(df.Breakfast_Green)/breakfast_total
-#     breakfast_yellow_pct = 100*sum(df.Breakfast_Yellow)/breakfast_total
-#     breakfast_red_pct = 100*sum(df.Breakfast_Red)/breakfast_total
-# else:
-#     breakfast_green_pct,breakfast_yellow_pct,breakfast_red_pct =0,0,0
 
-# lunch_total = sum(df.Lunch_Green+df.Lunch_Yellow+df.Lunch_Red)
-# if lunch_total:
-#     lunch_green_pct = 100*sum(df.Lunch_Green)/lunch_total
-#     lunch_yellow_pct = 100*sum(df.Lunch_Yellow)/lunch_total
-#     lunch_red_pct = 100*sum(df.Lunch_Red)/lunch_total
-# else:
-#     lunch_green_pct,lunch_yellow_pct,lunch_red_pct=0,0,0
 
-# dinner_total = sum(df.Dinner_Green+df.Dinner_Yellow+df.Dinner_Red)
-# if dinner_total:
-#     dinner_green_pct = 100*sum(df.Dinner_Green)/dinner_total
-#     dinner_yellow_pct = 100*sum(df.Dinner_Yellow)/dinner_total
-#     dinner_red_pct = 100* sum(df.Dinner_Red)/dinner_total
-# else:
-#     dinner_green_pct,dinner_yellow_pct,dinner_red_pct=0,0,0
-
-# snack_total = sum(df.Snacks_Green+df.Snacks_Yellow+df.Snacks_Red)
-# if snack_total:
-#     snacks_green_pct = 100*sum(df.Snacks_Green)/snack_total
-#     snacks_yellow_pct = 100*sum(df.Snacks_Yellow)/snack_total
-#     snacks_red_pct = 100*sum(df.Snacks_Red)/snack_total
-# else:
-#     snacks_green_pct,snacks_yellow_pct,snacks_red_pct=0,0,0
-
-# d2= {'Green': [breakfast_green_pct,lunch_green_pct,dinner_green_pct,snacks_green_pct],
-#      'Yellow': [breakfast_yellow_pct,lunch_yellow_pct,dinner_yellow_pct,snacks_yellow_pct],
-#      'Red':[breakfast_red_pct,lunch_red_pct,dinner_red_pct, snacks_red_pct]
-
-#                   }
-
-# d = pd.DataFrame(data=d2, index=['Breakfast','Lunch','Dinner','Snacks']).round(2)
-# pct_fig = go.Figure()
-# pct_fig.add_trace(go.Bar(
-#     y=d.index,
-#     x=d.Green,
-#     name='Green',
-#     orientation='h',
-#     text=d.Green,
-#     marker=dict(
-#         color='rgb(0,255,0)'
-#     )
-# ))
-# pct_fig.add_trace(go.Bar(
-#     y=d.index,
-#     x=d.Yellow,
-#     name='Yellow',
-#     orientation='h',
-#     text=d.Yellow,
-#     marker=dict(
-#         color='rgb(242,242,19)'
-#     )
-# ))
-# pct_fig.add_trace(go.Bar(
-#     y=d.index,
-#     x=d.Red,
-#     name='Red',
-#     orientation='h',
-#     text=d.Red,
-#     marker=dict(
-#         color='rgb(246, 78, 139)'
-#     )
-# ))
-# pct_fig.update_layout(barmode='stack')
-# pct_fig.update_layout(title_text="Calorie Density Breakdown by Meal (%)", title_x=0.5)
-
-# ### Getting min, max, and default start, end dates for date picker
-
-# # min will be the minimum date in calorie df, max will be today's date
-# min_date = min(df.Date)
-# max_date = dt.datetime.today().date()
-# test_date = (dt.datetime.today()-timedelta(days=7)).date()
-
-# # default dates will be one week from today to start, and today to finish
-# start_date = max((dt.datetime.today()-timedelta(days=7)).date(),min_date)
-# end_date = dt.datetime.strptime(dt.datetime.today().strftime("%m/%d/%Y"),'%m/%d/%Y').date()
+# height_weight_fig.update_layout(yaxis_range=[0,1500])
+# height_weight_fig.update_layout(title_text="Steps", title_x=0.5)
 
 # ### App layout
 
 app.layout = html.Div([
-    html.Div(dcc.Graph(id='height-scatter',figure=height_weight_fig)),
+    html.Div(dcc.Graph(id='height-scatter',figure=height_width_fig)),
     html.Div(dcc.Graph(id='year-bar',figure=year_bar)),
     html.Div(dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)),
     html.Div(dcc.Graph(id='owner-bar',figure=owner_bar)),
