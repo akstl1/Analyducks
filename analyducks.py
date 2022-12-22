@@ -77,7 +77,18 @@ for i, row in df.iterrows():
 # height_weight_fig.update_layout(yaxis_range=[0,1500])
 height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)")
 
-# ### App layout
+
+##
+
+map_fig = go.Figure(data=go.Scattergeo(
+        lon = df['Longitude'],
+        lat = df['Latitude'],
+        # text = df['text'],
+        mode = 'markers'
+        # marker_color = df['cnt'],
+        ))
+
+### App layout
 
 app.layout = html.Div([
     html.Div(dcc.Graph(id='height-scatter',className="graph",figure=height_width_fig)),
@@ -85,7 +96,8 @@ app.layout = html.Div([
     html.Div(dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)),
     html.Div(dcc.Graph(id='owner-bar',figure=owner_bar)),
     html.Div(dcc.Graph(id='weight-bar',figure=weight_bar)),
-    html.Div(dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative))
+    html.Div(dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)),
+    html.Div(dcc.Graph(id='map',figure=map_fig))
 ])
 
 # app.layout = html.Div([
