@@ -27,3 +27,13 @@
     width: 50%;
     display: inline-block;
 }
+
+#table {
+    /* width:80%; */
+    align-content: center;
+    text-align: center;
+}
+
+DataTable {
+    align-content: center;
+}

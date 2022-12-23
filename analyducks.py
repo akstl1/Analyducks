@@ -1,4 +1,5 @@
 import datetime as dt
+from datetime import date
 import os
 
 import dash
@@ -20,7 +21,7 @@ server=app.server
 # data load
 
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
-
+df.Date_Bought = pd.DatetimeIndex(df.Date_Bought).strftime("%d-%m-%Y")
 df['Year'] = pd.DatetimeIndex(df['Date_Bought']).year
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
 df2 = df.groupby(['Year']).sum().cumsum().reset_index()
@@ -98,6 +99,9 @@ map_fig = go.Figure(data=go.Scattergeo(
 
 ## kpis
 
+duck_weight = df["Total_Weight"].sum()
+total_ducks = df["Quantity"].sum()
+# ducks_bought_last_year = len(df[np.datetime64(date.today())-df["Date_Bought"]<=365])
 
 # kpi_fig = go.Figure()
 
@@ -115,12 +119,26 @@ map_fig = go.Figure(data=go.Scattergeo(
 app.layout = html.Div([
     html.Div([
         dbc.Card(
-    dbc.CardBody(
-        [
-            html.H2("400", className="card-title"),
-            html.H6("Total Ducks Owned", className="card-subtitle"),
-        ]
-    ))
+            dbc.CardBody(
+                [
+                    html.H2(total_ducks, className="card-title"),
+                    html.H6("Total Ducks Owned", className="card-subtitle"),
+                ]
+        )),
+        dbc.Card(
+            dbc.CardBody(
+                [
+                    html.H2(duck_weight, className="card-title"),
+                    html.H6("Combined Duck Collection Weight (g)", className="card-subtitle"),
+                ]
+        )),
+        dbc.Card(
+            dbc.CardBody(
+                [
+                    html.H2(duck_weight, className="card-title"),
+                    html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
+                ]
+        ))
     ]),
     html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig), 
               dcc.Graph(id='owner-bar',figure=owner_bar)]),
@@ -132,7 +150,29 @@ app.layout = html.Div([
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
-                columns=[{"name": i, "id": i} for i in df.columns]
+                columns=[{"name": i, "id": i} for i in df[["Name","Location","Date_Bought","Fun Fact","Total_Weight","Height","Width","Length"]].columns],
+                fixed_rows={'headers': True, 'data': 0 },
+                style_cell={'textAlign': 'left'},
+                style_header={
+                    'backgroundColor': 'rgb(210, 210, 210)',
+                    'color': 'black',
+                    'fontWeight': 'bold',
+                     'width':'20px'
+                },
+                style_data={
+                    'whiteSpace': 'normal',
+                    'height': 'auto',
+                    'width': '50px',
+                    'lineHeight': '20px',
+                    'color': 'black',
+                    'backgroundColor': 'white'
+                },
+                style_data_conditional=[
+        {
+            'if': {'row_index': 'odd'},
+            'backgroundColor': 'rgb(220, 220, 220)',
+        }
+    ]
 ))
     
 ])
