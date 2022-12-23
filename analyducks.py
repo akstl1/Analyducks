@@ -1,6 +1,5 @@
 import datetime as dt
 import os
-from datetime import timedelta
 
 import dash
 import numpy as np
@@ -10,20 +9,20 @@ import plotly.graph_objs as go
 from dash import dash_table, dcc, html
 from dash.dependencies import Input, Output, State
 from PIL import Image
-import math
 
 app = dash.Dash()
 server=app.server
+
+## -------------------------------------------------------------------------------------------------
+# data load
 
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
 
 df['Year'] = pd.DatetimeIndex(df['Date_Bought']).year
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
 df2 = df.groupby(['Year']).sum().cumsum().reset_index()
-print(df)
-print(df2)
 
-# ------------------------------------------------------------------------------------------------
+## -------------------------------------------------------------------------------------------------
 ## figs
 
 ## year bar plot
@@ -104,6 +103,7 @@ map_fig = go.Figure(data=go.Scattergeo(
 #     domain = {'x': [0, 0.5], 'y': [0, 0.5]},
 #     delta = {'reference': 400, 'relative': True, 'position' : "top"}))
 
+## -------------------------------------------------------------------------------------------------
 ### App layout
 
 app.layout = html.Div([
@@ -123,9 +123,7 @@ app.layout = html.Div([
     
 ])
 
-# ## -------------------------------------------------------------------------------------------------
-
-
+## -------------------------------------------------------------------------------------------------
 # run app
 if __name__=="__main__":
     app.run_server()
