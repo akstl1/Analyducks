@@ -29,7 +29,7 @@ print(df2)
 ## year bar plot
 
 owner_bar = px.bar(df,x="Buyer", y="Quantity")
-owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchase", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity")
+owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity")
 
 
 ## weight bar plot
@@ -108,13 +108,12 @@ map_fig = go.Figure(data=go.Scattergeo(
 
 app.layout = html.Div([
     # html.Div(dcc.Graph(id='kpi', figure=kpi_fig)),
-    html.Div([dcc.Graph(id='height-scatter',className="graph",figure=height_width_fig),
-             dcc.Graph(id='owner-bar',figure=owner_bar)]),
-    # html.Div(dcc.Graph(id='owner-bar',figure=owner_bar)),
-    html.Div(dcc.Graph(id='year-bar',figure=year_bar)),
-    html.Div(dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)),
-    html.Div(dcc.Graph(id='weight-bar',figure=weight_bar)),
-    html.Div(dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)),
+    html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig), 
+              dcc.Graph(id='owner-bar',figure=owner_bar)]),
+    html.Div([dcc.Graph(id='year-bar',figure=year_bar), 
+              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)]),
+        html.Div([dcc.Graph(id='weight-bar',figure=weight_bar),
+                  dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)]),
     html.Div(dcc.Graph(id='map',figure=map_fig)),
     html.Div(dash_table.DataTable(
                 id="table",
