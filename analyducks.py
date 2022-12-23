@@ -9,8 +9,11 @@ import plotly.graph_objs as go
 from dash import dash_table, dcc, html
 from dash.dependencies import Input, Output, State
 from PIL import Image
+import dash_bootstrap_components as dbc
 
-app = dash.Dash()
+app = dash.Dash(
+    external_stylesheets=[dbc.themes.BOOTSTRAP]
+)
 server=app.server
 
 ## -------------------------------------------------------------------------------------------------
@@ -95,6 +98,7 @@ map_fig = go.Figure(data=go.Scattergeo(
 
 ## kpis
 
+
 # kpi_fig = go.Figure()
 
 # kpi_fig.add_trace(go.Indicator(
@@ -103,17 +107,27 @@ map_fig = go.Figure(data=go.Scattergeo(
 #     domain = {'x': [0, 0.5], 'y': [0, 0.5]},
 #     delta = {'reference': 400, 'relative': True, 'position' : "top"}))
 
+
+
 ## -------------------------------------------------------------------------------------------------
 ### App layout
 
 app.layout = html.Div([
-    # html.Div(dcc.Graph(id='kpi', figure=kpi_fig)),
+    html.Div([
+        dbc.Card(
+    dbc.CardBody(
+        [
+            html.H2("400", className="card-title"),
+            html.H6("Total Ducks Owned", className="card-subtitle"),
+        ]
+    ))
+    ]),
     html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig), 
               dcc.Graph(id='owner-bar',figure=owner_bar)]),
     html.Div([dcc.Graph(id='year-bar',figure=year_bar), 
               dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)]),
-        html.Div([dcc.Graph(id='weight-bar',figure=weight_bar),
-                  dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)]),
+    html.Div([dcc.Graph(id='weight-bar',figure=weight_bar),
+              dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)]),
     html.Div(dcc.Graph(id='map',figure=map_fig)),
     html.Div(dash_table.DataTable(
                 id="table",
