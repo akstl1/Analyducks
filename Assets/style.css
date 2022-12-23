@@ -1,8 +1,8 @@
-#height-scatter {
+.graph {
     width: 50%;
     display: inline-block;
 }
-
+/* 
 #year-bar {
     width: 50%;
     display: inline-block;
@@ -26,10 +26,9 @@
 #weight-bar-cumulative {
     width: 50%;
     display: inline-block;
-}
+} */
 
 #table {
-    /* width:80%; */
     align-content: center;
     text-align: center;
 }
@@ -40,7 +39,17 @@ DataTable {
 
 .kpi {
     display: inline-block;
-    width: 30%;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 28%;
+    margin-left:2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    background-color: skyblue;
+}
+
+.kpi-container {
+    float: center;
 }

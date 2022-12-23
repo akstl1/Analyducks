@@ -113,6 +113,10 @@ ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,to
 
 app.layout = html.Div([
     html.Div([
+        html.H1("Analyducks"),
+        html.H4("A visual analysis of my rubber duck collection")
+    ],className="title"),
+    html.Div([
         dbc.Card(
             dbc.CardBody(
                 [
@@ -134,13 +138,13 @@ app.layout = html.Div([
                     html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
                 ]
         ),className='kpi')
-    ]),
-    html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig), 
-              dcc.Graph(id='owner-bar',figure=owner_bar)]),
-    html.Div([dcc.Graph(id='year-bar',figure=year_bar), 
-              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)]),
-    html.Div([dcc.Graph(id='weight-bar',figure=weight_bar),
-              dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)]),
+    ],className='kpi-container'),
+    html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph'), 
+              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph')]),
+    html.Div([dcc.Graph(id='year-bar',figure=year_bar,className='graph'), 
+              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph')]),
+    html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
+              dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
     html.Div(dcc.Graph(id='map',figure=map_fig)),
     html.Div(dash_table.DataTable(
                 id="table",
