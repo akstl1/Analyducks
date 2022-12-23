@@ -17,7 +17,7 @@ server=app.server
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
 
 df['year'] = pd.DatetimeIndex(df['Date Bought']).year
-df['total weight'] = df.Qty*df.Weight
+df['total weight'] = df.Quantity*df.Weight
 df2 = df.groupby(['year']).sum().cumsum().reset_index()
 print(df)
 print(df2)
@@ -27,7 +27,7 @@ print(df2)
 
 ## year bar plot
 
-owner_bar = px.bar(df,x="Buyer", y="Qty")
+owner_bar = px.bar(df,x="Buyer", y="Quantity")
 
 
 ## weight bar plot
@@ -40,11 +40,11 @@ weight_bar_cumulative = px.bar(df2,x="year", y="total weight")
 
 ## year bar plot
 
-year_bar = px.bar(df,x="year", y="Qty")
+year_bar = px.bar(df,x="year", y="Quantity")
 
 ## year bar plot cumulative
 
-year_bar_cumulative = px.bar(df2,x="year", y="Qty")
+year_bar_cumulative = px.bar(df2,x="year", y="Quantity")
 
 ### height width scatter plot
 
@@ -67,8 +67,8 @@ for i, row in df.iterrows():
             yanchor="middle",
             x=row["Height"],
             y=row["Width"],
-            sizex=(row["Weight"] - min_weight) / (max_weight - min_weight),
-            sizey=(row["Weight"] - min_weight) / (max_weight - min_weight),
+            sizex=5*(row["Weight"] - min_weight) / (max_weight - min_weight),
+            sizey=5*(row["Weight"] - min_weight) / (max_weight - min_weight),
             sizing="contain",
             opacity=0.8,
             layer="above"
@@ -88,16 +88,33 @@ map_fig = go.Figure(data=go.Scattergeo(
         # marker_color = df['cnt'],
         ))
 
+## kpis
+
+# kpi_fig = go.Figure()
+
+# kpi_fig.add_trace(go.Indicator(
+#     mode = "number+delta",
+#     value = 200,
+#     domain = {'x': [0, 0.5], 'y': [0, 0.5]},
+#     delta = {'reference': 400, 'relative': True, 'position' : "top"}))
+
 ### App layout
 
 app.layout = html.Div([
+    # html.Div(dcc.Graph(id='kpi', figure=kpi_fig)),
     html.Div(dcc.Graph(id='height-scatter',className="graph",figure=height_width_fig)),
     html.Div(dcc.Graph(id='year-bar',figure=year_bar)),
     html.Div(dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative)),
     html.Div(dcc.Graph(id='owner-bar',figure=owner_bar)),
     html.Div(dcc.Graph(id='weight-bar',figure=weight_bar)),
     html.Div(dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative)),
-    html.Div(dcc.Graph(id='map',figure=map_fig))
+    html.Div(dcc.Graph(id='map',figure=map_fig)),
+    html.Div(dash_table.DataTable(
+                id="table",
+                data=df.to_dict('records'),
+                columns=[{"name": i, "id": i} for i in df.columns]
+))
+    
 ])
 
 # app.layout = html.Div([
