@@ -21,11 +21,11 @@ server=app.server
 # data load
 
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
-df.Date_Bought = pd.DatetimeIndex(df.Date_Bought).strftime("%d-%m-%Y")
+df['Date_Bought'] = pd.to_datetime(df['Date_Bought']).dt.date
+# df.Date_Bought = pd.DatetimeIndex(df.Date_Bought).strftime("%d-%m-%Y")
 df['Year'] = pd.DatetimeIndex(df['Date_Bought']).year
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
 df2 = df.groupby(['Year']).sum().cumsum().reset_index()
-
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
@@ -101,17 +101,12 @@ map_fig = go.Figure(data=go.Scattergeo(
 
 duck_weight = df["Total_Weight"].sum()
 total_ducks = df["Quantity"].sum()
-# ducks_bought_last_year = len(df[np.datetime64(date.today())-df["Date_Bought"]<=365])
 
-# kpi_fig = go.Figure()
-
-# kpi_fig.add_trace(go.Indicator(
-#     mode = "number+delta",
-#     value = 200,
-#     domain = {'x': [0, 0.5], 'y': [0, 0.5]},
-#     delta = {'reference': 400, 'relative': True, 'position' : "top"}))
-
-
+today = date.today()
+today_yr = today.year
+today_day = today.day
+today_month = today.month
+ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
 
 ## -------------------------------------------------------------------------------------------------
 ### App layout
@@ -124,21 +119,21 @@ app.layout = html.Div([
                     html.H2(total_ducks, className="card-title"),
                     html.H6("Total Ducks Owned", className="card-subtitle"),
                 ]
-        )),
+        ),className='kpi'),
         dbc.Card(
             dbc.CardBody(
                 [
                     html.H2(duck_weight, className="card-title"),
                     html.H6("Combined Duck Collection Weight (g)", className="card-subtitle"),
                 ]
-        )),
+        ),className='kpi'),
         dbc.Card(
             dbc.CardBody(
                 [
-                    html.H2(duck_weight, className="card-title"),
+                    html.H2(ducks_bought_last_year, className="card-title"),
                     html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
                 ]
-        ))
+        ),className='kpi')
     ]),
     html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig), 
               dcc.Graph(id='owner-bar',figure=owner_bar)]),
@@ -158,7 +153,7 @@ app.layout = html.Div([
                     'color': 'black',
                     'fontWeight': 'bold',
                      'width':'20px'
-                },
+                    },
                 style_data={
                     'whiteSpace': 'normal',
                     'height': 'auto',
@@ -166,14 +161,13 @@ app.layout = html.Div([
                     'lineHeight': '20px',
                     'color': 'black',
                     'backgroundColor': 'white'
-                },
-                style_data_conditional=[
-        {
-            'if': {'row_index': 'odd'},
-            'backgroundColor': 'rgb(220, 220, 220)',
-        }
-    ]
-))
+                    },
+                style_data_conditional=[{
+                    'if': {'row_index': 'odd'},
+                    'backgroundColor': 'rgb(220, 220, 220)',
+                    }]
+    )),
+    html.Br()
     
 ])
 
