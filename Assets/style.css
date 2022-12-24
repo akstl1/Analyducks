@@ -1,4 +1,9 @@
-.graph {
+.graph1 {
+    width: 33%;
+    display: inline-block;
+}
+
+.graph2 {
     width: 25%;
     display: inline-block;
     /* border-bottom: 2px solid; */

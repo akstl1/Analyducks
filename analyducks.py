@@ -32,6 +32,9 @@ iso_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).res
 
 state_df = df.groupby(["Purchase_State"]).agg({"Quantity":"sum"}).reset_index()
 state_df = state_df[state_df["Purchase_State"]!=""]
+
+purchase_method_df = df.groupby(["Purchase_Method"]).agg({"Quantity":"sum"}).reset_index()
+
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
@@ -91,6 +94,10 @@ for i, row in df.iterrows():
     )
 
 height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)")
+
+## pie chart of purchase method
+
+purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method', title='Purchase Method Distribution')
 
 
 ##
@@ -179,15 +186,21 @@ app.layout = html.Div([
                 ]
         ),className='kpi')
     ],className='kpi-container'),
-    html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph'), 
-              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph')],className="graph-container"),
-    html.Div([dcc.Graph(id='year-bar',figure=year_bar,className='graph'), 
-              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph'),
-              dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
-              dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
+    html.Div([
+              dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph1'), 
+              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1'),
+              dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1')
+            ],className="graph-container"),
+    html.Div([
+              dcc.Graph(id='year-bar',figure=year_bar,className='graph2'), 
+              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph2'),
+              dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2'),
+              dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')
+            ]),
     # html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
     #           dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
-    html.Div([dcc.Graph(id='map',figure=map_fig,className="map"),
+    html.Div([
+                dcc.Graph(id='map',figure=map_fig,className="map"),
                 dcc.Graph(id='state-map',figure=state_fig,className="map"),
                 dcc.Graph(id='country-map',figure=country_fig,className="map")
             ]),
