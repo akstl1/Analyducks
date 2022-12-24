@@ -92,16 +92,18 @@ height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x
 map_fig = go.Figure(data=go.Scattergeo(
         lon = df['Longitude'],
         lat = df['Latitude'],
-        # text = df['text'],
+        text = df['Name'],
         mode = 'markers'
         # marker_color = df['cnt'],
         ))
+map_fig.update_layout(title_text="Rubber Duck Purchase Locations",title_x=0.5)
 
 ## kpis
 
 duck_weight = df["Total_Weight"].sum()
 total_ducks = df["Quantity"].sum()
-
+unique_countries = df.Purchase_Country.nunique()
+unique_cities = df.Purchase_City.nunique()
 today = date.today()
 today_yr = today.year
 today_day = today.day
@@ -127,15 +129,29 @@ app.layout = html.Div([
         dbc.Card(
             dbc.CardBody(
                 [
-                    html.H2(duck_weight, className="card-title"),
-                    html.H6("Combined Duck Collection Weight (g)", className="card-subtitle"),
+                    html.H2(ducks_bought_last_year, className="card-title"),
+                    html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
                 ]
         ),className='kpi'),
         dbc.Card(
             dbc.CardBody(
                 [
-                    html.H2(ducks_bought_last_year, className="card-title"),
-                    html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
+                    html.H2(duck_weight, className="card-title"),
+                    html.H6("Duck Collection Weight (g)", className="card-subtitle"),
+                ]
+        ),className='kpi'),
+        dbc.Card(
+            dbc.CardBody(
+                [
+                    html.H2(unique_countries, className="card-title"),
+                    html.H6("Unique Countries of Purchase", className="card-subtitle"),
+                ]
+        ),className='kpi'),
+        dbc.Card(
+            dbc.CardBody(
+                [
+                    html.H2(unique_cities, className="card-title"),
+                    html.H6("Unique Cities of Purchase", className="card-subtitle"),
                 ]
         ),className='kpi')
     ],className='kpi-container'),
@@ -145,11 +161,11 @@ app.layout = html.Div([
               dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph')]),
     html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
-    html.Div(dcc.Graph(id='map',figure=map_fig)),
+    html.Div([dcc.Graph(id='map',figure=map_fig)]),
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
-                columns=[{"name": i, "id": i} for i in df[["Name","Location","Date_Bought","Fun Fact","Total_Weight","Height","Width","Length"]].columns],
+                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Date_Bought","Fun Fact","Total_Weight","Height","Width","Length"]].columns],
                 fixed_rows={'headers': True, 'data': 0 },
                 style_cell={'textAlign': 'left'},
                 style_header={

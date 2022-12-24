@@ -2,31 +2,6 @@
     width: 50%;
     display: inline-block;
 }
-/* 
-#year-bar {
-    width: 50%;
-    display: inline-block;
-}
-
-#year-bar-cumulative {
-    width: 50%;
-    display: inline-block;
-}
-
-#owner-bar {
-    width: 50%;
-    display: inline-block;
-}
-
-#weight-bar {
-    width: 50%;
-    display: inline-block;
-}
-
-#weight-bar-cumulative {
-    width: 50%;
-    display: inline-block;
-} */
 
 #table {
     align-content: center;
@@ -39,17 +14,20 @@ DataTable {
 
 .kpi {
     display: inline-block;
-    width: 28%;
-    margin-left:2%;
-    margin-right: 2%;
+    width: 18%;
+    margin-left:1%;
+    margin-right: 1%;
     text-align: center;
 }
 
 .title {
     text-align: center;
     background-color: skyblue;
+    padding-bottom: 5px;
 }
 
 .kpi-container {
     float: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
