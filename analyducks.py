@@ -15,6 +15,7 @@ import dash_bootstrap_components as dbc
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
+app.title="Analyducks"
 server=app.server
 
 ## -------------------------------------------------------------------------------------------------
@@ -147,7 +148,8 @@ ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,to
 app.layout = html.Div([
     html.Div([
         html.H1("Analyducks"),
-        html.H4("A visual analysis of my rubber duck collection")
+        html.H4("A visual analysis of Allan K's rubber duck collection"),
+        html.A("Click here to view my portfolio",href= "https://akstl1.github.io/")
     ],className="title"),
     html.Div([
         dbc.Card(
