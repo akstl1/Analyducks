@@ -1,3 +1,5 @@
+## imports
+
 import datetime as dt
 from datetime import date
 import os
@@ -12,6 +14,7 @@ from dash.dependencies import Input, Output, State
 from PIL import Image
 import dash_bootstrap_components as dbc
 
+## start up the app, and provide title and bootstrap ref
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
@@ -21,62 +24,79 @@ server=app.server
 ## -------------------------------------------------------------------------------------------------
 # data load
 
+## read in excel dataset
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
+
+## convert date bought col to date, and extract year into a column
 df['Date_Bought'] = pd.to_datetime(df['Date_Bought']).dt.date
-# df.Date_Bought = pd.DatetimeIndex(df.Date_Bought).strftime("%d-%m-%Y")
 df['Year'] = pd.DatetimeIndex(df['Date_Bought']).year
+
+## find avg weight measure, needed for rows where more than 1 duck is included in the total weight
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
 
+##  transform and create new df to find cumulative sum of ducks bought per year
 df2 = df.groupby(['Year']).sum().cumsum().reset_index()
 
+## transform and create new df to find ducks bought per country
 iso_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).reset_index()
 
+## transform and craete new df to find ducks bought per US state
 state_df = df.groupby(["Purchase_State"]).agg({"Quantity":"sum"}).reset_index()
 state_df = state_df[state_df["Purchase_State"]!=""]
 
+## transform and create new df to find ducks bought by purchase method
 purchase_method_df = df.groupby(["Purchase_Method"]).agg({"Quantity":"sum"}).reset_index()
 
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
-## year bar plot
+## bar plot showing ducks bought by purchaser
 
 owner_bar = px.bar(df,x="Buyer", y="Quantity")
-owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity",paper_bgcolor="#ebcc34")
+owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
+
+## pie chart showing purchase method of ducks
+
+purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method')
+purchase_fig.update_layout(title_text="Purchase Method Distribution",title_x=0.5,paper_bgcolor="rgba(0,0,0,0)")
+
+## 3d scatter of length, height, width
+
+three_d_fig = px.scatter_3d(df, x='Length', y='Width', z="Height",color='Avg_Weight')
+three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",title_x=0.5,paper_bgcolor="rgba(0,0,0,0)")
 
 
-## weight bar plot
+## bar plot showing weight of ducks bought each year
 
 weight_bar = px.bar(df,x="Year", y="Avg_Weight")
-weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)")
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="#f0e246")
 
-## weight bar plot cumulative
+## bar plot showing weight of ducks bought each year, cumulative
 
 weight_bar_cumulative = px.bar(df2,x="Year", y="Total_Weight")
 weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)")
 
-## year bar plot
+## bar plot showing number of ducks bought per year
 
 year_bar = px.bar(df,x="Year", y="Quantity")
 year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity Bought")
 
-## year bar plot cumulative
+## bar plot showing number of ducks bought per year, cumulative
 
 year_bar_cumulative = px.bar(df2,x="Year", y="Quantity")
 year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity")
 
-### height width scatter plot
+## scatter plot showing duck height vs width
 
 height_width_fig = px.scatter(df, x="Height", y="Width")
 height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False)
 
-# maxDim = df[["Height", "Weight"]].max().idxmax()
-# maxi = df[maxDim].max()
+# min and max weight aclc to determine size of sactter plot markets
 min_weight = df["Avg_Weight"].min()
 max_weight = df["Avg_Weight"].max()
 
+# loop through each point to give each scatter dot a custom market image, with size per above calcs/normalization
 for i, row in df.iterrows():
-    # country = row['country'].replace(" ", "-")
     height_width_fig.add_layout_image(
         dict(
             source=Image.open(f"ducks/png/duck2.png"),
@@ -96,46 +116,45 @@ for i, row in df.iterrows():
 
 height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)")
 
-## pie chart of purchase method
-
-purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method', title='Purchase Method Distribution')
-
-
-##
+## choropleth showing ducks purchased by geolocation
 
 map_fig = px.scatter_geo(df,
         lon = 'Longitude',
         lat = 'Latitude',
         hover_name="Name"
-        # mode = 'markers'
-        # marker_color = df['cnt'],
         )
 map_fig.update_geos(projection_type="natural earth")
 map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",title_x=0.5)
 
-## country map
+## choropleth showing duck purchase by country
 
 country_fig = px.choropleth(iso_df, locations="ISO_Code",
-                    color="Quantity", # lifeExp is a column of gapminder
-                    hover_name="Purchase_Country" # column to add to hover information
+                    color="Quantity", 
+                    hover_name="Purchase_Country"
                     )
 country_fig.update_geos(projection_type="natural earth")
 country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5)
-## state map
 
-# country_fig = px.choropleth(iso_df, locations="ISO_Code",
-#                     color="Quantity", # lifeExp is a column of gapminder
-#                     hover_name="Purchase_Country" # column to add to hover information
-#                     )
+## choropleth showing duck purchase by US state
+
 state_fig = px.choropleth(state_df,locations="Purchase_State", locationmode="USA-states", color="Quantity", scope="usa")
 state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
 
-## kpis
+## calcs for KPI cards
 
+# weight KPI
 duck_weight = df["Total_Weight"].sum()
+
+# total ducks bought KPI
 total_ducks = df["Quantity"].sum()
+
+# unique purchase countries KPI
 unique_countries = df.Purchase_Country.nunique()
+
+# unique purchase cities KPI
 unique_cities = df.Purchase_City.nunique()
+
+# ducks bought within last year KPI
 today = date.today()
 today_yr = today.year
 today_day = today.day
@@ -189,8 +208,9 @@ app.layout = html.Div([
         ),className='kpi')
     ],className='kpi-container'),
     html.Div([
-              dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph1'), 
+            #   dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph1'),
               dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1'),
+              dcc.Graph(id='3d-scatter',figure=three_d_fig,className='graph1'),
               dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1')
             ],className="graph-container"),
     html.Div([

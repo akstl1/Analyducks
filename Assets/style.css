@@ -14,6 +14,10 @@
     border-image-repeat: stretch; */
 }
 
+.graph-container {
+    background-color: #ebcc34;
+}
+
 #table {
     align-content: center;
     text-align: center;
