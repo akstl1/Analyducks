@@ -40,6 +40,7 @@ DataTable {
     border-top: 3px solid black;
 }
 
-/* .graph-container {
-    opacity: 0;
-} */
+.map {
+    width: 30%;
+    display: inline-block;
+}

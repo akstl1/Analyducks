@@ -32,7 +32,6 @@ iso_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).res
 
 state_df = df.groupby(["Purchase_State"]).agg({"Quantity":"sum"}).reset_index()
 state_df = state_df[state_df["Purchase_State"]!=""]
-print(state_df)
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
@@ -96,14 +95,15 @@ height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x
 
 ##
 
-map_fig = go.Figure(data=go.Scattergeo(
-        lon = df['Longitude'],
-        lat = df['Latitude'],
-        text = df['Name'],
-        mode = 'markers'
+map_fig = px.scatter_geo(df,
+        lon = 'Longitude',
+        lat = 'Latitude',
+        hover_name="Name"
+        # mode = 'markers'
         # marker_color = df['cnt'],
-        ))
-map_fig.update_layout(title_text="Rubber Duck Purchase Locations",title_x=0.5)
+        )
+map_fig.update_geos(projection_type="natural earth")
+map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",title_x=0.5)
 
 ## country map
 
@@ -111,7 +111,8 @@ country_fig = px.choropleth(iso_df, locations="ISO_Code",
                     color="Quantity", # lifeExp is a column of gapminder
                     hover_name="Purchase_Country" # column to add to hover information
                     )
-
+country_fig.update_geos(projection_type="natural earth")
+country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5)
 ## state map
 
 # country_fig = px.choropleth(iso_df, locations="ISO_Code",
@@ -119,7 +120,7 @@ country_fig = px.choropleth(iso_df, locations="ISO_Code",
 #                     hover_name="Purchase_Country" # column to add to hover information
 #                     )
 state_fig = px.choropleth(state_df,locations="Purchase_State", locationmode="USA-states", color="Quantity", scope="usa")
-
+state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
 
 ## kpis
 
@@ -186,9 +187,12 @@ app.layout = html.Div([
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
     # html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
     #           dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
-    html.Div([dcc.Graph(id='map',figure=map_fig)]),
-    html.Div([dcc.Graph(id='country-map',figure=country_fig)]),
-    html.Div([dcc.Graph(id='state-map',figure=state_fig)]),
+    html.Div([dcc.Graph(id='map',figure=map_fig,className="map"),
+                dcc.Graph(id='state-map',figure=state_fig,className="map"),
+                dcc.Graph(id='country-map',figure=country_fig,className="map")
+            ]),
+    # html.Div([dcc.Graph(id='country-map',figure=country_fig)]),
+    # html.Div([dcc.Graph(id='state-map',figure=state_fig)]),
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
