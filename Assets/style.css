@@ -1,12 +1,12 @@
 .graph {
-    width: 50%;
+    width: 25%;
     display: inline-block;
     /* border-bottom: 2px solid; */
     /* background-size: 20px; */
-    border-image: url('ducks/png/duck2.png') 28 / 28px / 0 round;
+    /* border-image: url('ducks/png/duck2.png') 28 / 28px / 0 round;
     border-width: 5px;
     border-style: solid;
-    border-image-repeat: stretch;
+    border-image-repeat: stretch; */
 }
 
 #table {

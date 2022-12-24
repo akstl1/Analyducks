@@ -29,6 +29,10 @@ df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
 df2 = df.groupby(['Year']).sum().cumsum().reset_index()
 
 iso_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).reset_index()
+
+state_df = df.groupby(["Purchase_State"]).agg({"Quantity":"sum"}).reset_index()
+state_df = state_df[state_df["Purchase_State"]!=""]
+print(state_df)
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
@@ -41,17 +45,17 @@ owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", titl
 ## weight bar plot
 
 weight_bar = px.bar(df,x="Year", y="Avg_Weight")
-weight_bar.update_layout(title_text="Weight (g) of Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)")
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)")
 
 ## weight bar plot cumulative
 
 weight_bar_cumulative = px.bar(df2,x="Year", y="Total_Weight")
-weight_bar_cumulative.update_layout(title_text="Cumulative Weight of Rubber Ducks Bought", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)")
+weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)")
 
 ## year bar plot
 
 year_bar = px.bar(df,x="Year", y="Quantity")
-year_bar.update_layout(title_text="Number of Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity Bought")
+year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity Bought")
 
 ## year bar plot cumulative
 
@@ -106,8 +110,16 @@ map_fig.update_layout(title_text="Rubber Duck Purchase Locations",title_x=0.5)
 country_fig = px.choropleth(iso_df, locations="ISO_Code",
                     color="Quantity", # lifeExp is a column of gapminder
                     hover_name="Purchase_Country" # column to add to hover information
-                    # color_continuous_scale=px.colors.sequential.Plasma
                     )
+
+## state map
+
+# country_fig = px.choropleth(iso_df, locations="ISO_Code",
+#                     color="Quantity", # lifeExp is a column of gapminder
+#                     hover_name="Purchase_Country" # column to add to hover information
+#                     )
+state_fig = px.choropleth(state_df,locations="Purchase_State", locationmode="USA-states", color="Quantity", scope="usa")
+
 
 ## kpis
 
@@ -169,11 +181,14 @@ app.layout = html.Div([
     html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph'), 
               dcc.Graph(id='owner-bar',figure=owner_bar,className='graph')],className="graph-container"),
     html.Div([dcc.Graph(id='year-bar',figure=year_bar,className='graph'), 
-              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph')]),
-    html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
+              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph'),
+              dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
+    # html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
+    #           dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
     html.Div([dcc.Graph(id='map',figure=map_fig)]),
     html.Div([dcc.Graph(id='country-map',figure=country_fig)]),
+    html.Div([dcc.Graph(id='state-map',figure=state_fig)]),
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
