@@ -25,14 +25,17 @@ df['Date_Bought'] = pd.to_datetime(df['Date_Bought']).dt.date
 # df.Date_Bought = pd.DatetimeIndex(df.Date_Bought).strftime("%d-%m-%Y")
 df['Year'] = pd.DatetimeIndex(df['Date_Bought']).year
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
+
 df2 = df.groupby(['Year']).sum().cumsum().reset_index()
+
+iso_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).reset_index()
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
 ## year bar plot
 
 owner_bar = px.bar(df,x="Buyer", y="Quantity")
-owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity")
+owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity",paper_bgcolor="#ebcc34")
 
 
 ## weight bar plot
@@ -98,6 +101,14 @@ map_fig = go.Figure(data=go.Scattergeo(
         ))
 map_fig.update_layout(title_text="Rubber Duck Purchase Locations",title_x=0.5)
 
+## country map
+
+country_fig = px.choropleth(iso_df, locations="ISO_Code",
+                    color="Quantity", # lifeExp is a column of gapminder
+                    hover_name="Purchase_Country" # column to add to hover information
+                    # color_continuous_scale=px.colors.sequential.Plasma
+                    )
+
 ## kpis
 
 duck_weight = df["Total_Weight"].sum()
@@ -156,12 +167,13 @@ app.layout = html.Div([
         ),className='kpi')
     ],className='kpi-container'),
     html.Div([dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph'), 
-              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph')]),
+              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph')],className="graph-container"),
     html.Div([dcc.Graph(id='year-bar',figure=year_bar,className='graph'), 
               dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph')]),
     html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
     html.Div([dcc.Graph(id='map',figure=map_fig)]),
+    html.Div([dcc.Graph(id='country-map',figure=country_fig)]),
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),

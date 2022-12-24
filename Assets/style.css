@@ -1,6 +1,12 @@
 .graph {
     width: 50%;
     display: inline-block;
+    /* border-bottom: 2px solid; */
+    /* background-size: 20px; */
+    border-image: url('ducks/png/duck2.png') 28 / 28px / 0 round;
+    border-width: 5px;
+    border-style: solid;
+    border-image-repeat: stretch;
 }
 
 #table {
@@ -28,6 +34,12 @@ DataTable {
 
 .kpi-container {
     float: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: lightgray;
+    border-top: 3px solid black;
 }
+
+/* .graph-container {
+    opacity: 0;
+} */
