@@ -62,59 +62,59 @@ purchase_fig.update_layout(title_text="Purchase Method Distribution",title_x=0.5
 
 ## 3d scatter of length, height, width
 
-three_d_fig = px.scatter_3d(df, x='Length', y='Width', z="Height",color='Avg_Weight')
+three_d_fig = px.scatter_3d(df, x='Length', y='Width', z="Height",size='Avg_Weight',color='Avg_Weight')
 three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",title_x=0.5,paper_bgcolor="rgba(0,0,0,0)")
 
 
 ## bar plot showing weight of ducks bought each year
 
 weight_bar = px.bar(df,x="Year", y="Avg_Weight")
-weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="#f0e246")
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
 weight_bar_cumulative = px.bar(df2,x="Year", y="Total_Weight")
-weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)")
+weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing number of ducks bought per year
 
 year_bar = px.bar(df,x="Year", y="Quantity")
-year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity Bought")
+year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing number of ducks bought per year, cumulative
 
 year_bar_cumulative = px.bar(df2,x="Year", y="Quantity")
-year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity")
+year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
 
 ## scatter plot showing duck height vs width
 
-height_width_fig = px.scatter(df, x="Height", y="Width")
-height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False)
+# height_width_fig = px.scatter(df, x="Height", y="Width")
+# height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False,paper_bgcolor="rgba(0,0,0,0)")
 
 # min and max weight aclc to determine size of sactter plot markets
-min_weight = df["Avg_Weight"].min()
-max_weight = df["Avg_Weight"].max()
+# min_weight = df["Avg_Weight"].min()
+# max_weight = df["Avg_Weight"].max()
 
 # loop through each point to give each scatter dot a custom market image, with size per above calcs/normalization
-for i, row in df.iterrows():
-    height_width_fig.add_layout_image(
-        dict(
-            source=Image.open(f"ducks/png/duck2.png"),
-            xref="x",
-            yref="y",
-            xanchor="center",
-            yanchor="middle",
-            x=row["Height"],
-            y=row["Width"],
-            sizex=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
-            sizey=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
-            sizing="contain",
-            opacity=0.8,
-            layer="above"
-        )
-    )
+# for i, row in df.iterrows():
+#     height_width_fig.add_layout_image(
+#         dict(
+#             source=Image.open(f"ducks/png/duck2.png"),
+#             xref="x",
+#             yref="y",
+#             xanchor="center",
+#             yanchor="middle",
+#             x=row["Height"],
+#             y=row["Width"],
+#             sizex=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
+#             sizey=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
+#             sizing="contain",
+#             opacity=0.8,
+#             layer="above"
+#         )
+#     )
 
-height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)")
+# height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)",paper_bgcolor="rgba(0,0,0,0)")
 
 ## choropleth showing ducks purchased by geolocation
 
@@ -218,7 +218,7 @@ app.layout = html.Div([
               dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph2'),
               dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2'),
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')
-            ]),
+            ],className="graph-container2"),
     # html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
     #           dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
     html.Div([
