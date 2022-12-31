@@ -209,7 +209,6 @@ app.layout = html.Div([
         ),className='kpi')
     ],className='kpi-container'),
     html.Div([
-            #   dcc.Graph(id='height-scatter',figure=height_width_fig,className='graph1'),
               dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1'),
               dcc.Graph(id='3d-scatter',figure=three_d_fig,className='graph1'),
               dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1')
@@ -220,15 +219,11 @@ app.layout = html.Div([
               dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2'),
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')
             ],className="graph-container2"),
-    # html.Div([dcc.Graph(id='weight-bar',figure=weight_bar,className='graph'),
-    #           dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph')]),
     html.Div([
                 dcc.Graph(id='map',figure=map_fig,className="map"),
                 dcc.Graph(id='state-map',figure=state_fig,className="map"),
                 dcc.Graph(id='country-map',figure=country_fig,className="map")
             ]),
-    # html.Div([dcc.Graph(id='country-map',figure=country_fig)]),
-    # html.Div([dcc.Graph(id='state-map',figure=state_fig)]),
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
