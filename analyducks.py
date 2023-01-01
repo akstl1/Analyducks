@@ -3,6 +3,7 @@
 import datetime as dt
 from datetime import date
 import os
+import requests
 
 import dash
 import numpy as np
@@ -63,7 +64,7 @@ purchase_fig.update_layout(title_text="Purchase Method Distribution",title_x=0.5
 
 ## 3d scatter of length, height, width
 
-three_d_fig = px.scatter_3d(df, x='Length', y='Width', z="Height",size='Avg_Weight',color='Avg_Weight')
+three_d_fig = px.scatter_3d(df, x='Length', y='Width', z="Height",size='Avg_Weight',color='Avg_Weight',labels={'Avg_Weight':'Avg. Weight'})
 three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",title_x=0.5,paper_bgcolor="rgba(0,0,0,0)")
 
 
@@ -119,11 +120,44 @@ year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x
 
 ## choropleth showing ducks purchased by geolocation
 
+# states_geojson = requests.get(
+#     "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_1_states_provinces_lines.geojson").json()
+
 map_fig = px.scatter_geo(df,
         lon = 'Longitude',
         lat = 'Latitude',
         hover_name="Name"
+        
         )
+
+# map_fig = map_fig.add_trace(
+#     go.Scattergeo(
+#         lat=[
+#             v
+#             for sub in [
+#                 np.array(f["geometry"]["coordinates"])[:, 1].tolist() + [None]
+#                 for f in states_geojson["features"]
+#             ]
+#             for v in sub
+#         ],
+#         lon=[
+#             v
+#             for sub in [
+#                 np.array(f["geometry"]["coordinates"])[:, 0].tolist() + [None]
+#                 for f in states_geojson["features"]
+#             ]
+#             for v in sub
+#         ],
+#         line_color="brown",
+#         line_width=1,
+#         mode="lines",
+#         showlegend=False,
+#     )
+# )
+
+map_fig.update_geos(
+    visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
+)
 map_fig.update_geos(projection_type="natural earth")
 map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",title_x=0.5)
 
@@ -131,14 +165,44 @@ map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",tit
 
 country_fig = px.choropleth(iso_df, locations="ISO_Code",
                     color="Quantity", 
-                    hover_name="Purchase_Country"
+                    hover_name="Purchase_Country",
+                    color_continuous_scale="YlGn"
                     )
+
+# country_fig = country_fig.add_trace(
+#     go.Scattergeo(
+#         lat=[
+#             v
+#             for sub in [
+#                 np.array(f["geometry"]["coordinates"])[:, 1].tolist() + [None]
+#                 for f in states_geojson["features"]
+#             ]
+#             for v in sub
+#         ],
+#         lon=[
+#             v
+#             for sub in [
+#                 np.array(f["geometry"]["coordinates"])[:, 0].tolist() + [None]
+#                 for f in states_geojson["features"]
+#             ]
+#             for v in sub
+#         ],
+#         line_color="brown",
+#         line_width=1,
+#         mode="lines",
+#         showlegend=False,
+#     )
+# )
+
+country_fig.update_geos(
+    visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
+)
 country_fig.update_geos(projection_type="natural earth")
-country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5)
+country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,height=500, width=1000)
 
 ## choropleth showing duck purchase by US state
 
-state_fig = px.choropleth(state_df,locations="Purchase_State", locationmode="USA-states", color="Quantity", scope="usa")
+state_fig = px.choropleth(state_df,locations="Purchase_State", locationmode="USA-states", color="Quantity", scope="usa",color_continuous_scale="YlGn")
 state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
 
 ## calcs for KPI cards
