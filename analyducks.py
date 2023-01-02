@@ -78,7 +78,7 @@ weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.
 weight_bar_cumulative = px.bar(df2,x="Year", y="Total_Weight")
 weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
 
-## bar plot showing number of ducks bought per year
+## bar plot showing number of ducks bought per year 
 
 year_bar = px.bar(df,x="Year", y="Quantity")
 year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
