@@ -149,7 +149,7 @@ country_fig.update_geos(
     visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
 )
 country_fig.update_geos(projection_type="natural earth")
-country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,height=500, width=1000)
+country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,width=1000)
 
 ## choropleth showing duck purchase by US state
 
