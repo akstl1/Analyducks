@@ -91,41 +91,6 @@ year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xa
 year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
 year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
 
-## scatter plot showing duck height vs width
-
-# height_width_fig = px.scatter(df, x="Height", y="Width")
-# height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False,paper_bgcolor="rgba(0,0,0,0)")
-
-# min and max weight aclc to determine size of sactter plot markets
-# min_weight = df["Avg_Weight"].min()
-# max_weight = df["Avg_Weight"].max()
-
-# loop through each point to give each scatter dot a custom market image, with size per above calcs/normalization
-# for i, row in df.iterrows():
-#     height_width_fig.add_layout_image(
-#         dict(
-#             source=Image.open(f"ducks/png/duck2.png"),
-#             xref="x",
-#             yref="y",
-#             xanchor="center",
-#             yanchor="middle",
-#             x=row["Height"],
-#             y=row["Width"],
-#             sizex=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
-#             sizey=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
-#             sizing="contain",
-#             opacity=0.8,
-#             layer="above"
-#         )
-#     )
-
-# height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)",paper_bgcolor="rgba(0,0,0,0)")
-
-## choropleth showing ducks purchased by geolocation
-
-# states_geojson = requests.get(
-#     "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_1_states_provinces_lines.geojson").json()
-
 map_fig = px.scatter_geo(df,
         lon = 'Longitude',
         lat = 'Latitude',
@@ -251,19 +216,19 @@ app.layout = html.Div([
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
-                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Date_Bought","Fun Fact","Total_Weight","Height","Width","Length"]].columns],
+                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","Fun Fact","Total_Weight","Height","Width","Length"]].columns],
                 fixed_rows={'headers': True, 'data': 0 },
                 style_cell={'textAlign': 'left'},
                 style_header={
                     'backgroundColor': 'rgb(210, 210, 210)',
                     'color': 'black',
-                    'fontWeight': 'bold',
-                     'width':'20px'
+                    'fontWeight': 'bold'
                     },
                 style_data={
                     'whiteSpace': 'normal',
                     'height': 'auto',
-                    'width': '50px',
+                    'minWidth':'60px',
+                    'width': '120px',
                     'lineHeight': '20px',
                     'color': 'black',
                     'backgroundColor': 'white'
@@ -281,3 +246,41 @@ app.layout = html.Div([
 # run app
 if __name__=="__main__":
     app.run_server()
+
+
+
+
+## scatter plot showing duck height vs width
+
+# height_width_fig = px.scatter(df, x="Height", y="Width")
+# height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False,paper_bgcolor="rgba(0,0,0,0)")
+
+# min and max weight aclc to determine size of sactter plot markets
+# min_weight = df["Avg_Weight"].min()
+# max_weight = df["Avg_Weight"].max()
+
+# loop through each point to give each scatter dot a custom market image, with size per above calcs/normalization
+# for i, row in df.iterrows():
+#     height_width_fig.add_layout_image(
+#         dict(
+#             source=Image.open(f"ducks/png/duck2.png"),
+#             xref="x",
+#             yref="y",
+#             xanchor="center",
+#             yanchor="middle",
+#             x=row["Height"],
+#             y=row["Width"],
+#             sizex=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
+#             sizey=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
+#             sizing="contain",
+#             opacity=0.8,
+#             layer="above"
+#         )
+#     )
+
+# height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)",paper_bgcolor="rgba(0,0,0,0)")
+
+## choropleth showing ducks purchased by geolocation
+
+# states_geojson = requests.get(
+#     "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_1_states_provinces_lines.geojson").json()
