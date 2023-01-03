@@ -53,8 +53,8 @@ buyer_df = df.groupby(["Buyer"]).agg({"Quantity":"sum"}).reset_index()
 
 yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
 
-weight_df = df.groupby(["Year", "Total_Weight"]).agg({"Quantity":"sum"}).reset_index()
-
+weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
+print(weight_df)
 weight_cum_df = df.groupby(["Year", "Total_Weight"]).sum().cumsum().reset_index()
 
 ## -------------------------------------------------------------------------------------------------
@@ -78,8 +78,8 @@ three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)
 
 ## bar plot showing weight of ducks bought each year
 
-weight_bar = px.histogram(df,x="Year", y="Avg_Weight",labels={'y':'y'})
-weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,bargap=0.2,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
+weight_bar = px.bar(weight_df,x="Year", y="Total_Weight")
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
