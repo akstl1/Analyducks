@@ -126,14 +126,14 @@ year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x
 map_fig = px.scatter_geo(df,
         lon = 'Longitude',
         lat = 'Latitude',
-        hover_name="Name"
-        
+        hover_name="Name"      
         )
 
 map_fig.update_geos(
-    visible=True, resolution=50, scope="world", showcountries=True, color="Black"
+    visible=True, resolution=50, scope="world", showcountries=True
 )
 map_fig.update_geos(projection_type="natural earth")
+map_fig.update_traces(marker=dict(color="Red"))
 map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",title_x=0.5)
 
 ## choropleth showing duck purchase by country
