@@ -130,33 +130,8 @@ map_fig = px.scatter_geo(df,
         
         )
 
-# map_fig = map_fig.add_trace(
-#     go.Scattergeo(
-#         lat=[
-#             v
-#             for sub in [
-#                 np.array(f["geometry"]["coordinates"])[:, 1].tolist() + [None]
-#                 for f in states_geojson["features"]
-#             ]
-#             for v in sub
-#         ],
-#         lon=[
-#             v
-#             for sub in [
-#                 np.array(f["geometry"]["coordinates"])[:, 0].tolist() + [None]
-#                 for f in states_geojson["features"]
-#             ]
-#             for v in sub
-#         ],
-#         line_color="brown",
-#         line_width=1,
-#         mode="lines",
-#         showlegend=False,
-#     )
-# )
-
 map_fig.update_geos(
-    visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
+    visible=True, resolution=50, scope="world", showcountries=True, color="Black"
 )
 map_fig.update_geos(projection_type="natural earth")
 map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",title_x=0.5)
@@ -165,34 +140,10 @@ map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",tit
 
 country_fig = px.choropleth(iso_df, locations="ISO_Code",
                     color="Quantity", 
-                    hover_name="Purchase_Country",
-                    color_continuous_scale="YlGn"
+                    hover_name="Purchase_Country"
+                    # color_continuous_scale="YlGn"
                     )
-
-# country_fig = country_fig.add_trace(
-#     go.Scattergeo(
-#         lat=[
-#             v
-#             for sub in [
-#                 np.array(f["geometry"]["coordinates"])[:, 1].tolist() + [None]
-#                 for f in states_geojson["features"]
-#             ]
-#             for v in sub
-#         ],
-#         lon=[
-#             v
-#             for sub in [
-#                 np.array(f["geometry"]["coordinates"])[:, 0].tolist() + [None]
-#                 for f in states_geojson["features"]
-#             ]
-#             for v in sub
-#         ],
-#         line_color="brown",
-#         line_width=1,
-#         mode="lines",
-#         showlegend=False,
-#     )
-# )
+country_fig.add_trace(map_fig.data[0])
 
 country_fig.update_geos(
     visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
@@ -202,8 +153,14 @@ country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0
 
 ## choropleth showing duck purchase by US state
 
-state_fig = px.choropleth(state_df,locations="Purchase_State", locationmode="USA-states", color="Quantity", scope="usa",color_continuous_scale="YlGn")
+state_fig = px.choropleth(state_df,locations="Purchase_State", 
+                          locationmode="USA-states", 
+                          color="Quantity", 
+                          scope="usa"
+                        #   color_continuous_scale="YlGn"
+                          )
 state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
+state_fig.add_trace(map_fig.data[0])
 
 ## calcs for KPI cards
 
@@ -284,7 +241,7 @@ app.layout = html.Div([
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')
             ],className="graph-container2"),
     html.Div([
-                dcc.Graph(id='map',figure=map_fig,className="map"),
+                # dcc.Graph(id='map',figure=map_fig,className="map"),
                 dcc.Graph(id='state-map',figure=state_fig,className="map"),
                 dcc.Graph(id='country-map',figure=country_fig,className="map")
             ]),
