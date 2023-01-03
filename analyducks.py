@@ -36,17 +36,12 @@ df = df.sort_values(by=['Date_Bought'], ascending=True)
 ## find avg weight measure, needed for rows where more than 1 duck is included in the total weight
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
 
-##  transform and create new df to find cumulative sum of ducks bought per year
-df2 = df.groupby(['Year']).sum().cumsum().reset_index()
-
-## transform and create new df to find ducks bought per country
-iso_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).reset_index()
-
-## transform and craete new df to find ducks bought per US state
+## transform and create new dfs to find ducks bought by state, country, purchase method, buyer, year, weight, and cumulative weight
 state_df = df.groupby(["Purchase_State"]).agg({"Quantity":"sum"}).reset_index()
 state_df = state_df[state_df["Purchase_State"]!=""]
 
-## transform and create new df to find ducks bought by purchase method
+county_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).reset_index()
+
 purchase_method_df = df.groupby(["Purchase_Method"]).agg({"Quantity":"sum"}).reset_index()
 
 buyer_df = df.groupby(["Buyer"]).agg({"Quantity":"sum"}).reset_index()
@@ -54,8 +49,8 @@ buyer_df = df.groupby(["Buyer"]).agg({"Quantity":"sum"}).reset_index()
 yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
 
 weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
-print(weight_df)
-weight_cum_df = df.groupby(["Year", "Total_Weight"]).sum().cumsum().reset_index()
+
+weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 
 ## -------------------------------------------------------------------------------------------------
 ## figs
@@ -83,17 +78,17 @@ weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
-weight_bar_cumulative = px.bar(df2,x="Year", y="Total_Weight")
+weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
 weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing number of ducks bought per year 
 
-year_bar = px.bar(df,x="Year", y="Quantity")
+year_bar = px.bar(yearly_df,x="Year", y="Quantity")
 year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing number of ducks bought per year, cumulative
 
-year_bar_cumulative = px.bar(df2,x="Year", y="Quantity")
+year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
 year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
 
 ## scatter plot showing duck height vs width
@@ -146,7 +141,7 @@ map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",tit
 
 ## choropleth showing duck purchase by country
 
-country_fig = px.choropleth(iso_df, locations="ISO_Code",
+country_fig = px.choropleth(county_df, locations="ISO_Code",
                     color="Quantity", 
                     hover_name="Purchase_Country"
                     # color_continuous_scale="YlGn"
