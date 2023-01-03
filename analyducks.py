@@ -49,12 +49,20 @@ state_df = state_df[state_df["Purchase_State"]!=""]
 ## transform and create new df to find ducks bought by purchase method
 purchase_method_df = df.groupby(["Purchase_Method"]).agg({"Quantity":"sum"}).reset_index()
 
+buyer_df = df.groupby(["Buyer"]).agg({"Quantity":"sum"}).reset_index()
+
+yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
+
+weight_df = df.groupby(["Year", "Total_Weight"]).agg({"Quantity":"sum"}).reset_index()
+
+weight_cum_df = df.groupby(["Year", "Total_Weight"]).sum().cumsum().reset_index()
+
 ## -------------------------------------------------------------------------------------------------
 ## figs
 
 ## bar plot showing ducks bought by purchaser
 
-owner_bar = px.bar(df,x="Buyer", y="Quantity")
+owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
 owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
 
 ## pie chart showing purchase method of ducks
@@ -70,8 +78,8 @@ three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)
 
 ## bar plot showing weight of ducks bought each year
 
-weight_bar = px.bar(df,x="Year", y="Avg_Weight")
-weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
+weight_bar = px.histogram(df,x="Year", y="Avg_Weight",labels={'y':'y'})
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,bargap=0.2,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
