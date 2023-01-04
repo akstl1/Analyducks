@@ -248,7 +248,7 @@ app.layout = html.Div([
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
-                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me/Fun Fact","Total_Weight","Height","Width","Length"]].columns],
+                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me","Total_Weight","Height","Width","Length"]].columns],
                 fixed_rows={'headers': True, 'data': 0 },
                 style_cell={'textAlign': 'left'},
                 style_header={
