@@ -135,12 +135,7 @@ map_fig = px.scatter_geo(df,
         hover_name="Name"      
         )
 
-map_fig.update_geos(
-    visible=True, resolution=50, scope="world", showcountries=True
-)
-map_fig.update_geos(projection_type="natural earth")
 map_fig.update_traces(marker=dict(color="Red"))
-map_fig.update_layout(title_text="Individual Rubber Duck Purchase Locations",title_x=0.5)
 
 ## choropleth showing duck purchase by country
 
@@ -247,7 +242,6 @@ app.layout = html.Div([
               dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')
             ],className="graph-container2"),
     html.Div([
-                # dcc.Graph(id='map',figure=map_fig,className="map"),
                 dcc.Graph(id='state-map',figure=state_fig,className="map"),
                 dcc.Graph(id='country-map',figure=country_fig,className="map")
             ]),
@@ -284,41 +278,3 @@ app.layout = html.Div([
 # run app
 if __name__=="__main__":
     app.run_server()
-
-
-
-
-## scatter plot showing duck height vs width
-
-# height_width_fig = px.scatter(df, x="Height", y="Width")
-# height_width_fig.update_traces(marker=dict(color='rgba(0,0,0,0)'), showlegend=False,paper_bgcolor="rgba(0,0,0,0)")
-
-# min and max weight aclc to determine size of sactter plot markets
-# min_weight = df["Avg_Weight"].min()
-# max_weight = df["Avg_Weight"].max()
-
-# loop through each point to give each scatter dot a custom market image, with size per above calcs/normalization
-# for i, row in df.iterrows():
-#     height_width_fig.add_layout_image(
-#         dict(
-#             source=Image.open(f"ducks/png/duck2.png"),
-#             xref="x",
-#             yref="y",
-#             xanchor="center",
-#             yanchor="middle",
-#             x=row["Height"],
-#             y=row["Width"],
-#             sizex=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
-#             sizey=5*(row["Avg_Weight"] - min_weight) / (max_weight - min_weight),
-#             sizing="contain",
-#             opacity=0.8,
-#             layer="above"
-#         )
-#     )
-
-# height_width_fig.update_layout(title_text="Rubber Duck Height vs Width", title_x=0.5,xaxis_title="Height (cm)", yaxis_title="Width (cm)",paper_bgcolor="rgba(0,0,0,0)")
-
-## choropleth showing ducks purchased by geolocation
-
-# states_geojson = requests.get(
-#     "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_1_states_provinces_lines.geojson").json()
