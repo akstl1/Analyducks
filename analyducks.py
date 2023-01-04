@@ -58,38 +58,76 @@ weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 ## bar plot showing ducks bought by purchaser
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
-owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", title_x=0.5,xaxis_title="Purchaser", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
+owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", 
+                        title_x=0.5,
+                        xaxis_title="Purchaser", 
+                        yaxis_title="Quantity",
+                        paper_bgcolor="rgba(0,0,0,0)"
+                        )
 
 ## pie chart showing purchase method of ducks
 
 purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method')
-purchase_fig.update_layout(title_text="Purchase Method Distribution",title_x=0.5,paper_bgcolor="rgba(0,0,0,0)")
+purchase_fig.update_layout(title_text="Purchase Method Distribution",
+                           title_x=0.5,
+                           paper_bgcolor="rgba(0,0,0,0)"
+                           )
 
 ## 3d scatter of length, height, width
 
-three_d_fig = px.scatter_3d(df, x='Length', y='Width', z="Height",size='Avg_Weight',color='Avg_Weight',labels={'Avg_Weight':'Avg. Weight'})
-three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",title_x=0.5,paper_bgcolor="rgba(0,0,0,0)")
+three_d_fig = px.scatter_3d(df, x='Length', 
+                            y='Width', 
+                            z="Height",
+                            size='Avg_Weight',
+                            color='Avg_Weight',
+                            labels={'Avg_Weight':'Avg. Weight'}
+                            )
+
+three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",
+                          title_x=0.5,
+                          paper_bgcolor="rgba(0,0,0,0)"
+                          )
 
 
 ## bar plot showing weight of ducks bought each year
 
 weight_bar = px.bar(weight_df,x="Year", y="Total_Weight")
-weight_bar.update_layout(title_text="Weight (g) of Annual Purchases", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases",
+                         title_x=0.5,
+                         xaxis_title="Purchase Year",
+                         yaxis_title="Weight (g)",
+                         paper_bgcolor="rgba(0,0,0,0)"
+                         )
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
 weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
-weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Cumulative Weight (g)",paper_bgcolor="rgba(0,0,0,0)")
+weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
+                                    title_x=0.5,
+                                    xaxis_title="Purchase Year", 
+                                    yaxis_title="Cumulative Weight (g)",
+                                    paper_bgcolor="rgba(0,0,0,0)"
+                                    )
 
 ## bar plot showing number of ducks bought per year 
 
 year_bar = px.bar(yearly_df,x="Year", y="Quantity")
-year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
+year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", 
+                       title_x=0.5,
+                       xaxis_title="Purchase Year",
+                       yaxis_title="Quantity",
+                       paper_bgcolor="rgba(0,0,0,0)"
+                       )
 
 ## bar plot showing number of ducks bought per year, cumulative
 
 year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
-year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned", title_x=0.5,xaxis_title="Purchase Year", yaxis_title="Quantity",paper_bgcolor="rgba(0,0,0,0)")
+year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
+                                  title_x=0.5,
+                                  xaxis_title="Purchase Year", 
+                                  yaxis_title="Quantity",
+                                  paper_bgcolor="rgba(0,0,0,0)"
+                                  )
 
 map_fig = px.scatter_geo(df,
         lon = 'Longitude',
@@ -216,7 +254,7 @@ app.layout = html.Div([
     html.Div(dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
-                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","Fun Fact","Total_Weight","Height","Width","Length"]].columns],
+                columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me/Fun Fact","Total_Weight","Height","Width","Length"]].columns],
                 fixed_rows={'headers': True, 'data': 0 },
                 style_cell={'textAlign': 'left'},
                 style_header={
