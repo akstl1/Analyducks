@@ -1,1 +1,1 @@
-web: gunicorn pokedex:server
+web: gunicorn analyducks:server
