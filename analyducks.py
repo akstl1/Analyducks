@@ -230,7 +230,9 @@ app.layout = html.Div([
                 ]
         ),className='kpi')
     ],className='kpi-container'),
+    # html.Div([html.H3("General Statistics")], className='title1'),
     html.Div([
+              html.H3("General Statistics",className='title1'),
               dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1'),
               dcc.Graph(id='3d-scatter',figure=three_d_fig,className='graph1'),
               dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1')

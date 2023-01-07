@@ -59,3 +59,10 @@ DataTable {
     width: 47%;
     display: inline-block;
 }
+
+.title1 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    padding-top: 10px;
+}
