@@ -87,6 +87,15 @@ three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)
                           title_x=0.5,
                           paper_bgcolor="rgba(0,0,0,0)"
                           )
+camera = dict(
+    eye=dict(x=0, y=2, z=1),
+    # up=dict(x=1, y=1, z=0),
+)
+
+# camera = dict(
+#     center=dict(x=0, y=0, z=0))
+
+three_d_fig.update_layout(scene_camera=camera)
 
 
 ## bar plot showing weight of ducks bought each year
@@ -232,22 +241,29 @@ app.layout = html.Div([
     ],className='kpi-container'),
     # html.Div([html.H3("General Statistics")], className='title1'),
     html.Div([
-              html.H3("General Statistics",className='title1'),
+              html.H4("General Data",className='title1'),
               dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1'),
               dcc.Graph(id='3d-scatter',figure=three_d_fig,className='graph1'),
               dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1')
             ],className="graph-container"),
     html.Div([
-              dcc.Graph(id='year-bar',figure=year_bar,className='graph2'), 
-              dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph2'),
-              dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2'),
-              dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')
-            ],className="graph-container2"),
+              html.Div([
+                        html.H4("Purchase Year Data",className='title1'),
+                        dcc.Graph(id='year-bar',figure=year_bar,className='graph2'), 
+                        dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph2')
+                        ],className="split-container-left"),
+              html.Div([
+                        html.H4("Collection Weight Data",className='title1'),
+                        dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2'),
+                        dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')],className="split-container-right")
+                        ]),
     html.Div([
+                html.Div([html.H4("Geographic Purchase Visualization")],className="title1"),
                 dcc.Graph(id='state-map',figure=state_fig,className="map"),
                 dcc.Graph(id='country-map',figure=country_fig,className="map")
             ]),
-    html.Div(dash_table.DataTable(
+    html.Div(
+             dash_table.DataTable(
                 id="table",
                 data=df.to_dict('records'),
                 columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me","Total_Weight","Height","Width","Length"]].columns],

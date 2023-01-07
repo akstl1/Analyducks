@@ -4,14 +4,8 @@
 }
 
 .graph2 {
-    width: 25%;
+    width: 50%;
     display: inline-block;
-    /* border-bottom: 2px solid; */
-    /* background-size: 20px; */
-    /* border-image: url('ducks/png/duck2.png') 28 / 28px / 0 round;
-    border-width: 5px;
-    border-style: solid;
-    border-image-repeat: stretch; */
 }
 
 .graph-container {
@@ -20,6 +14,10 @@
 
 .graph-container2 {
     background-color: #f0e246;
+}
+
+.graph-container3 {
+    background-color: #ebdf63;
 }
 
 
@@ -65,4 +63,19 @@ DataTable {
     text-decoration: underline;
     font-weight: bold;
     padding-top: 10px;
+}
+
+.split-container-left {
+    display: inline-block;
+    width: 50%;
+    background-color: #f0e246;
+
+
+}
+
+.split-container-right {
+    display: inline-block;
+    width: 50%;
+    background-color: #f0ed69;
+
 }
