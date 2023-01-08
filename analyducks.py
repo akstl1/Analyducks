@@ -14,6 +14,7 @@ from dash import dash_table, dcc, html
 from dash.dependencies import Input, Output, State
 from PIL import Image
 import dash_bootstrap_components as dbc
+# from whitenoise import WhiteNoise
 
 ## start up the app, and provide title and bootstrap ref
 app = dash.Dash(
@@ -21,6 +22,8 @@ app = dash.Dash(
 )
 app.title="Analyducks"
 server=app.server
+# server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
+
 
 ## -------------------------------------------------------------------------------------------------
 # data load
