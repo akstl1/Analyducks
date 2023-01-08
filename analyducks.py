@@ -3,7 +3,7 @@
 import datetime as dt
 from datetime import date
 import os
-import requests
+# import requests
 
 import dash
 import numpy as np
