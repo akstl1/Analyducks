@@ -204,7 +204,13 @@ app.layout = html.Div([
         html.H1("Analyducks"),
         html.H4("A visual analysis of Allan K's rubber duck collection"),
         html.A("Click here to view my portfolio",href= "https://akstl1.github.io/")
-    ],className="title"),
+    ],className="title",
+    style={
+        'text-align': 'center',
+        'background-color': 'skyblue',
+        'padding-bottom': '5px'
+    }
+    ),
     html.Div([
         dbc.Card(
             dbc.CardBody(
@@ -212,62 +218,164 @@ app.layout = html.Div([
                     html.H2(total_ducks, className="card-title"),
                     html.H6("Total Ducks Owned", className="card-subtitle"),
                 ]
-        ),className='kpi'),
+        ),
+        # className='kpi',
+        style={
+            'display': 'inline-block',
+            'width': '18%',
+            'margin-left':'1%',
+            'margin-right': '1%',
+            'text-align': 'center'
+        }
+        ),
         dbc.Card(
             dbc.CardBody(
                 [
                     html.H2(ducks_bought_last_year, className="card-title"),
                     html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
                 ]
-        ),className='kpi'),
+        ),
+        # className='kpi',
+        style={
+            'display': 'inline-block',
+            'width': '18%',
+            'margin-left':'1%',
+            'margin-right': '1%',
+            'text-align': 'center'
+        }
+        ),
         dbc.Card(
             dbc.CardBody(
                 [
                     html.H2(duck_weight, className="card-title"),
                     html.H6("Duck Collection Weight (g)", className="card-subtitle"),
                 ]
-        ),className='kpi'),
+        ),
+        # className='kpi',
+        style={
+            'display': 'inline-block',
+            'width': '18%',
+            'margin-left':'1%',
+            'margin-right': '1%',
+            'text-align': 'center'
+        }
+        ),
         dbc.Card(
             dbc.CardBody(
                 [
                     html.H2(unique_countries, className="card-title"),
                     html.H6("Unique Countries of Purchase", className="card-subtitle"),
                 ]
-        ),className='kpi'),
+        ),
+        # className='kpi',
+        style={
+            'display': 'inline-block',
+            'width': '18%',
+            'margin-left':'1%',
+            'margin-right': '1%',
+            'text-align': 'center'
+        }
+        ),
         dbc.Card(
             dbc.CardBody(
                 [
                     html.H2(unique_cities, className="card-title"),
                     html.H6("Unique Cities of Purchase", className="card-subtitle"),
                 ]
-        ),className='kpi')
-    ],className='kpi-container'),
+        ),
+        # className='kpi',
+        style={
+            'display': 'inline-block',
+            'width': '18%',
+            'margin-left':'1%',
+            'margin-right': '1%',
+            'text-align': 'center'
+        }
+        )
+    ],
+    # className='kpi-container',
+    style={
+    'float': 'center',
+    'padding-top': '15px',
+    'padding-bottom': '15px',
+    'background-color': 'lightgray',
+    'border-top': '3px solid black'
+    }
+    ),
     # html.Div([html.H3("General Statistics")], className='title1'),
     html.Div([
-              html.H4("General Data",className='title1'),
-              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1'),
-              dcc.Graph(id='3d-scatter',figure=three_d_fig,className='graph1'),
-              dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1')
-            ],className="graph-container"),
+              html.H4("General Data",
+                        # className='title1',
+                        style={
+                            'text-align': 'center',
+                            'text-decoration': 'underline',
+                            'font-weight': 'bold',
+                            'padding-top': '10px'
+                        }),
+              dcc.Graph(id='owner-bar',figure=owner_bar,className='graph1',style={'width': '33%', 'display': 'inline-block'}),
+              dcc.Graph(id='3d-scatter',figure=three_d_fig,className='graph1',style={'width': '33%', 'display': 'inline-block'}),
+              dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1',style={'width': '33%', 'display': 'inline-block'})
+            ],
+                # className="graph-container",
+                style={'background-color': '#ebcc34'}),
     html.Div([
               html.Div([
-                        html.H4("Purchase Year Data",className='title1'),
-                        dcc.Graph(id='year-bar',figure=year_bar,className='graph2'), 
-                        dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph2')
-                        ],className="split-container-left"),
+                        html.H4("Purchase Year Data",
+                        # className='title1',
+                        style={
+                            'text-align': 'center',
+                            'text-decoration': 'underline',
+                            'font-weight': 'bold',
+                            'padding-top': '10px'
+                        }
+                        ),
+                        dcc.Graph(id='year-bar',figure=year_bar,className='graph2', style={'width': '50%','display': 'inline-block'}), 
+                        dcc.Graph(id='year-bar-cumulative',figure=year_bar_cumulative,className='graph2', style={'width': '50%','display': 'inline-block'})
+                        ],
+                        # className="split-container-left",
+                        style={
+                                        'display': 'inline-block',
+                                        'width': '50%',
+                                        'background-color': '#f0e246'
+                                    }
+                        ),
               html.Div([
-                        html.H4("Collection Weight Data",className='title1'),
-                        dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2'),
-                        dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2')],className="split-container-right")
+                        html.H4("Collection Weight Data",
+                            # className='title1',
+                            style={
+                            'text-align': 'center',
+                            'text-decoration': 'underline',
+                            'font-weight': 'bold',
+                            'padding-top': '10px'
+                        }
+                            ),
+                        dcc.Graph(id='weight-bar',figure=weight_bar,className='graph2', style={'width': '50%','display': 'inline-block'}),
+                        dcc.Graph(id='weight-bar-cumulative',figure=weight_bar_cumulative,className='graph2', style={'width': '50%','display': 'inline-block'})],
+                                    # className="split-container-right",
+                                    style={
+                                        'display': 'inline-block',
+                                        'width': '50%',
+                                        'background-color': '#f0ed69'
+                                    }
+                                    )
                         ]),
     html.Div([
-                html.Div([html.H4("Geographic Purchase Visualization")],className="title1"),
-                dcc.Graph(id='state-map',figure=state_fig,className="map"),
-                dcc.Graph(id='country-map',figure=country_fig,className="map")
+                html.Div([html.H4("Geographic Purchase Visualization")],
+                            className="title1",
+                            style={
+                            'text-align': 'center',
+                            'text-decoration': 'underline',
+                            'font-weight': 'bold',
+                            'padding-top': '10px'
+                        }
+                            ),
+                dcc.Graph(id='state-map',figure=state_fig,className="map", style={'width': '47%', 'display': 'inline-block'}),
+                dcc.Graph(id='country-map',figure=country_fig,className="map", style={'width': '47%', 'display': 'inline-block'})
             ]),
     html.Div(
              dash_table.DataTable(
-                id="table",
+                # id="table",
+                # style={'align-content': 'center', 'text-align': 'center'},
                 data=df.to_dict('records'),
                 columns=[{"name": i, "id": i} for i in df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me","Total_Weight","Height","Width","Length"]].columns],
                 fixed_rows={'headers': True, 'data': 0 },
@@ -275,7 +383,9 @@ app.layout = html.Div([
                 style_header={
                     'backgroundColor': 'rgb(210, 210, 210)',
                     'color': 'black',
-                    'fontWeight': 'bold'
+                    'fontWeight': 'bold',
+                    'align-content': 'center', 
+                    'text-align': 'center'
                     },
                 style_data={
                     'whiteSpace': 'normal',
@@ -284,7 +394,9 @@ app.layout = html.Div([
                     'width': '120px',
                     'lineHeight': '20px',
                     'color': 'black',
-                    'backgroundColor': 'white'
+                    'backgroundColor': 'white',
+                    'align-content': 'center',
+                    'text-align': 'center'
                     },
                 style_data_conditional=[{
                     'if': {'row_index': 'odd'},
