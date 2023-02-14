@@ -203,7 +203,7 @@ app.layout = html.Div([
     html.Div([
         html.H1("Analyducks"),
         html.H4("A visual analysis of Allan K's rubber duck collection"),
-        html.A("Click here to view my portfolio",href= "https://akstl1.github.io/")
+        html.A("Click here to view my portfolio",href= "https://akstl1.github.io/"),
     ],className="title",
     style={
         'text-align': 'center',
@@ -372,6 +372,14 @@ app.layout = html.Div([
                 dcc.Graph(id='state-map',figure=state_fig,className="map", style={'width': '47%', 'display': 'inline-block'}),
                 dcc.Graph(id='country-map',figure=country_fig,className="map", style={'width': '47%', 'display': 'inline-block'})
             ]),
+    html.Div([
+        html.Img(src=r'assets/DuckFamily.jpg',width="60%")
+    ],style={
+                                        'background-color': 'lightgray',
+                                        'text-align':'center'
+                                    }
+    ),
+    html.Br(),
     html.Div(
              dash_table.DataTable(
                 # id="table",
