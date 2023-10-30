@@ -373,7 +373,7 @@ app.layout = html.Div([
                 dcc.Graph(id='country-map',figure=country_fig,className="map", style={'width': '47%', 'display': 'inline-block'})
             ]),
     html.Div([
-        html.Img(src=r'assets/DuckFamily.jpg',width="60%")
+        html.Img(src=r'/img/DuckFamily.jpg',width="60%")
     ],style={
                                         'background-color': 'lightgray',
                                         'text-align':'center'
