@@ -3,6 +3,9 @@ import streamlit as st
 import pandas as pd
 import joblib
 import altair as alt
+import plotly.figure_factory as ff
+import plotly.express as px
+import plotly.graph_objs as go
 
 import datetime as dt
 from datetime import date
@@ -49,6 +52,17 @@ st.write(alt.Chart(buyer_df).mark_bar().encode(
     x=alt.X('Buyer').sort("-y"),
     y=alt.Y('Quantity'),
 ))
+
+
+owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
+owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", 
+                        title_x=0.3,
+                        xaxis_title="Purchaser", 
+                        yaxis_title="Quantity",
+                        paper_bgcolor="rgba(0,0,0,0)"
+                        )
+
+st.plotly_chart(owner_bar, use_container_width=True)
 
 
 
