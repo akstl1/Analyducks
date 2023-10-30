@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import altair as alt
 
 import datetime as dt
 from datetime import date
@@ -30,7 +31,7 @@ county_df = df.groupby(["ISO_Code","Purchase_Country"]).agg({"Quantity":"sum"}).
 purchase_method_df = df.groupby(["Purchase_Method"]).agg({"Quantity":"sum"}).reset_index()
 
 buyer_df = df.groupby(["Buyer"]).agg({"Quantity":"sum"}).reset_index()
-
+buyer_df = buyer_df.sort_values(by=['Quantity'],ascending=True)
 yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
 
 weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
@@ -43,8 +44,11 @@ st.title("Analyducks")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
 
-st.write(df)
-# st.bar_chart(buyer_df,"Buyer", "Quantity")
+
+st.write(alt.Chart(buyer_df).mark_bar().encode(
+    x=alt.X('Buyer').sort("-y"),
+    y=alt.Y('Quantity'),
+))
 
 
 
