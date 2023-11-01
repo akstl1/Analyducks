@@ -59,7 +59,7 @@ owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser",
                         title_x=0.3,
                         xaxis_title="Purchaser", 
                         yaxis_title="Quantity",
-                        paper_bgcolor="rgba(0,0,0,0)"
+                        paper_bgcolor="rgba(0,0,0,0)",
                         )
 
 st.plotly_chart(owner_bar, use_container_width=True)
