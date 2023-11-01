@@ -102,3 +102,99 @@ three_d_fig.update_layout(scene_camera=camera)
 
 st.plotly_chart(three_d_fig, use_container_width=True)
 
+## bar plot showing weight of ducks bought each year, cumulative
+
+# weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
+# weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
+#                                     title_x=0.5,
+#                                     xaxis_title="Purchase Year", 
+#                                     yaxis_title="Cumulative Weight (g)",
+#                                     paper_bgcolor="rgba(0,0,0,0)"
+#                                     )
+
+## bar plot showing number of ducks bought per year 
+
+year_bar = px.bar(yearly_df,x="Year", y="Quantity")
+year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", 
+                       title_x=0.5,
+                       xaxis_title="Purchase Year",
+                       yaxis_title="Quantity",
+                       paper_bgcolor="rgba(0,0,0,0)"
+                       )
+
+st.plotly_chart(year_bar, use_container_width=True)
+
+## bar plot showing number of ducks bought per year, cumulative
+
+# year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
+# year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
+#                                   title_x=0.5,
+#                                   xaxis_title="Purchase Year", 
+#                                   yaxis_title="Quantity",
+#                                   paper_bgcolor="rgba(0,0,0,0)"
+#                                   )
+
+# st.plotly_chart(year_bar_cumulative, use_container_width=True)
+
+map_fig = px.scatter_geo(df,
+        lon = 'Longitude',
+        lat = 'Latitude',
+        hover_name="Name"      
+        )
+
+map_fig.update_traces(marker=dict(color="Red"))
+
+# st.plotly_chart(map_fig, use_container_width=True)
+
+## choropleth showing duck purchase by country
+
+country_fig = px.choropleth(county_df, locations="ISO_Code",
+                    color="Quantity", 
+                    hover_name="Purchase_Country"
+                    # color_continuous_scale="YlGn"
+                    )
+country_fig.add_trace(map_fig.data[0])
+
+country_fig.update_geos(
+    visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
+)
+country_fig.update_geos(projection_type="natural earth")
+country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,width=1000)
+
+st.plotly_chart(country_fig, use_container_width=True)
+
+## choropleth showing duck purchase by US state
+
+state_fig = px.choropleth(state_df,locations="Purchase_State", 
+                          locationmode="USA-states", 
+                          color="Quantity", 
+                          scope="usa"
+                        #   color_continuous_scale="YlGn"
+                          )
+state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
+state_fig.add_trace(map_fig.data[0])
+
+st.plotly_chart(state_fig, use_container_width=True)
+
+## calcs for KPI cards
+
+# weight KPI
+# duck_weight = df["Total_Weight"].sum()
+
+# total ducks bought KPI
+# total_ducks = df["Quantity"].sum()
+
+# unique purchase countries KPI
+# unique_countries = df.Purchase_Country.nunique()
+
+# unique purchase cities KPI
+# unique_cities = df.Purchase_City.nunique()
+
+# ducks bought within last year KPI
+# today = date.today()
+# today_yr = today.year
+# today_day = today.day
+# today_month = today.month
+# ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
+
+
