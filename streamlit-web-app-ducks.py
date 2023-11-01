@@ -39,7 +39,7 @@ yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
 
 weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
 
-weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
+# weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 
 ## insert a title for the app and instructions
 
