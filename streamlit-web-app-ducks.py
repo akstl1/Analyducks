@@ -45,7 +45,9 @@ weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
 
 st.title("Analyducks")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
-st.subheader("A visual analysis of Allan K's rubber duck collection")
+st.write("[Click here to view my portfolio](https://akstl1.github.io/)")
+# st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
+
 
 
 # st.write(alt.Chart(buyer_df).mark_bar().encode(
