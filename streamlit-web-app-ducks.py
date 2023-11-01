@@ -18,8 +18,8 @@ df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
 
 
 ## convert date bought col to date, and extract year into a column
-df['Date_Bought'] = pd.to_datetime(df['Date_Bought']).dt.date
-df['Year'] = pd.to_datetime(df['Date_Bought']).dt.year
+df['Date_Bought'] = pd.to_datetime(df['Date_Bought'],format='%Y%m%d')
+df['Year'] = pd.to_datetime(df['Date_Bought'],format='%Y')
 df = df.sort_values(by=['Date_Bought'], ascending=True)
 
 ## find avg weight measure, needed for rows where more than 1 duck is included in the total weight
