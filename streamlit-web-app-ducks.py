@@ -64,5 +64,39 @@ owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser",
 
 st.plotly_chart(owner_bar, use_container_width=True)
 
+## pie chart showing purchase method of ducks
 
+purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method')
+purchase_fig.update_layout(title_text="Purchase Method Distribution",
+                           title_x=0.5,
+                           paper_bgcolor="rgba(0,0,0,0)"
+                           )
+
+st.plotly_chart(purchase_fig, use_container_width=True)
+
+## 3d scatter of length, height, width
+
+three_d_fig = px.scatter_3d(df, x='Length', 
+                            y='Width', 
+                            z="Height",
+                            size='Avg_Weight',
+                            color='Avg_Weight',
+                            labels={'Avg_Weight':'Avg. Weight'}
+                            )
+
+three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",
+                          title_x=0.5,
+                          paper_bgcolor="rgba(0,0,0,0)"
+                          )
+camera = dict(
+    eye=dict(x=0, y=2, z=1),
+    # up=dict(x=1, y=1, z=0),
+)
+
+# camera = dict(
+#     center=dict(x=0, y=0, z=0))
+
+three_d_fig.update_layout(scene_camera=camera)
+
+st.plotly_chart(three_d_fig, use_container_width=True)
 
