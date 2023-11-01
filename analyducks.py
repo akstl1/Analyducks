@@ -12,7 +12,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 from dash import dash_table, dcc, html
 from dash.dependencies import Input, Output, State
-from PIL import Image
+# from PIL import Image
 import dash_bootstrap_components as dbc
 # from whitenoise import WhiteNoise
 
