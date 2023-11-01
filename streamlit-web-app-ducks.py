@@ -48,10 +48,10 @@ st.subheader("A visual analysis of Allan K's rubber duck collection")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
 
 
-st.write(alt.Chart(buyer_df).mark_bar().encode(
-    x=alt.X('Buyer').sort("-y"),
-    y=alt.Y('Quantity'),
-))
+# st.write(alt.Chart(buyer_df).mark_bar().encode(
+#     x=alt.X('Buyer').sort("-y"),
+#     y=alt.Y('Quantity'),
+# ))
 
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
