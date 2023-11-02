@@ -43,12 +43,10 @@ weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
 # weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 
 ## insert a title for the app and instructions
-
+st.set_page_config(page_title="Analyducks", layout="wide")
 st.title("Analyducks")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
 st.write("[Click here to view my portfolio](https://akstl1.github.io/)")
-# st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
-
 
 
 # st.write(alt.Chart(buyer_df).mark_bar().encode(
@@ -205,16 +203,16 @@ st.plotly_chart(state_fig, use_container_width=True)
 # )
 
 
-cols = st.columns(3,gap="small")
+# cols = st.columns(3,gap="small")
 
-for i, x in enumerate(cols):
-    x.selectbox(f"Input # {i}",[1,2,3], key=i)
+# for i, x in enumerate(cols):
+#     x.selectbox(f"Input # {i}",[1,2,3], key=i)
  
     
 names = [i for i in df['Name']]   
 desc = [i for i in df['About Me']]     
 ducks = len(df['Quantity'])
-n_cols=3
+n_cols=5
 n_rows=int(1+ducks//n_cols)
 rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
 cols = [column for row in rows for column in row]
