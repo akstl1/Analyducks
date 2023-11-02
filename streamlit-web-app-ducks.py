@@ -87,7 +87,7 @@ owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser",
                         paper_bgcolor="rgba(0,0,0,0)",
                         )
 
-st.plotly_chart(owner_bar, use_container_width=True)
+# st.plotly_chart(owner_bar, use_container_width=True)
 
 ## pie chart showing purchase method of ducks
 
@@ -97,7 +97,7 @@ purchase_fig.update_layout(title_text="Purchase Method Distribution",
                            paper_bgcolor="rgba(0,0,0,0)"
                            )
 
-st.plotly_chart(purchase_fig, use_container_width=True)
+# st.plotly_chart(purchase_fig, use_container_width=True)
 
 ## 3d scatter of length, height, width
 
@@ -123,7 +123,10 @@ camera = dict(
 
 three_d_fig.update_layout(scene_camera=camera)
 
-st.plotly_chart(three_d_fig, use_container_width=True)
+gen1,gen2,gen3 = st.columns(3)
+gen1.plotly_chart(purchase_fig, use_container_width=True)
+gen2.plotly_chart(owner_bar, use_container_width=True)
+gen3.plotly_chart(three_d_fig, use_container_width=True)
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
