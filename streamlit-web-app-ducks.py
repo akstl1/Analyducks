@@ -1,15 +1,15 @@
 # Improt libraries
 import streamlit as st
 import pandas as pd
-import joblib
-import altair as alt
-import plotly.figure_factory as ff
+# import joblib
+# import altair as alt
+# import plotly.figure_factory as ff
 import plotly.express as px
-import plotly.graph_objs as go
+# import plotly.graph_objs as go
 
 import datetime as dt
 from datetime import date
-import os
+# import os
 
 import numpy as np
 
@@ -48,6 +48,35 @@ st.set_page_config(page_title="Analyducks", layout="wide")
 st.title("Analyducks")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
 st.write("[Click here to view my portfolio](https://akstl1.github.io/)")
+
+
+## calcs for KPI cards
+
+# weight KPI
+duck_weight = df["Total_Weight"].sum()
+
+# total ducks bought KPI
+total_ducks = df["Quantity"].sum()
+
+# unique purchase countries KPI
+unique_countries = df.Purchase_Country.nunique()
+
+# unique purchase cities KPI
+unique_cities = df.Purchase_City.nunique()
+
+# ducks bought within last year KPI
+today = date.today()
+today_yr = today.year
+today_day = today.day
+today_month = today.month
+ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
+
+col1, col2, col3, col4, col5 = st.columns(5)
+col1.metric("Weight",total_ducks)
+col2.metric("Total Bought",duck_weight)
+col3.metric("Weight",unique_countries)
+col4.metric("Weight",unique_cities)
+col5.metric("Weight",ducks_bought_last_year)
 
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
@@ -243,26 +272,16 @@ for col,i,d in zip(cols,names,desc):
     #         }
     #     )
 
-    
-## calcs for KPI cards
+css='''
+<style>
+    section.main>div {
+        padding-bottom: 1rem;
+    }
+    [data-testid="column"]>div>div>div>div>div {
+        overflow: auto;
+        height: 70vh;
+    }
+</style>
+'''
 
-# weight KPI
-# duck_weight = df["Total_Weight"].sum()
-
-# total ducks bought KPI
-# total_ducks = df["Quantity"].sum()
-
-# unique purchase countries KPI
-# unique_countries = df.Purchase_Country.nunique()
-
-# unique purchase cities KPI
-# unique_cities = df.Purchase_City.nunique()
-
-# ducks bought within last year KPI
-# today = date.today()
-# today_yr = today.year
-# today_day = today.day
-# today_month = today.month
-# ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
-
-
+st.markdown(css, unsafe_allow_html=True)
