@@ -19,8 +19,9 @@ import numpy as np
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
 
 ## convert date bought col to date, and extract year into a column
-df['Date_Bought'] = pd.to_datetime(df['Date_Bought'],format='%Y%m%d')
-df['Year'] = pd.to_datetime(df['Date_Bought'],format='%Y')
+df['Date_Bought'] = pd.to_datetime(df['Date_Bought'],format='%m/%d/%Y').dt.date
+# df['Year'] = pd.to_datetime(df['Date_Bought'],format='%Y')
+df['Year'] = pd.DatetimeIndex(df['Date_Bought']).year
 df = df.sort_values(by=['Date_Bought'], ascending=True)
 
 ## find avg weight measure, needed for rows where more than 1 duck is included in the total weight
@@ -40,19 +41,13 @@ yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
 
 weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
 
-# weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
+weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 
 ## insert a title for the app and instructions
 st.set_page_config(page_title="Analyducks", layout="wide")
 st.title("Analyducks")
 st.subheader("A visual analysis of Allan K's rubber duck collection")
 st.write("[Click here to view my portfolio](https://akstl1.github.io/)")
-
-
-# st.write(alt.Chart(buyer_df).mark_bar().encode(
-#     x=alt.X('Buyer').sort("-y"),
-#     y=alt.Y('Quantity'),
-# ))
 
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
@@ -103,13 +98,15 @@ st.plotly_chart(three_d_fig, use_container_width=True)
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
-# weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
-# weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
-#                                     title_x=0.5,
-#                                     xaxis_title="Purchase Year", 
-#                                     yaxis_title="Cumulative Weight (g)",
-#                                     paper_bgcolor="rgba(0,0,0,0)"
-#                                     )
+weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
+weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
+                                    title_x=0.5,
+                                    xaxis_title="Purchase Year", 
+                                    yaxis_title="Cumulative Weight (g)",
+                                    paper_bgcolor="rgba(0,0,0,0)"
+                                    )
+
+st.plotly_chart(weight_bar_cumulative, use_container_width=True)
 
 ## bar plot showing number of ducks bought per year 
 
@@ -125,13 +122,15 @@ st.plotly_chart(year_bar, use_container_width=True)
 
 ## bar plot showing number of ducks bought per year, cumulative
 
-# year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
-# year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
-#                                   title_x=0.5,
-#                                   xaxis_title="Purchase Year", 
-#                                   yaxis_title="Quantity",
-#                                   paper_bgcolor="rgba(0,0,0,0)"
-#                                   )
+year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
+year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
+                                  title_x=0.5,
+                                  xaxis_title="Purchase Year", 
+                                  yaxis_title="Quantity",
+                                  paper_bgcolor="rgba(0,0,0,0)"
+                                  )
+
+st.plotly_chart(year_bar_cumulative, use_container_width=True)
 
 # st.plotly_chart(year_bar_cumulative, use_container_width=True)
 
@@ -175,7 +174,7 @@ state_fig.add_trace(map_fig.data[0])
 
 st.plotly_chart(state_fig, use_container_width=True)
 
-
+st.write(df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me","Total_Weight","Height","Width","Length"]])
 
 # hasClicked = card(
 #   title="Hello World!",
