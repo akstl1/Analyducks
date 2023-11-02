@@ -218,7 +218,7 @@ rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
 cols = [column for row in rows for column in row]
 st.write(n_rows)
 for col,i,d in zip(cols,names,desc):
-    col.image("./img/"+img_nm)
+    col.image("./img/DuckFamily.jpg")
     col.subheader(i)
     col.write(d)
     # with col:
