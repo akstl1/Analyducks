@@ -12,12 +12,11 @@ from datetime import date
 import os
 
 import numpy as np
-# from streamlit_card import card
 
+# from streamlit_card import card
 
 ## read in excel dataset
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
-
 
 ## convert date bought col to date, and extract year into a column
 df['Date_Bought'] = pd.to_datetime(df['Date_Bought'],format='%Y%m%d')
