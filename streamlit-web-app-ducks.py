@@ -12,7 +12,7 @@ from datetime import date
 import os
 
 import numpy as np
-from streamlit_card import card
+# from streamlit_card import card
 
 
 ## read in excel dataset
