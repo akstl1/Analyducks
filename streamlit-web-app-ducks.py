@@ -12,6 +12,8 @@ from datetime import date
 import os
 
 import numpy as np
+from streamlit_card import card
+
 
 ## read in excel dataset
 df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
@@ -176,6 +178,76 @@ state_fig.add_trace(map_fig.data[0])
 
 st.plotly_chart(state_fig, use_container_width=True)
 
+
+
+# hasClicked = card(
+#   title="Hello World!",
+#   text="Some description",
+#   image="http://placekitten.com/200/300",
+#   url="https://github.com/gamcoh/st-card"
+# )
+
+
+# res = card(
+#     title="Streamlit Card",
+#     text="This is a test card",
+#     image="https://placekitten.com/500/500",
+#     styles={
+#         "card": {
+#             "width": "30%",
+#             "height": "500px",
+#             "border-radius": "60px",
+#             "box-shadow": "0 0 10px rgba(0,0,0,0.5)"
+#         },
+#         "text": {
+#             "font-family": "serif"
+#         }
+#     }
+# )
+
+
+# cols = st.columns(3,gap="small")
+
+# for i, x in enumerate(cols):
+#     x.selectbox(f"Input # {i}",[1,2,3], key=i)
+ 
+    
+names = [i for i in df['Name']]   
+desc = [i for i in df['About Me']]     
+ducks = len(df['Quantity'])
+n_cols=3
+n_rows=int(1+ducks//n_cols)
+rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
+cols = [column for row in rows for column in row]
+st.write(n_rows)
+for col,i,d in zip(cols,names,desc):
+    col.image("https://placekitten.com/500/500")
+    col.subheader(i)
+    col.write(d)
+    # with col:
+    #     res=card(
+    #         title=i,
+    #         text=d,
+    #         image="https://placekitten.com/500/500",
+    #         on_click=lambda: print("Clicked!"),
+    #         styles={
+    #             "card": {
+    #                 "width": "100%",
+    #                 "height": "200px",
+    #                 "border-radius": "2px",
+    #                 "padding": "5px",
+    #                 "box-shadow": "0 0 10px rgba(0,0,0,0.5)"
+    #             },
+    #             "text": {
+    #                 "font-family": "serif"
+    #             },
+    #             "title": {
+    #                 "font-size":"10px"
+    #                 }
+    #         }
+    #     )
+
+    
 ## calcs for KPI cards
 
 # weight KPI
