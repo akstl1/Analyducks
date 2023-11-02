@@ -205,10 +205,10 @@ st.plotly_chart(state_fig, use_container_width=True)
 # )
 
 
-# cols = st.columns(3,gap="small")
+cols = st.columns(3,gap="small")
 
-# for i, x in enumerate(cols):
-#     x.selectbox(f"Input # {i}",[1,2,3], key=i)
+for i, x in enumerate(cols):
+    x.selectbox(f"Input # {i}",[1,2,3], key=i)
  
     
 names = [i for i in df['Name']]   
