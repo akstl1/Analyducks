@@ -208,7 +208,7 @@ st.plotly_chart(state_fig, use_container_width=True)
 # for i, x in enumerate(cols):
 #     x.selectbox(f"Input # {i}",[1,2,3], key=i)
  
-    
+img_nm = "DuckFamily.jpg"    
 names = [i for i in df['Name']]   
 desc = [i for i in df['About Me']]     
 ducks = len(df['Quantity'])
@@ -218,7 +218,7 @@ rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
 cols = [column for row in rows for column in row]
 st.write(n_rows)
 for col,i,d in zip(cols,names,desc):
-    col.image("https://placekitten.com/500/500")
+    col.image("./img/"+img_nm)
     col.subheader(i)
     col.write(d)
     # with col:
