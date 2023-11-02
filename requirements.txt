@@ -14,4 +14,4 @@ dash-table==5.0.0
 DateTime==4.4
 openpyxl==3.0.10
 altair==5.0.0
-streamlit_card==0.0.61
+streamlit-card==0.0.61
