@@ -315,16 +315,3 @@ for col,i,d in zip(cols,names,desc):
     #         }
     #     )
 
-css='''
-<style>
-    section.main>div {
-        padding-bottom: 1rem;
-    }
-    [data-testid="column"]>div>div>div>div>div {
-        overflow: auto;
-        height: 70vh;
-    }
-</style>
-'''
-
-st.markdown(css, unsafe_allow_html=True)
