@@ -12,6 +12,8 @@ from datetime import date
 # import os
 
 import numpy as np
+import dash_bootstrap_components as dbc
+
 
 # from streamlit_card import card
 
@@ -82,6 +84,47 @@ col3.metric("Duck Collection Weight (g)",duck_weight)
 col4.metric("Unique Countries of Purchase",unique_countries)
 col5.metric("Unique Cities of Purchase",unique_cities)
 
+css='''
+[data-testid="stMetric"] {
+    color: #212529;
+    background-color: #f8f9fa;
+    width: 75%;
+    margin: auto;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem
+}
+
+[data-testid="stMetric"] > div {
+    color: #212529;
+    background-color: #f8f9fa;
+    width: fit-content;
+    margin: auto;
+}
+
+
+[data-testid="stMetric"] label {
+    color: #212529;
+    background-color: #f8f9fa;
+    width: fit-content;
+    margin: auto;
+}
+'''
+
+st.markdown(f'<style>{css}</style>',unsafe_allow_html=True)
+# st.markdown('''
+# <style>
+# /*center metric label*/
+# [data-testid="stMetricLabel"] > div:nth-child(1) {
+#     justify-content: center;
+# }
+
+# /*center metric value*/
+# [data-testid="stMetricValue"] > div:nth-child(1) {
+#     justify-content: center;
+# }
+# </style>
+# ''', unsafe_allow_html=True)
+
 ###################### General Data graphs ##############################
 
 
@@ -99,7 +142,7 @@ owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser",
 
 purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method')
 purchase_fig.update_layout(title_text="Purchase Method Distribution",
-                           title_x=0.5,
+                           title_x=0.3,
                            paper_bgcolor="rgba(0,0,0,0)"
                            )
 
@@ -116,7 +159,7 @@ three_d_fig = px.scatter_3d(df, x='Length',
                             )
 
 three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",
-                          title_x=0.5,
+                          title_x=0.3,
                           paper_bgcolor="rgba(0,0,0,0)"
                           )
 camera = dict(
@@ -140,7 +183,7 @@ gen3.plotly_chart(three_d_fig, use_container_width=True)
 
 year_bar = px.bar(yearly_df,x="Year", y="Quantity")
 year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", 
-                       title_x=0.5,
+                       title_x=0.3,
                        xaxis_title="Purchase Year",
                        yaxis_title="Quantity",
                        paper_bgcolor="rgba(0,0,0,0)"
@@ -152,7 +195,7 @@ year_bar.update_layout(title_text="Rubber Ducks Bought Per Year",
 
 year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
 year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
-                                  title_x=0.5,
+                                  title_x=0.3,
                                   xaxis_title="Purchase Year", 
                                   yaxis_title="Quantity",
                                   paper_bgcolor="rgba(0,0,0,0)"
@@ -165,7 +208,7 @@ year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
 
 weight_bar = px.bar(weight_df,x="Year", y="Total_Weight")
 weight_bar.update_layout(title_text="Weight (g) of Annual Purchases",
-                         title_x=0.5,
+                         title_x=0.3,
                          xaxis_title="Purchase Year",
                          yaxis_title="Weight (g)",
                          paper_bgcolor="rgba(0,0,0,0)"
@@ -178,7 +221,7 @@ weight_bar.update_layout(title_text="Weight (g) of Annual Purchases",
 
 weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
 weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
-                                    title_x=0.5,
+                                    title_x=0.3,
                                     xaxis_title="Purchase Year", 
                                     yaxis_title="Cumulative Weight (g)",
                                     paper_bgcolor="rgba(0,0,0,0)"
@@ -221,7 +264,7 @@ country_fig.update_geos(
     visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
 )
 country_fig.update_geos(projection_type="natural earth")
-country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,width=1000)
+country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.3,width=1000)
 
 # st.plotly_chart(country_fig, use_container_width=True)
 
@@ -233,7 +276,7 @@ state_fig = px.choropleth(state_df,locations="Purchase_State",
                           scope="usa"
                         #   color_continuous_scale="YlGn"
                           )
-state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
+state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.3)
 state_fig.add_trace(map_fig.data[0])
 
 # st.plotly_chart(state_fig, use_container_width=True)
