@@ -45,12 +45,16 @@ weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 
 ## insert a title for the app and instructions
 st.set_page_config(page_title="Analyducks", layout="wide")
-st.title("Analyducks")
-st.subheader("A visual analysis of Allan K's rubber duck collection")
-st.write("[Click here to view my portfolio](https://akstl1.github.io/)")
+st.markdown("<h1 style='text-align: center;'>Analyducks</h1>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;'>A visual analysis of Allan K's rubber duck collection</h1>", unsafe_allow_html=True)
+st.markdown(
+    """<a style='display: block; text-align: center;' href="https://akstl1.github.io/">Click here to view my portfolio</a>
+    """,
+    unsafe_allow_html=True,
+)
 
 
-## calcs for KPI cards
+###################### KPI Calcs ##############################
 
 # weight KPI
 duck_weight = df["Total_Weight"].sum()
@@ -72,11 +76,13 @@ today_month = today.month
 ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
 
 col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Weight",total_ducks)
-col2.metric("Total Bought",duck_weight)
-col3.metric("Weight",unique_countries)
-col4.metric("Weight",unique_cities)
-col5.metric("Weight",ducks_bought_last_year)
+col1.metric("Total Ducks Owned",total_ducks)
+col2.metric("Ducks Bought Within Last Year",ducks_bought_last_year)
+col3.metric("Duck Collection Weight (g)",duck_weight)
+col4.metric("Unique Countries of Purchase",unique_countries)
+col5.metric("Unique Cities of Purchase",unique_cities)
+
+###################### General Data graphs ##############################
 
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
@@ -128,17 +134,7 @@ gen1.plotly_chart(purchase_fig, use_container_width=True)
 gen2.plotly_chart(owner_bar, use_container_width=True)
 gen3.plotly_chart(three_d_fig, use_container_width=True)
 
-## bar plot showing weight of ducks bought each year, cumulative
-
-weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
-weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
-                                    title_x=0.5,
-                                    xaxis_title="Purchase Year", 
-                                    yaxis_title="Cumulative Weight (g)",
-                                    paper_bgcolor="rgba(0,0,0,0)"
-                                    )
-
-st.plotly_chart(weight_bar_cumulative, use_container_width=True)
+###################### Purchase and weight graphs ##############################
 
 ## bar plot showing number of ducks bought per year 
 
@@ -150,7 +146,7 @@ year_bar.update_layout(title_text="Rubber Ducks Bought Per Year",
                        paper_bgcolor="rgba(0,0,0,0)"
                        )
 
-st.plotly_chart(year_bar, use_container_width=True)
+# st.plotly_chart(year_bar, use_container_width=True)
 
 ## bar plot showing number of ducks bought per year, cumulative
 
@@ -162,7 +158,43 @@ year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
                                   paper_bgcolor="rgba(0,0,0,0)"
                                   )
 
-st.plotly_chart(year_bar_cumulative, use_container_width=True)
+# st.plotly_chart(year_bar_cumulative, use_container_width=True)
+
+
+## bar plot showing weight of ducks bought each year
+
+weight_bar = px.bar(weight_df,x="Year", y="Total_Weight")
+weight_bar.update_layout(title_text="Weight (g) of Annual Purchases",
+                         title_x=0.5,
+                         xaxis_title="Purchase Year",
+                         yaxis_title="Weight (g)",
+                         paper_bgcolor="rgba(0,0,0,0)"
+                         )
+
+# st.plotly_chart(weight_bar, use_container_width=True)
+
+
+## bar plot showing weight of ducks bought each year, cumulative
+
+weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
+weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
+                                    title_x=0.5,
+                                    xaxis_title="Purchase Year", 
+                                    yaxis_title="Cumulative Weight (g)",
+                                    paper_bgcolor="rgba(0,0,0,0)"
+                                    )
+
+# st.plotly_chart(weight_bar_cumulative, use_container_width=True)
+
+purchase1,purchase2,purchase3,purchase4 = st.columns(4)
+purchase1.plotly_chart(year_bar, use_container_width=True)
+purchase2.plotly_chart(year_bar_cumulative, use_container_width=True)
+purchase3.plotly_chart(weight_bar, use_container_width=True)
+purchase4.plotly_chart(weight_bar_cumulative, use_container_width=True)
+
+
+###################### Mapping graphs ##############################
+
 
 # st.plotly_chart(year_bar_cumulative, use_container_width=True)
 
@@ -191,7 +223,7 @@ country_fig.update_geos(
 country_fig.update_geos(projection_type="natural earth")
 country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,width=1000)
 
-st.plotly_chart(country_fig, use_container_width=True)
+# st.plotly_chart(country_fig, use_container_width=True)
 
 ## choropleth showing duck purchase by US state
 
@@ -204,7 +236,15 @@ state_fig = px.choropleth(state_df,locations="Purchase_State",
 state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
 state_fig.add_trace(map_fig.data[0])
 
-st.plotly_chart(state_fig, use_container_width=True)
+# st.plotly_chart(state_fig, use_container_width=True)
+
+
+map1,map2 = st.columns(2)
+map1.plotly_chart(country_fig, use_container_width=True)
+map2.plotly_chart(state_fig, use_container_width=True)
+
+###################### Duck info graphs ##############################
+
 
 st.write(df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me","Total_Weight","Height","Width","Length"]])
 
