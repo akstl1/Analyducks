@@ -402,9 +402,28 @@ css='''
     margin: auto;
 }
 
-[.stApp] > header {
-    background-color: transparent;
+[data-testid="block-container"] {
+    color: #000000;
+    background-color: #f8f9fa;
+    width: fit-content;
+    margin: auto;
 }
+
+[data-testid="stMarkdownContainer"] > div > h1 {
+    color: #000000;
+    # background-color: #f8f9fa;
+    width: fit-content;
+    margin: auto;
+}
+
+# [data-testid="stHorizontalBlock"] > div {
+#     color: #000000;
+#     background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+
+
 
 # [data-testid="element-container"] > div  {
 #     # color: #EBCC34;
