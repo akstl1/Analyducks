@@ -1,0 +1,14 @@
+
+
+@media (max-width: 576px) {
+    .duckCard {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+  }
+
+  .duckCard {
+    width: 80%;
+  }

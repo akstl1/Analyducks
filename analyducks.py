@@ -16,10 +16,14 @@ import datetime as dt
 from datetime import date
 import os
 from dash import dash_table
+from analyducks_card import duck_card
+
+style = "/assets/analyducks.css"
 
 ## start up the app, and provide title and bootstrap ref
 app = dash.Dash(
-    external_stylesheets=[dbc.themes.BOOTSTRAP]
+    external_stylesheets=[dbc.themes.BOOTSTRAP,style],
+    
 )
 app.title="Analyducks"
 server=app.server
@@ -114,7 +118,7 @@ weight_bar.update_layout(title_text="Weight (g) of Annual Purchases",
 
 ## bar plot showing weight of ducks bought each year, cumulative
 
-weight_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Total_Weight")
+weight_bar_cumulative = px.line(weight_cum_df,x="Year", y="Total_Weight")
 weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
                                     title_x=0.5,
                                     xaxis_title="Purchase Year", 
@@ -134,7 +138,7 @@ year_bar.update_layout(title_text="Rubber Ducks Bought Per Year",
 
 ## bar plot showing number of ducks bought per year, cumulative
 
-year_bar_cumulative = px.bar(weight_cum_df,x="Year", y="Quantity")
+year_bar_cumulative = px.line(weight_cum_df,x="Year", y="Quantity")
 year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
                                   title_x=0.5,
                                   xaxis_title="Purchase Year", 
@@ -213,94 +217,100 @@ app.layout = html.Div([
     }
     ),
     html.Div([
-        dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H2(total_ducks, className="card-title"),
-                    html.H6("Total Ducks In My Collection", className="card-subtitle"),
-                ]
-        ),
-        # className='kpi',
-        style={
-            'display': 'inline-block',
-            'width': '18%',
-            'margin-left':'1%',
-            'margin-right': '1%',
-            'text-align': 'center'
-        }
-        ),
-        dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H2(ducks_bought_last_year, className="card-title"),
-                    html.H6("Ducks Bought In Last Year", className="card-subtitle"),
-                ]
-        ),
-        # className='kpi',
-        style={
-            'display': 'inline-block',
-            'width': '18%',
-            'margin-left':'1%',
-            'margin-right': '1%',
-            'text-align': 'center'
-        }
-        ),
-        dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H2(duck_weight, className="card-title"),
-                    html.H6("Duck Collection Weight (g)", className="card-subtitle"),
-                ]
-        ),
-        # className='kpi',
-        style={
-            'display': 'inline-block',
-            'width': '18%',
-            'margin-left':'1%',
-            'margin-right': '1%',
-            'text-align': 'center'
-        }
-        ),
-        dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H2(unique_countries, className="card-title"),
-                    html.H6("Unique Countries of Purchase", className="card-subtitle"),
-                ]
-        ),
-        # className='kpi',
-        style={
-            'display': 'inline-block',
-            'width': '18%',
-            'margin-left':'1%',
-            'margin-right': '1%',
-            'text-align': 'center'
-        }
-        ),
-        dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H2(unique_cities, className="card-title"),
-                    html.H6("Unique Cities of Purchase", className="card-subtitle"),
-                ]
-        ),
-        # className='kpi',
-        style={
-            'display': 'inline-block',
-            'width': '18%',
-            'margin-left':'1%',
-            'margin-right': '1%',
-            'text-align': 'center'
-        }
-        )
+        duck_card(total_ducks,"Total Ducks In My Collection"),
+        duck_card(ducks_bought_last_year,"Ducks Bought In Last Year"),
+        duck_card(duck_weight,"Duck Collection Weight (g)"),
+        duck_card(unique_countries,"Unique Countries of Purchase"),
+        duck_card(unique_cities,"Unique Cities of Purchase")
+        # ,
+        # dbc.Card(
+        #     dbc.CardBody(
+        #         [
+        #             html.H2(total_ducks, className="card-title"),
+        #             html.H6("Total Ducks In My Collection", className="card-subtitle"),
+        #         ]
+        # ),
+        # # className='kpi',
+        # style={
+        #     'display': 'inline-block',
+        #     'width': '18%',
+        #     'margin-left':'1%',
+        #     'margin-right': '1%',
+        #     'text-align': 'center'
+        # }
+        # ),
+        # dbc.Card(
+        #     dbc.CardBody(
+        #         [
+        #             html.H2(ducks_bought_last_year, className="card-title"),
+        #             html.H6("Ducks Bought In Last Year", className="card-subtitle"),
+        #         ]
+        # ),
+        # # className='kpi',
+        # style={
+        #     'display': 'inline-block',
+        #     'width': '18%',
+        #     'margin-left':'1%',
+        #     'margin-right': '1%',
+        #     'text-align': 'center'
+        # }
+        # ),
+        # dbc.Card(
+        #     dbc.CardBody(
+        #         [
+        #             html.H2(duck_weight, className="card-title"),
+        #             html.H6("Duck Collection Weight (g)", className="card-subtitle"),
+        #         ]
+        # ),
+        # # className='kpi',
+        # style={
+        #     'display': 'inline-block',
+        #     'width': '18%',
+        #     'margin-left':'1%',
+        #     'margin-right': '1%',
+        #     'text-align': 'center'
+        # }
+        # ),
+        # dbc.Card(
+        #     dbc.CardBody(
+        #         [
+        #             html.H2(unique_countries, className="card-title"),
+        #             html.H6("Unique Countries of Purchase", className="card-subtitle"),
+        #         ]
+        # ),
+        # # className='kpi',
+        # style={
+        #     'display': 'inline-block',
+        #     'width': '18%',
+        #     'margin-left':'1%',
+        #     'margin-right': '1%',
+        #     'text-align': 'center'
+        # }
+        # ),
+        # dbc.Card(
+        #     dbc.CardBody(
+        #         [
+        #             html.H2(unique_cities, className="card-title"),
+        #             html.H6("Unique Cities of Purchase", className="card-subtitle"),
+        #         ]
+        # ),
+        # # className='kpi',
+        # style={
+        #     'display': 'inline-block',
+        #     'width': '18%',
+        #     'margin-left':'1%',
+        #     'margin-right': '1%',
+        #     'text-align': 'center'
+        # }
+        # )
     ],
     # className='kpi-container',
     style={
     'float': 'center',
     'padding-top': '15px',
     'padding-bottom': '15px',
-    'background-color': 'lightgray',
-    'border-top': '3px solid black'
+    'background-color': 'skyblue'
+    # 'border-top': '3px solid black'
     }
     ),
     # html.Div([html.H3("General Statistics")], className='title1'),
