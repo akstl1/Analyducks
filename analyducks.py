@@ -16,7 +16,7 @@ import datetime as dt
 from datetime import date
 import os
 from dash import dash_table
-from analyducks_card import duck_card
+from analyducks_card import kpi_duck_card
 
 style = "/assets/analyducks.css"
 
@@ -70,7 +70,8 @@ owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser",
                         title_x=0.5,
                         xaxis_title="Purchaser", 
                         yaxis_title="Quantity",
-                        paper_bgcolor="rgba(0,0,0,0)"
+                        paper_bgcolor="rgba(0,0,0,0)",
+                        xaxis={'categoryorder':'total descending'}
                         )
 
 ## pie chart showing purchase method of ducks
@@ -202,121 +203,11 @@ today_month = today.month
 ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
 
 ## -------------------------------------------------------------------------------------------------
-### App layout
+### Tab setup
 
-app.layout = html.Div([
-    html.Div([
-        html.H1("Analyducks",style={"margin-left":"3%","margin-right":"3%"}),
-        html.H4("A visual analysis of Allan K's rubber duck collection",style={"margin-left":"3%","margin-right":"3%"}),
-        html.P("You've heard of a data lake, now welcome to my data pond! I am an avid rubber duck collector, and after extensive searching I could not find any analytics about them. Of course, I had to rectify that so I have created the world's first repository of rubber duck analytics. Please enjoy the below charting and descriptive statistics on my flock's weight, purchase years, origin and personalities.",style={"margin-bottom":"0px", "margin-left":"5%","margin-right":"5%"}),
-    ],className="title",
-    style={
-        'text-align': 'center',
-        'background-color': 'skyblue',
-        'padding-bottom': '5px'
-    }
-    ),
-    html.Div([
-        duck_card(total_ducks,"Total Ducks In My Collection"),
-        duck_card(ducks_bought_last_year,"Ducks Bought In Last Year"),
-        duck_card(duck_weight,"Duck Collection Weight (g)"),
-        duck_card(unique_countries,"Unique Countries of Purchase"),
-        duck_card(unique_cities,"Unique Cities of Purchase")
-        # ,
-        # dbc.Card(
-        #     dbc.CardBody(
-        #         [
-        #             html.H2(total_ducks, className="card-title"),
-        #             html.H6("Total Ducks In My Collection", className="card-subtitle"),
-        #         ]
-        # ),
-        # # className='kpi',
-        # style={
-        #     'display': 'inline-block',
-        #     'width': '18%',
-        #     'margin-left':'1%',
-        #     'margin-right': '1%',
-        #     'text-align': 'center'
-        # }
-        # ),
-        # dbc.Card(
-        #     dbc.CardBody(
-        #         [
-        #             html.H2(ducks_bought_last_year, className="card-title"),
-        #             html.H6("Ducks Bought In Last Year", className="card-subtitle"),
-        #         ]
-        # ),
-        # # className='kpi',
-        # style={
-        #     'display': 'inline-block',
-        #     'width': '18%',
-        #     'margin-left':'1%',
-        #     'margin-right': '1%',
-        #     'text-align': 'center'
-        # }
-        # ),
-        # dbc.Card(
-        #     dbc.CardBody(
-        #         [
-        #             html.H2(duck_weight, className="card-title"),
-        #             html.H6("Duck Collection Weight (g)", className="card-subtitle"),
-        #         ]
-        # ),
-        # # className='kpi',
-        # style={
-        #     'display': 'inline-block',
-        #     'width': '18%',
-        #     'margin-left':'1%',
-        #     'margin-right': '1%',
-        #     'text-align': 'center'
-        # }
-        # ),
-        # dbc.Card(
-        #     dbc.CardBody(
-        #         [
-        #             html.H2(unique_countries, className="card-title"),
-        #             html.H6("Unique Countries of Purchase", className="card-subtitle"),
-        #         ]
-        # ),
-        # # className='kpi',
-        # style={
-        #     'display': 'inline-block',
-        #     'width': '18%',
-        #     'margin-left':'1%',
-        #     'margin-right': '1%',
-        #     'text-align': 'center'
-        # }
-        # ),
-        # dbc.Card(
-        #     dbc.CardBody(
-        #         [
-        #             html.H2(unique_cities, className="card-title"),
-        #             html.H6("Unique Cities of Purchase", className="card-subtitle"),
-        #         ]
-        # ),
-        # # className='kpi',
-        # style={
-        #     'display': 'inline-block',
-        #     'width': '18%',
-        #     'margin-left':'1%',
-        #     'margin-right': '1%',
-        #     'text-align': 'center'
-        # }
-        # )
-    ],
-    # className='kpi-container',
-    style={
-    'float': 'center',
-    'padding-top': '15px',
-    'padding-bottom': '15px',
-    'background-color': 'skyblue'
-    # 'border-top': '3px solid black'
-    }
-    ),
-    # html.Div([html.H3("General Statistics")], className='title1'),
+general_tab = html.Div([
     html.Div([
               html.H4("General Data",
-                        # className='title1',
                         style={
                             'text-align': 'center',
                             'text-decoration': 'underline',
@@ -328,8 +219,11 @@ app.layout = html.Div([
               dcc.Graph(id='method-pie',figure=purchase_fig,className='graph1',style={'width': '33%', 'display': 'inline-block'})
             ],
                 # className="graph-container",
-                style={'background-color': '#ebcc34'}),
-    html.Div([
+                style={'background-color': '#ebcc34'})
+])
+
+year_weight_tab = html.Div([
+      html.Div([
               html.Div([
                         html.H4("Purchase Year Data",
                         # className='title1',
@@ -369,8 +263,11 @@ app.layout = html.Div([
                                         'background-color': '#f0ed69'
                                     }
                                     )
-                        ]),
-    html.Div([
+                        ])
+])
+
+geo_tab = html.Div([
+  html.Div([
                 html.Div([html.H4("Geographic Purchase Visualization")],
                             className="title1",
                             style={
@@ -382,7 +279,45 @@ app.layout = html.Div([
                             ),
                 dcc.Graph(id='state-map',figure=state_fig,className="map", style={'width': '47%', 'display': 'inline-block'}),
                 dcc.Graph(id='country-map',figure=country_fig,className="map", style={'width': '47%', 'display': 'inline-block'})
-            ]),
+            ])
+
+
+])
+
+## -------------------------------------------------------------------------------------------------
+### App layout
+
+app.layout = html.Div([
+    html.Div([
+        html.H1("Analyducks",style={"margin-left":"3%","margin-right":"3%"}),
+        html.H4("A visual analysis of Allan K's rubber duck collection",style={"margin-left":"3%","margin-right":"3%"}),
+        html.P("You've heard of a data lake, now welcome to my data pond! I am an avid rubber duck collector, and after extensive searching I could not find any analytics about them. Of course, I had to rectify that so I have created the world's first repository of rubber duck analytics. Please enjoy the below charting and descriptive statistics on my flock's weight, purchase years, origin and personalities.",style={"margin-bottom":"0px", "margin-left":"5%","margin-right":"5%"}),
+    ],className="title",
+    style={
+        'text-align': 'center',
+        'background-color': 'skyblue',
+        'padding-bottom': '5px'
+    }
+    ),
+    html.Div([
+        kpi_duck_card(total_ducks,"Total Ducks In My Collection"),
+        kpi_duck_card(ducks_bought_last_year,"Ducks Bought In Last Year"),
+        kpi_duck_card(duck_weight,"Duck Collection Weight (g)"),
+        kpi_duck_card(unique_countries,"Unique Countries of Purchase"),
+        kpi_duck_card(unique_cities,"Unique Cities of Purchase")
+        ],
+        style={
+            'float': 'center',
+            'padding-top': '15px',
+            'padding-bottom': '15px',
+            'background-color': 'skyblue'
+        }),
+    html.Div([dbc.Tabs([
+                dbc.Tab(general_tab,label="General Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"}),
+                dbc.Tab(year_weight_tab,label="Year & Weight Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"}),
+                dbc.Tab(geo_tab,label="Geographical Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"})
+                                # dbc.Tab(bi_tab, label="Data Analytics", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"49%"}),
+                        ],style={"background-color":"#adadad","font-weight":"bold","height":"44px"})]),
     html.Div([
         
         html.Img(src='./assets/DuckFamily.jpg',width="60%")

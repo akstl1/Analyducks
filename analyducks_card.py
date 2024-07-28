@@ -12,7 +12,7 @@ import dash_bootstrap_components as dbc
 
 
 
-def duck_card(dt,ttle):
+def kpi_duck_card(dt,ttle):
 
     card = dbc.Card(
             dbc.CardBody(
