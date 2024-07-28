@@ -26,3 +26,50 @@
   .card-body {
     background-color: white;
   }
+
+
+/* CARD STYLING */
+
+@media (min-width: 577px) {
+  .cardA {
+    width: 38%;
+    display: inline-block;
+    margin-left: 9%;
+    margin-right: 3%;
+  }
+
+  .cardR {
+    width: 38%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 9%;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardA {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .cardR {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+
+/* give cards a border, set color styling */
+.card {
+border-radius: 3%;
+border-color: #2C2F36;
+background-color: #e3e0d8;
+
+}
+
+/* set card title styling */
+.card h4 {
+color: black;
+}

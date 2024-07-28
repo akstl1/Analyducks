@@ -16,7 +16,8 @@ import datetime as dt
 from datetime import date
 import os
 from dash import dash_table
-from analyducks_card import kpi_duck_card
+from kpi_duck_card import kpi_duck_card
+from duck_card import create_card_A
 
 style = "/assets/analyducks.css"
 
@@ -284,6 +285,8 @@ geo_tab = html.Div([
 
 ])
 
+personality_tab = html.Div(children=[create_card_A(x,y) for x,y in zip(df.Name,df.Purchase_City)])
+# for duck in df: personality_tab.append(html.Div([create_card_A(df.Name,df.Purchase_City)]))
 ## -------------------------------------------------------------------------------------------------
 ### App layout
 
@@ -315,7 +318,8 @@ app.layout = html.Div([
     html.Div([dbc.Tabs([
                 dbc.Tab(general_tab,label="General Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"}),
                 dbc.Tab(year_weight_tab,label="Year & Weight Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"}),
-                dbc.Tab(geo_tab,label="Geographical Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"})
+                dbc.Tab(geo_tab,label="Geographical Stats",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"}),
+                dbc.Tab(personality_tab,label="Personality Tab",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"25%"})
                                 # dbc.Tab(bi_tab, label="Data Analytics", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"49%"}),
                         ],style={"background-color":"#adadad","font-weight":"bold","height":"44px"})]),
     html.Div([
