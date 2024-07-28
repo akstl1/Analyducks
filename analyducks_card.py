@@ -22,12 +22,14 @@ def duck_card(dt,ttle):
                 ]
         ),
         style={
-            'display': 'inline-block',
-            'width': '18%',
-            'margin-left':'1%',
-            'margin-right': '1%',
-            'margin-bottom': '.5%',
-            'text-align': 'center'
+            # 'display': 'inline-block',
+            # 'width': '18%',
+            # 'margin-left':'1%',
+            # 'margin-right': '1%',
+            # 'margin-bottom': '.5%',
+            'text-align': 'center',
+            'background-color':'white'
         }, className = "duckCard"
         )
+        # ])
     return card
