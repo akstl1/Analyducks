@@ -55,7 +55,21 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
+st.markdown(
+    """
+    <style>
+    
+    .st-emotion-cache-j5r0tf {
+        background-color: #000000;
+        }
+    </style>
+    """, 
+    unsafe_allow_html=True
+    
+    )
+# <div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Total Ducks Owned</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 133 </div></div></div></div></div></div></div>
+# <div data-testid="stHorizontalBlock" class="st-emotion-cache-ocqkz7 e1f1d6gn4"><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Total Ducks Owned</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 133 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Ducks Bought Within Last Year</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 78 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Duck Collection Weight (g)</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 5209.2 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Unique Countries of Purchase</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 8 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Unique Cities of Purchase</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 40 </div></div></div></div></div></div></div></div>
+# <div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="852.7999877929688" data-testid="stVerticalBlock" class="st-emotion-cache-pplk8x e1f1d6gn1"><div data-testid="stHorizontalBlock" class="st-emotion-cache-ocqkz7 e1f1d6gn4"><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Total Ducks Owned</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 133 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Ducks Bought Within Last Year</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 78 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Duck Collection Weight (g)</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 5209.2 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Unique Countries of Purchase</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 8 </div></div></div></div></div></div></div><div data-testid="column" class="st-emotion-cache-j5r0tf e1f1d6gn2"><div class="st-emotion-cache-1wmy9hl e1f1d6gn0"><div width="157.7624969482422" data-testid="stVerticalBlock" class="st-emotion-cache-9xwmxx e1f1d6gn1"><div data-stale="false" width="157.7624969482422" class="element-container st-emotion-cache-az4wv8 e1f1d6gn3" data-testid="element-container"><div data-testid="stMetric"><label data-testid="stMetricLabel" visibility="0" class="st-emotion-cache-1tenn4l e1i5pmia2"><div class="st-emotion-cache-1wivap2 e1i5pmia3"><div data-testid="stMarkdownContainer" class="st-emotion-cache-xujc5b e1nzilvr5"><p>Unique Cities of Purchase</p></div></div></label><div data-testid="stMetricValue" class="st-emotion-cache-1xarl3l e1i5pmia1"><div class="st-emotion-cache-1wivap2 e1i5pmia3"> 40 </div></div></div></div></div></div></div></div></div></div>
 ###################### KPI Calcs ##############################
 
 # weight KPI
@@ -77,12 +91,13 @@ today_day = today.day
 today_month = today.month
 ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
 
-col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Total Ducks Owned",total_ducks)
-col2.metric("Ducks Bought Within Last Year",ducks_bought_last_year)
-col3.metric("Duck Collection Weight (g)",duck_weight)
-col4.metric("Unique Countries of Purchase",unique_countries)
-col5.metric("Unique Cities of Purchase",unique_cities)
+with st.container():
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("Total Ducks Owned",total_ducks)
+    col2.metric("Ducks Bought Within Last Year",ducks_bought_last_year)
+    col3.metric("Duck Collection Weight (g)",duck_weight)
+    col4.metric("Unique Countries of Purchase",unique_countries)
+    col5.metric("Unique Cities of Purchase",unique_cities)
 
 # css='''
 # [data-testid="stMetric"] {
@@ -402,19 +417,24 @@ css='''
     margin: auto;
 }
 
-[data-testid="block-container"] {
-    color: #000000;
-    background-color: #f8f9fa;
-    width: fit-content;
-    margin: auto;
+[data-testid="stVerticalBlock"] > [".st-emotion-cache-pplk8x e1f1d6gn1"] {
+    border: 20px groove red;
 }
 
-[data-testid="stMarkdownContainer"] > div > h1 {
-    color: #000000;
-    # background-color: #f8f9fa;
-    width: fit-content;
-    margin: auto;
-}
+
+# [data-testid="block-container"] {
+#     color: #000000;
+#     background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+
+# [data-testid="stMarkdownContainer"] > div > h1 {
+#     color: #000000;
+#     # background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
 
 # [data-testid="stHorizontalBlock"] > div {
 #     color: #000000;

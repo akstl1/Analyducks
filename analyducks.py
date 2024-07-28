@@ -1,20 +1,21 @@
 ## imports
 
+import dash
+from dash import html, dcc, register_page  #, callback # If you need callbacks, import it here.
+import dash_bootstrap_components as dbc
+import pandas as pd
+import plotly.graph_objs as go
+from dash.dependencies import Input, Output, State
+from dash import callback
+import requests
+import plotly.express as px
+import pokebase as pb
+import webbrowser
+import numpy as np
 import datetime as dt
 from datetime import date
 import os
-# import requests
-
-import dash
-import numpy as np
-import pandas as pd
-import plotly.express as px
-import plotly.graph_objs as go
-from dash import dash_table, dcc, html
-from dash.dependencies import Input, Output, State
-# from PIL import Image
-import dash_bootstrap_components as dbc
-# from whitenoise import WhiteNoise
+from dash import dash_table
 
 ## start up the app, and provide title and bootstrap ref
 app = dash.Dash(
@@ -29,7 +30,7 @@ server=app.server
 # data load
 
 ## read in excel dataset
-df = pd.read_excel("data/data.xlsx", sheet_name="Ducks")
+df = pd.read_excel("./data/duck_data.xlsx", sheet_name="Ducks")
 
 ## convert date bought col to date, and extract year into a column
 df['Date_Bought'] = pd.to_datetime(df['Date_Bought']).dt.date
@@ -53,7 +54,7 @@ yearly_df = df.groupby(["Year"]).agg({"Quantity":"sum"}).reset_index()
 
 weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
 
-weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
+weight_cum_df = df.groupby(['Year']).sum(numeric_only=True).cumsum().reset_index()
 
 ## -------------------------------------------------------------------------------------------------
 ## figs
@@ -201,9 +202,9 @@ ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,to
 
 app.layout = html.Div([
     html.Div([
-        html.H1("Analyducks"),
-        html.H4("A visual analysis of Allan K's rubber duck collection"),
-        html.A("Click here to view my portfolio",href= "https://akstl1.github.io/"),
+        html.H1("Analyducks",style={"margin-left":"3%","margin-right":"3%"}),
+        html.H4("A visual analysis of Allan K's rubber duck collection",style={"margin-left":"3%","margin-right":"3%"}),
+        html.P("You've heard of a data lake, now welcome to my data pond! I am an avid rubber duck collector, and after extensive searching I could not find any analytics about them. Of course, I had to rectify that so I have created the world's first repository of rubber duck analytics. Please enjoy the below charting and descriptive statistics on my flock's weight, purchase years, origin and personalities.",style={"margin-bottom":"0px", "margin-left":"5%","margin-right":"5%"}),
     ],className="title",
     style={
         'text-align': 'center',
@@ -216,7 +217,7 @@ app.layout = html.Div([
             dbc.CardBody(
                 [
                     html.H2(total_ducks, className="card-title"),
-                    html.H6("Total Ducks Owned", className="card-subtitle"),
+                    html.H6("Total Ducks In My Collection", className="card-subtitle"),
                 ]
         ),
         # className='kpi',
@@ -232,7 +233,7 @@ app.layout = html.Div([
             dbc.CardBody(
                 [
                     html.H2(ducks_bought_last_year, className="card-title"),
-                    html.H6("Ducks Bought Within Last Year", className="card-subtitle"),
+                    html.H6("Ducks Bought In Last Year", className="card-subtitle"),
                 ]
         ),
         # className='kpi',
@@ -373,7 +374,8 @@ app.layout = html.Div([
                 dcc.Graph(id='country-map',figure=country_fig,className="map", style={'width': '47%', 'display': 'inline-block'})
             ]),
     html.Div([
-        html.Img(src=r'/img/DuckFamily.jpg',width="60%")
+        
+        html.Img(src='./assets/DuckFamily.jpg',width="60%")
     ],style={
                                         'background-color': 'lightgray',
                                         'text-align':'center'
@@ -414,6 +416,7 @@ app.layout = html.Div([
     html.Br()
     
 ])
+
 
 ## -------------------------------------------------------------------------------------------------
 # run app
