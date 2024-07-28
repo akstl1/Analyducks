@@ -285,7 +285,11 @@ geo_tab = html.Div([
 
 ])
 
-personality_tab = html.Div(children=[create_card_A(x,y) for x,y in zip(df.Name,df.Purchase_City)])
+# personality_tab = html.Div(children=[create_card_A(x,y) for x,y in zip(df.Name,df.Purchase_City)])
+personality_tab = html.Div(children=[create_card_A(name,about, city, country, dt, weight, height, width, length) 
+                                     for name,about, city, country, dt, weight, height, width, length in zip(df.Name,df['About Me'],df.Purchase_City,df.Purchase_Country,df.Date_Bought,df.Total_Weight,df.Height,df.Width,df.Length)])
+
+# create_card_A(name,about, city, country, date, weight, height, width, length, description)
 # for duck in df: personality_tab.append(html.Div([create_card_A(df.Name,df.Purchase_City)]))
 ## -------------------------------------------------------------------------------------------------
 ### App layout

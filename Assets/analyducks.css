@@ -32,7 +32,7 @@
 
 @media (min-width: 577px) {
   .cardA {
-    width: 38%;
+    width: 20%;
     display: inline-block;
     margin-left: 9%;
     margin-right: 3%;
@@ -48,7 +48,7 @@
 
 @media (max-width: 576px) {
   .cardA {
-    width: 80%;
+    width: 20%;
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -69,7 +69,3 @@ background-color: #e3e0d8;
 
 }
 
-/* set card title styling */
-.card h4 {
-color: black;
-}
