@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Analyducks"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "074c86a9-db33-4a6a-a203-1ec64e9f4425"
+  }
+}
