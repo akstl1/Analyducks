@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "a2093a6ac0b6b2441dc3",
+  "position": {
+    "x": 220.29850746268656,
+    "y": 181.79104477611941,
+    "z": 0,
+    "height": 329.55223880597015,
+    "width": 439.70149253731341
+  },
+  "visual": {
+    "visualType": "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196",
+    "drillFilterOtherVisuals": true
+  }
+}

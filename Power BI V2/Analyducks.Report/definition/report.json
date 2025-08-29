@@ -26,6 +26,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "e05168756a4ad03a8e52",
-  "displayName": "Home",
+  "name": "2d1eb82274b0be07a8be",
+  "displayName": "Number and weights",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280
