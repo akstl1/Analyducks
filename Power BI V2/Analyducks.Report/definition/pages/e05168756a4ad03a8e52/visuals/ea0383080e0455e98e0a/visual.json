@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ea0383080e0455e98e0a",
+  "position": {
+    "x": 114.6268656716418,
+    "y": 133.43283582089552,
+    "z": 0,
+    "height": 51.044776119402982,
+    "width": 1099.7014925373135
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "You may have seen data and delta lakes, now welcome to my data pond - where data about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017 in college, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

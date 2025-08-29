@@ -1,0 +1,333 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "c5abc25b84ca0527104d",
+  "position": {
+    "x": 253.43283582089552,
+    "y": 169.25373134328359,
+    "z": 0,
+    "height": 462.98507462686564,
+    "width": 697.61194029850742
+  },
+  "visual": {
+    "visualType": "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196",
+    "query": {
+      "queryState": {
+        "data": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "Width"
+                }
+              },
+              "queryRef": "Sum(Sheet1.Width)",
+              "nativeQueryRef": "Width"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "Height"
+                }
+              },
+              "queryRef": "Sum(Sheet1.Height)",
+              "nativeQueryRef": "Height"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "Length"
+                }
+              },
+              "queryRef": "Sum(Sheet1.Length)",
+              "nativeQueryRef": "Length"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "Total_Weight"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Sheet1.Total_Weight)",
+              "nativeQueryRef": "Sum of Total_Weight"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "Avg Weight"
+                }
+              },
+              "queryRef": "Sheet1.Avg Weight",
+              "nativeQueryRef": "Avg Weight"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Width"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "chart": [
+        {
+          "properties": {
+            "schema": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"data\":[{\"type\":\"scatter3d\",\"mode\":\"markers\",\"x\":[],\"xsrc\":\"Length\",\"meta\":{\"columnNames\":{\"x\":\"Length\",\"y\":\"Width\",\"z\":\"Height\",\"marker\":{\"size\":\"Avg Weight\",\"color\":\"Avg Weight\"}}},\"y\":[],\"ysrc\":\"Width\",\"z\":[],\"zsrc\":\"Height\",\"hovertemplate\":\"\",\"marker\":{\"size\":[],\"sizesrc\":\"Avg Weight\",\"sizeref\":0.31703703703703706,\"sizemode\":\"area\",\"color\":[],\"colorsrc\":\"Avg Weight\",\"colorscale\":[[0,\"#0d0887\"],[0.1111111111111111,\"#46039f\"],[0.2222222222222222,\"#7201a8\"],[0.3333333333333333,\"#9c179e\"],[0.4444444444444444,\"#bd3786\"],[0.5555555555555556,\"#d8576b\"],[0.6666666666666666,\"#ed7953\"],[0.7777777777777778,\"#fb9f3a\"],[0.8888888888888888,\"#fdca26\"],[1,\"#f0f921\"]],\"showscale\":true,\"colorbar\":{\"title\":{\"text\":\"Avg Weight\"}}},\"autocolorscale\":false}],\"frames\":[],\"layout\":{\"mapbox\":{\"accesstoken\":\"\",\"style\":\"open-street-map\"},\"xaxis\":{\"range\":[-1,6],\"autorange\":true},\"yaxis\":{\"range\":[-1,4],\"autorange\":true},\"autosize\":true,\"colorway\":[\"#118DFF\",\"#12239E\",\"#E66C37\",\"#6B007B\",\"#E044A7\",\"#744EC2\",\"#D9B300\",\"#D64550\",\"#197278\",\"#1AAB40\",\"#15C6F4\",\"#4092FF\",\"#FFA058\",\"#BE5DC9\",\"#F472D0\",\"#B5A1FF\",\"#C4A200\",\"#FF8080\",\"#00DBBC\",\"#5BD667\",\"#0091D5\",\"#4668C5\",\"#FF6300\",\"#99008A\",\"#EC008C\",\"#533285\",\"#99700A\",\"#FF4141\",\"#1F9A85\",\"#25891C\",\"#0057A2\",\"#002050\",\"#C94F0F\",\"#450F54\",\"#B60064\",\"#34124F\",\"#6A5A29\",\"#1AAB40\",\"#BA141A\",\"#0C3D37\",\"#0B511F\",\"#373D49\",\"#FDB15D\",\"#AAF20F\",\"#5F646D\",\"#8AA3EB\",\"#FEE266\",\"#A6687A\",\"#3557B8\",\"#DFCFBF\",\"#4A91C5\",\"#5F646D\",\"#FBBF81\",\"#C9F459\",\"#7F838A\",\"#A4B8EE\",\"#FDE489\",\"#B68794\",\"#28428A\",\"#A79B8F\",\"#165889\",\"#292E37\",\"#BB824A\",\"#8DB525\",\"#474A52\",\"#6A7CB0\",\"#BDA750\",\"#7B4F5A\",\"#1B2C5C\",\"#706860\",\"#0F3C5C\",\"#1C1E25\",\"#7D5731\",\"#5D7918\",\"#303237\",\"#475375\",\"#7E6F36\",\"#52343D\",\"#0D152E\",\"#544E48\",\"#010EB8\",\"#393749\",\"#F9FD5D\",\"#38F20F\",\"#615F6D\",\"#A08AEB\",\"#CEFE66\",\"#A67668\",\"#5435B8\",\"#DFDFBF\",\"#4A53C5\",\"#615F6D\",\"#FAFB81\",\"#7CF459\",\"#807F8A\",\"#B5A4EE\",\"#DBFD89\",\"#B69087\",\"#3F288A\",\"#A7A78F\",\"#161F89\",\"#2A2937\",\"#BBBB4A\",\"#45B525\",\"#494752\",\"#7A6AB0\",\"#9CBD50\",\"#7B594F\",\"#291B5C\",\"#707060\",\"#0F155C\",\"#1E1C25\",\"#7C7D31\",\"#2D7918\",\"#303037\",\"#514775\",\"#697E36\",\"#523B34\",\"#140D2E\",\"#545448\",\"#4E01B8\",\"#423749\",\"#A9FD5D\",\"#0FF256\",\"#675F6D\",\"#D18AEB\",\"#82FE66\",\"#A69468\",\"#9535B8\",\"#CFDFBF\",\"#7D4AC5\",\"#675F6D\",\"#BCFB81\",\"#59F484\",\"#857F8A\",\"#DAA4EE\",\"#A1FD89\",\"#B6A887\",\"#6F288A\",\"#9BA78F\",\"#461689\",\"#322937\",\"#82BB4A\",\"#25B54C\",\"#4E4752\",\"#9E6AB0\",\"#65BD50\",\"#7B6E4F\",\"#4A1B5C\",\"#687060\",\"#2E0F5C\",\"#221C25\",\"#567D31\",\"#187934\",\"#343037\",\"#684775\",\"#457E36\",\"#524934\",\"#250D2E\",\"#4E5448\",\"#AA01B8\",\"#493746\",\"#5DFD62\",\"#0FF2C7\",\"#6D5F6B\",\"#EB8AD3\",\"#66FE96\",\"#99A668\",\"#B83598\",\"#BFDFBF\",\"#BA4AC5\",\"#6D5F6B\",\"#81FB82\",\"#59F4D1\",\"#8A7F89\",\"#EEA4DD\",\"#89FDAA\",\"#ACB687\",\"#8A2873\",\"#8FA78F\",\"#801689\",\"#372934\",\"#4ABB4A\",\"#25B594\",\"#524750\",\"#B06A9F\",\"#50BD70\",\"#717B4F\",\"#5C1B4D\",\"#607060\",\"#540F5C\",\"#251C22\",\"#317D32\",\"#187964\",\"#373036\",\"#75476A\"],\"scene\":{\"aspectratio\":{\"x\":1.2040286525777772,\"y\":0.8081093208742739,\"z\":1.027763196682382},\"aspectmode\":\"auto\",\"xaxis\":{\"title\":{\"text\":\"Length\"},\"type\":\"linear\"},\"yaxis\":{\"title\":{\"text\":\"Width\"},\"type\":\"linear\"},\"zaxis\":{\"title\":{\"text\":\"Height\"},\"type\":\"linear\"},\"camera\":{\"mode\":\"turntable\"}},\"margin\":{\"t\":60,\"b\":60,\"l\":60,\"r\":60},\"title\":{\"text\":\"<br>\"},\"showlegend\":false}}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "plotly": [
+        {
+          "properties": {
+            "powerbiTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "resetRangeOnMapping": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "legendClickToggle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "plotlyTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "colorway": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "highlights": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "displayModeBar": [
+        {
+          "properties": {
+            "saveCamera": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "toImageCustom": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "toggleSpikelines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "editor": [
+        {
+          "properties": {
+            "parseColorScales": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cd3dfc1672512d2de804",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Width"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "44ae17f8135d423567a0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Height"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d5acf080c081060bcc0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Length"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "86cefff8d07ab5b3035d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Total_Weight"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "97b5e445595e00b0b6a2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Avg Weight"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

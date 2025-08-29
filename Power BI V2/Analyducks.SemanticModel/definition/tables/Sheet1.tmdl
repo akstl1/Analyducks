@@ -1,0 +1,192 @@
+table Sheet1
+	lineageTag: 967938bc-37ac-43ed-acd4-f9ce5d8fd5f0
+
+	column Duck
+		dataType: string
+		lineageTag: 27fe14da-daf8-4f73-b611-a8a750c4b24c
+		summarizeBy: none
+		sourceColumn: Duck
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 943b1941-cca7-4813-9cd6-6b8eb9fa3caa
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purchase_Method
+		dataType: string
+		lineageTag: dc228460-5dc0-4622-9591-fb510f8e8a31
+		summarizeBy: none
+		sourceColumn: Purchase_Method
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purchase_Retailer
+		dataType: string
+		lineageTag: 0de8b2e9-3c86-4aef-923b-3a2983540bdb
+		summarizeBy: none
+		sourceColumn: Purchase_Retailer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purchase_City
+		dataType: string
+		lineageTag: 95afceec-63f8-45b5-bc2a-4fc018084d45
+		summarizeBy: none
+		sourceColumn: Purchase_City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purchase_State
+		dataType: string
+		lineageTag: 286edfda-e929-4239-8da2-8765f950838d
+		summarizeBy: none
+		sourceColumn: Purchase_State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purchase_Country
+		dataType: string
+		lineageTag: ec4f8510-50df-4ac0-99e9-9209151ebd8f
+		summarizeBy: none
+		sourceColumn: Purchase_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISO_Code
+		dataType: string
+		lineageTag: 8bd8ebf0-a77a-422c-ada3-1a954a1c9f0e
+		summarizeBy: none
+		sourceColumn: ISO_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_Bought
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ed489913-d002-423d-b090-592a54da0156
+		summarizeBy: none
+		sourceColumn: Date_Bought
+
+		variation Variation
+			isDefault
+			relationship: cf412e01-6683-4c28-8f63-90224c7a1370
+			defaultHierarchy: LocalDateTable_c8f5c237-a9d1-47a4-8ed7-b49de5b78192.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Latitude
+		dataType: double
+		lineageTag: dea1fd0a-be1b-44b6-b33c-114d22557a61
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 1784bb20-f82d-4c72-8160-eae1bec7f775
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'About Me'
+		dataType: string
+		lineageTag: 55b4a01f-5c60-45c8-83ad-e10a3a1b3100
+		summarizeBy: none
+		sourceColumn: About Me
+
+		annotation SummarizationSetBy = Automatic
+
+	column Buyer
+		dataType: string
+		lineageTag: dedb75ba-0f54-433c-ad1d-34848f7c41a8
+		summarizeBy: none
+		sourceColumn: Buyer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 18275f8b-4403-4607-92ff-eecc3c4aee7a
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Weight
+		dataType: double
+		lineageTag: 217a87d2-6df6-4613-b801-c7fd716dd58d
+		summarizeBy: sum
+		sourceColumn: Total_Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Height
+		dataType: double
+		lineageTag: 0608df18-8f5c-42c9-b9a0-95a9f18b3cd3
+		summarizeBy: sum
+		sourceColumn: Height
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Width
+		dataType: double
+		lineageTag: b3a8a15b-9d64-41b0-b15a-21752c8f6421
+		summarizeBy: sum
+		sourceColumn: Width
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Length
+		dataType: double
+		lineageTag: dd604b6a-c701-4d45-a66c-4e8736b7f0da
+		summarizeBy: sum
+		sourceColumn: Length
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg Weight'
+		dataType: string
+		lineageTag: 25625667-f9d4-4d6f-a40d-319ba7989876
+		summarizeBy: none
+		sourceColumn: Avg Weight
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1BbVzpc5LwK7ZyxPtB0XZcuOibME3M5iD4CakzYrT-8Y/edit?pli=1&gid=0#gid=0"),
+				    Sheet1_Table = Source{[name="Sheet1",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Table, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Duck", type text}, {"Name", type any}, {"Purchase_Method", type text}, {"Purchase_Retailer", type text}, {"Purchase_City", type text}, {"Purchase_State", type text}, {"Purchase_Country", type text}, {"ISO_Code", type text}, {"Date_Bought", type date}, {"Latitude", type number}, {"Longitude", type number}, {"About Me", type any}, {"Buyer", type text}, {"Quantity", Int64.Type}, {"Total_Weight", type number}, {"Height", type number}, {"Width", type number}, {"Length", type number}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.RoundDown([Total_Weight]/[Quantity]))
+				in
+				    #"Added Custom"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
