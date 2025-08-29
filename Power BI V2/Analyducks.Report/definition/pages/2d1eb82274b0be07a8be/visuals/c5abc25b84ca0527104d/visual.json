@@ -6,7 +6,8 @@
     "y": 169.25373134328359,
     "z": 0,
     "height": 462.98507462686564,
-    "width": 697.61194029850742
+    "width": 697.61194029850742,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196",
@@ -250,84 +251,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cd3dfc1672512d2de804",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Width"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "44ae17f8135d423567a0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Height"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d5acf080c081060bcc0c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Length"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "86cefff8d07ab5b3035d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Total_Weight"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "97b5e445595e00b0b6a2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Avg Weight"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
