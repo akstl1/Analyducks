@@ -1,6 +1,9 @@
 table Sheet1
 	lineageTag: 967938bc-37ac-43ed-acd4-f9ce5d8fd5f0
 
+	measure Measure = Khariton.Convert.DayHourMinute(32400,9)
+		lineageTag: 85ba2420-d7ae-47d1-8f5b-5e53f94ca695
+
 	column Duck
 		dataType: string
 		lineageTag: 27fe14da-daf8-4f73-b611-a8a750c4b24c

@@ -1,8 +1,7 @@
-createOrReplace
-	/// Creates a formatted time string of 'XX Days YY Hours ZZ Minutes' from a provided input in seconds.
-	/// Requires integer inputs for seconds you are looking to convert, and your desired hours in a day.
-	function 'Khariton.Convert.DayHourMinute' = 
-                (seconds: INT64 VAL,hoursInDay: INT64 VAL) =>
+DEFINE
+    /// Creates a formatted time string of 'XX Days YY Hours ZZ Minutes' from a provided input in seconds.
+    /// Requires integer inputs for seconds you are looking to convert, and your desired hours in a day.
+    FUNCTION Khariton.Convert.DayHourMinute = (seconds: INT64 VAL,hoursInDay: INT64 VAL) =>
 		        var hoursInDay = hoursInDay*3600
 		        var days = ROUNDDOWN(divide(seconds,hoursInDay),0)
 		        var hours = rounddown(divide(seconds-(days*hoursInDay),3600),0)
@@ -25,3 +24,8 @@ createOrReplace
                         "00")
 
 		        return days_final & " Days " & hours_final &  " Hours " & minutes_final & " Minutes"
+
+EVALUATE
+    {
+        Khariton.Convert.DayHourMinute(32400, 24)
+    }

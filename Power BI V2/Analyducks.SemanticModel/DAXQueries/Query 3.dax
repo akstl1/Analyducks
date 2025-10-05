@@ -1,0 +1,4 @@
+EVALUATE
+    {
+        formattedTime(32400,24)
+    }
