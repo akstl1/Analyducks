@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ea0383080e0455e98e0a",
   "position": {
-    "x": 256.25,
-    "y": 133.75,
+    "x": 238.75,
+    "y": 110,
     "z": 1000,
-    "height": 51.25,
-    "width": 957.5
+    "height": 75,
+    "width": 1000,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textbox",
@@ -18,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "You may have seen data and delta lakes, now welcome to my data pond - where data about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017 in college, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels."
+                    "value": "You may have seen data/delta lakes, now welcome to my data pond - where information about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017 when I was a junior in college, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels."
                   }
                 ]
               }

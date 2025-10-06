@@ -1,0 +1,36 @@
+table *Measures
+	lineageTag: 7de996da-c5c2-4f7a-ad3f-2797dba59a08
+
+	measure 'Cumulative Count' =
+			
+			CALCULATE(sum(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Sheet1[Date_Bought].[Year]))
+		formatString: 0
+		lineageTag: c8c312f4-a647-4aea-95dd-2c3741e9608e
+
+	measure 'Cumulative Weight' =
+			
+			CALCULATE(sum(Sheet1[Total_Weight]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Sheet1[Date_Bought].[Year]))
+		lineageTag: 0f1404d1-53f7-4a91-b0b8-2f7ba5ca19b3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column *Measures
+		dataType: string
+		lineageTag: 61a4a6c4-c282-4b8a-ab2c-2170885a545c
+		summarizeBy: none
+		sourceColumn: *Measures
+
+		annotation SummarizationSetBy = Automatic
+
+	partition *Measures = m
+		mode: import
+		source =
+				let
+				    Source = ""
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

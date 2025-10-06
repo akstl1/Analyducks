@@ -10,11 +10,12 @@ annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop","TMDLView_Desktop"
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Sheet1"]
+annotation PBI_QueryOrder = ["Sheet1","*Measures"]
 
 ref table Sheet1
 ref table DateTableTemplate_f42bbec9-b855-4220-88e6-4287a523d76f
 ref table LocalDateTable_c8f5c237-a9d1-47a4-8ed7-b49de5b78192
+ref table *Measures
 
 ref cultureInfo en-US
 

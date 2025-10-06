@@ -4,10 +4,9 @@
   "position": {
     "x": 98.888888888888886,
     "y": 54.444444444444443,
-    "z": 1,
+    "z": 1000,
     "height": 313.33333333333331,
-    "width": 760,
-    "tabOrder": 1
+    "width": 760
   },
   "visual": {
     "visualType": "azureMap",
@@ -113,61 +112,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c6cc49dcb9c503a98d4a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Longitude"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5764e2433a854d772c0f",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Latitude"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "300afde19bf464af766f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_City"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

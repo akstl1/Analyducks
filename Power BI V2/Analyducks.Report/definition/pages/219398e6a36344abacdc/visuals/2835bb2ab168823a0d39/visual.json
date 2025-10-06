@@ -4,10 +4,10 @@
   "position": {
     "x": 357.5,
     "y": 110,
-    "z": 3,
+    "z": 3000,
     "height": 312.5,
     "width": 608.75,
-    "tabOrder": 3
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "azureMap",
@@ -235,39 +235,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "3bbac0bfa160904a04da",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_State"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ed4a777526bab8bd0208",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Quantity"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -177,6 +177,15 @@ table Sheet1
 
 		annotation SummarizationSetBy = Automatic
 
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: ed7a425c-0432-46c5-8432-cae361007200
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Sheet1 = m
 		mode: import
 		source =
@@ -185,9 +194,10 @@ table Sheet1
 				    Sheet1_Table = Source{[name="Sheet1",ItemKind="Table"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Table, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Duck", type text}, {"Name", type any}, {"Purchase_Method", type text}, {"Purchase_Retailer", type text}, {"Purchase_City", type text}, {"Purchase_State", type text}, {"Purchase_Country", type text}, {"ISO_Code", type text}, {"Date_Bought", type date}, {"Latitude", type number}, {"Longitude", type number}, {"About Me", type any}, {"Buyer", type text}, {"Quantity", Int64.Type}, {"Total_Weight", type number}, {"Height", type number}, {"Width", type number}, {"Length", type number}}),
-				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.RoundDown([Total_Weight]/[Quantity]))
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.RoundDown([Total_Weight]/[Quantity])),
+				    #"Added Index" = Table.AddIndexColumn(#"Added Custom", "Index", 1, 1, Int64.Type)
 				in
-				    #"Added Custom"
+				    #"Added Index"
 
 	annotation PBI_NavigationStepName = Navigation
 
