@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "c5abc25b84ca0527104d",
   "position": {
     "x": 253.43283582089552,
@@ -251,5 +251,84 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2cba875db21ad6b0108b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Width"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "535d462145740460b6a9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Height"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dba3550eaaec47ee0589",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Length"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "57ee26741b3d60b40049",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Total_Weight"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ffa9213065620939acc9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Avg Weight"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

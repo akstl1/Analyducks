@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "b78e0968dbad659c073e",
   "position": {
-    "x": 572.5,
-    "y": 440,
+    "x": 98.888888888888886,
+    "y": 54.444444444444443,
     "z": 1,
-    "height": 280,
-    "width": 627.5,
+    "height": 313.33333333333331,
+    "width": 760,
     "tabOrder": 1
   },
   "visual": {
@@ -87,6 +87,28 @@
       "dataPoint": [
         {
           "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Purchase Locations'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
         }
       ]
     },

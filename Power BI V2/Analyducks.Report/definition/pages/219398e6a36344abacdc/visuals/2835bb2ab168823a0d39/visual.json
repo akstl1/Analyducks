@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "7a4577cbfa2d67968885",
+  "name": "2835bb2ab168823a0d39",
   "position": {
-    "x": 651.66666666666674,
-    "y": 73.333333333333343,
-    "z": 2,
-    "height": 310,
-    "width": 628.33333333333337,
-    "tabOrder": 2
+    "x": 357.5,
+    "y": 110,
+    "z": 3,
+    "height": 312.5,
+    "width": 608.75,
+    "tabOrder": 3
   },
   "visual": {
     "visualType": "azureMap",
@@ -23,13 +23,12 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "Purchase_Country"
+                  "Property": "Purchase_State"
                 }
               },
-              "queryRef": "Sheet1.Purchase_Country",
-              "nativeQueryRef": "Country",
-              "active": true,
-              "displayName": "Country"
+              "queryRef": "Sheet1.Purchase_State",
+              "nativeQueryRef": "Purchase_State",
+              "active": true
             }
           ]
         },
@@ -52,8 +51,7 @@
                 }
               },
               "queryRef": "Sum(Sheet1.Quantity)",
-              "nativeQueryRef": "# Purchased",
-              "displayName": "# Purchased"
+              "nativeQueryRef": "Sum of Quantity"
             }
           ]
         }
@@ -83,7 +81,7 @@
                                   "Entity": "Sheet1"
                                 }
                               },
-                              "Property": "Purchase_Country"
+                              "Property": "Purchase_State"
                             }
                           },
                           "Function": 5
@@ -94,14 +92,14 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#80FFDB'"
+                                "Value": "'minColor'"
                               }
                             }
                           },
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'#7400B8'"
+                                "Value": "'maxColor'"
                               }
                             }
                           },
@@ -131,88 +129,6 @@
           }
         }
       ],
-      "mapControls": [
-        {
-          "properties": {
-            "defaultStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'road'"
-                }
-              }
-            },
-            "showStylePicker": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showNavigationControls": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showSelectionControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showRoadDetails": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showAdminDistrict2Borders": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "autoZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "zoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "worldWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "bubbleLayer": [
         {
           "properties": {
@@ -220,48 +136,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "bubbleRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "6L"
-                }
-              }
-            },
-            "minBubbleRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "6L"
-                }
-              }
-            },
-            "maxRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "21L"
-                }
-              }
-            },
-            "bubbleStrokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "autoStrokeColor": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "layerPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
                 }
               }
             }
@@ -277,39 +151,26 @@
                   "Value": "true"
                 }
               }
-            },
-            "mapTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "40L"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "heatMapLayer": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
             }
           }
         }
       ]
     },
     "visualContainerObjects": {
-      "visualTooltip": [
+      "title": [
         {
           "properties": {
-            "type": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Default'"
+                  "Value": "'Purchase Locations'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -322,7 +183,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "9713c639e522722ddc88",
+        "name": "ced54cc0027ae4d814a6",
         "field": {
           "Column": {
             "Expression": {
@@ -333,10 +194,64 @@
             "Property": "Purchase_Country"
           }
         },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "Sheet1",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "Purchase_Country"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'USA'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "3bbac0bfa160904a04da",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_State"
+          }
+        },
         "type": "Categorical"
       },
       {
-        "name": "1e76e6c307240996c9c0",
+        "name": "ed4a777526bab8bd0208",
         "field": {
           "Aggregation": {
             "Expression": {
