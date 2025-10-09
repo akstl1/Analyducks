@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "2835bb2ab168823a0d39",
   "position": {
-    "x": 357.5,
-    "y": 110,
+    "x": 461,
+    "y": 383,
     "z": 3000,
-    "height": 312.5,
-    "width": 608.75,
-    "tabOrder": 2000
+    "height": 313,
+    "width": 608,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "azureMap",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Sheet1.Purchase_State",
-              "nativeQueryRef": "Purchase_State",
-              "active": true
+              "nativeQueryRef": "State",
+              "active": true,
+              "displayName": "State"
             }
           ]
         },
@@ -51,7 +52,8 @@
                 }
               },
               "queryRef": "Sum(Sheet1.Quantity)",
-              "nativeQueryRef": "Sum of Quantity"
+              "nativeQueryRef": "Quantity",
+              "displayName": "Quantity"
             }
           ]
         }

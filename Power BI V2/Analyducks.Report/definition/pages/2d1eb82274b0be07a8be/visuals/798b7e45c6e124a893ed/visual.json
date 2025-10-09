@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 185,
-    "z": 3002,
+    "z": 2000,
     "height": 315,
     "width": 178.75,
-    "tabOrder": 3002
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -39,6 +39,50 @@
               "expr": {
                 "Literal": {
                   "Value": "9L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "shape": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "25L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
                 }
               }
             }

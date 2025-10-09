@@ -4,10 +4,9 @@
   "position": {
     "x": 211.25,
     "y": 97.5,
-    "z": 2000,
+    "z": 0,
     "height": 296.25,
-    "width": 480,
-    "tabOrder": 2000
+    "width": 480
   },
   "visual": {
     "visualType": "columnChart",
@@ -81,6 +80,34 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "border": [
         {
@@ -120,7 +147,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "18893b50703d6bd2a1a0",
+        "name": "bb334a5d1ed8467cb899",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dates"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "233d23dae349590ee408",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -134,20 +175,6 @@
               }
             },
             "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "761fe570104d2c50020c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dates"
-              }
-            },
-            "Property": "Year"
           }
         },
         "type": "Advanced"

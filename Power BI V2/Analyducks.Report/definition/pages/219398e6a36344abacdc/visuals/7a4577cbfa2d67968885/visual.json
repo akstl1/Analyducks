@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "7a4577cbfa2d67968885",
   "position": {
-    "x": 651.66666666666674,
-    "y": 73.333333333333343,
+    "x": 213,
+    "y": 33,
     "z": 2000,
-    "height": 310,
-    "width": 628.33333333333337,
-    "tabOrder": 1000
+    "height": 371,
+    "width": 1039
   },
   "visual": {
     "visualType": "azureMap",
@@ -151,7 +150,7 @@
             "showNavigationControls": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -193,7 +192,7 @@
             "worldWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

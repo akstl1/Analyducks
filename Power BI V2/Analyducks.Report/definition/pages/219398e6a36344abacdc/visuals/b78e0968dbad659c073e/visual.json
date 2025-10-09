@@ -6,7 +6,8 @@
     "y": 54.444444444444443,
     "z": 1000,
     "height": 313.33333333333331,
-    "width": 760
+    "width": 760,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "azureMap",
