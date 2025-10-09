@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "cffceaec663083d420e8",
   "position": {
-    "x": 223.75,
-    "y": 51.25,
+    "x": 211.25,
+    "y": 97.5,
     "z": 2000,
     "height": 296.25,
-    "width": 633.75,
+    "width": 480,
     "tabOrder": 2000
   },
   "visual": {
@@ -17,28 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Sheet1"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date_Bought"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "Dates"
                     }
                   },
-                  "Level": "Year"
+                  "Property": "Year"
                 }
               },
-              "queryRef": "Sheet1.Date_Bought.Variation.Date Hierarchy.Year",
-              "nativeQueryRef": "Date_Bought Year",
+              "queryRef": "Dates.Year",
+              "nativeQueryRef": "Sum of Year",
               "active": true
             }
           ]
@@ -62,7 +51,8 @@
                 }
               },
               "queryRef": "Sum(Sheet1.Quantity)",
-              "nativeQueryRef": "Sum of Quantity"
+              "nativeQueryRef": "Quantity",
+              "displayName": "Quantity"
             }
           ]
         }
@@ -71,113 +61,64 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Aggregation": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Sheet1"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Date_Bought"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
-                  }
-                },
-                "Level": "Year"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
-      }
-    },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6d90b40eb8772878310a",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
+                  "Column": {
                     "Expression": {
                       "SourceRef": {
                         "Entity": "Sheet1"
                       }
                     },
-                    "Name": "Variation",
-                    "Property": "Date_Bought"
+                    "Property": "Quantity"
                   }
                 },
-                "Hierarchy": "Date Hierarchy"
+                "Function": 0
               }
             },
-            "Level": "Year"
+            "direction": "Descending"
           }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "s",
-              "Entity": "Sheet1",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 2,
-                  "Left": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "PropertyVariationSource": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "s"
-                                }
-                              },
-                              "Name": "Variation",
-                              "Property": "Date_Bought"
-                            }
-                          },
-                          "Hierarchy": "Date Hierarchy"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "2017L"
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
               }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
             }
-          ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
+          }
         }
-      },
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
       {
         "name": "18893b50703d6bd2a1a0",
         "field": {
@@ -193,6 +134,20 @@
               }
             },
             "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "761fe570104d2c50020c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dates"
+              }
+            },
+            "Property": "Year"
           }
         },
         "type": "Advanced"

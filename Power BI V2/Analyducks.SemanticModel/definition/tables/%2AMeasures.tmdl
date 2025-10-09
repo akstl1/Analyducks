@@ -3,14 +3,31 @@ table *Measures
 
 	measure 'Cumulative Count' =
 			
-			CALCULATE(sum(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Sheet1[Date_Bought].[Year]))
+			CALCULATE(sum(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Dates[Year]))
 		formatString: 0
 		lineageTag: c8c312f4-a647-4aea-95dd-2c3741e9608e
 
 	measure 'Cumulative Weight' =
 			
-			CALCULATE(sum(Sheet1[Total_Weight]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Sheet1[Date_Bought].[Year]))
+			CALCULATE(sum(Sheet1[Total_Weight]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Dates[Year]))
 		lineageTag: 0f1404d1-53f7-4a91-b0b8-2f7ba5ca19b3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Max Axis' =
+			
+			var _value = CALCULATE(sum(Sheet1[Quantity]),ALL(Sheet1))*1.15
+			return _value
+			// CALCULATE(
+			//     maxx(
+			//         all(Dates[Year]),
+			//         sum(Sheet1[Quantity]))*1.15,
+			//         ALLEXCEPT(Dates,Dates[Year])))
+		formatString: 0
+		lineageTag: 1188dffe-67e8-4c7a-a3c4-a0d85465830d
+
+	measure Difference = [Max Axis]-[Cumulative Count]
+		lineageTag: 0267f3bc-5600-44c6-b892-1a95a3512345
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

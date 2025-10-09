@@ -40,6 +40,17 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "DuckPNG29389912550151887.png",
+          "path": "DuckPNG29389912550151887.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

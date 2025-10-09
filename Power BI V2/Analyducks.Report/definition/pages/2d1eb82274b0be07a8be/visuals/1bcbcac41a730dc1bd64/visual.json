@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "acf1b090025b853da640",
+  "name": "1bcbcac41a730dc1bd64",
   "position": {
     "x": 703.75,
-    "y": 51.25,
-    "z": 0,
-    "height": 522.5,
-    "width": 565
+    "y": 97.5,
+    "z": 3003,
+    "height": 448.75,
+    "width": 565,
+    "tabOrder": 3003
   },
   "visual": {
     "visualType": "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196",
@@ -281,6 +282,38 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -288,7 +321,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8cfbcfedec6125c9d235",
+        "name": "a18971998dbb66744810",
         "field": {
           "Column": {
             "Expression": {
@@ -302,7 +335,7 @@
         "type": "Advanced"
       },
       {
-        "name": "29cb53186eaab76144be",
+        "name": "b2ceb6ca9a2b25951264",
         "field": {
           "Column": {
             "Expression": {
@@ -316,7 +349,7 @@
         "type": "Advanced"
       },
       {
-        "name": "22e1f7d8db1d3c583ab9",
+        "name": "7db585a200503b057d45",
         "field": {
           "Column": {
             "Expression": {
@@ -330,7 +363,7 @@
         "type": "Advanced"
       },
       {
-        "name": "64931968c73317e59a44",
+        "name": "cc6c61af662e84c0e69b",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -349,7 +382,7 @@
         "type": "Advanced"
       },
       {
-        "name": "d85f90212b1537b84b3d",
+        "name": "48a22a53b0a07bd790b0",
         "field": {
           "Column": {
             "Expression": {
@@ -363,7 +396,7 @@
         "type": "Categorical"
       },
       {
-        "name": "a477264a45557364e356",
+        "name": "49298432c65a750c08c3",
         "field": {
           "Column": {
             "Expression": {
