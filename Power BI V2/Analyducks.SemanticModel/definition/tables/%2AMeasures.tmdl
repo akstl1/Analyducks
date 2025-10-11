@@ -44,15 +44,13 @@ table *Measures
 		formatString: 0
 		lineageTag: e3888411-43b3-4350-858a-dadc945fe9fb
 
-	measure 'Flock Height' = CALCULATE(SUM(Sheet1[Height]),all(Sheet1))
+	measure 'Flock Height' = CALCULATE(SUM(Sheet1[Height]),all(Sheet1))/100
+		formatString: 0.0
 		lineageTag: 0a20451c-1c1f-4533-851a-6a9fbf79f58a
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Flock Length' = CALCULATE(SUM(Sheet1[Length]),all(Sheet1))
+	measure 'Flock Length' = CALCULATE(SUM(Sheet1[Length]),all(Sheet1))/100
+		formatString: 0.0
 		lineageTag: 87cb69a9-c587-4190-bf54-5be0b33dafc6
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column *Measures
 		dataType: string

@@ -90,6 +90,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Flock Size'"
+                }
+              }
             }
           }
         }

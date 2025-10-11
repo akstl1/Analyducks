@@ -37,11 +37,12 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Flock Weight"
+                  "Property": "Past Year"
                 }
               },
-              "queryRef": "*Measures.Flock Weight",
-              "nativeQueryRef": "Flock Weight"
+              "queryRef": "*Measures.Past Year",
+              "nativeQueryRef": "# Added in Past Year",
+              "displayName": "# Added in Past Year"
             },
             {
               "field": {
@@ -51,11 +52,12 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Past Year"
+                  "Property": "Flock Weight"
                 }
               },
-              "queryRef": "*Measures.Past Year",
-              "nativeQueryRef": "Past Year"
+              "queryRef": "*Measures.Flock Weight",
+              "nativeQueryRef": "Flock Weight (kg)",
+              "displayName": "Flock Weight (kg)"
             },
             {
               "field": {
@@ -69,7 +71,8 @@
                 }
               },
               "queryRef": "*Measures.Flock Height",
-              "nativeQueryRef": "Flock Height"
+              "nativeQueryRef": "Flock Height (m)",
+              "displayName": "Flock Height (m)"
             },
             {
               "field": {
@@ -83,7 +86,8 @@
                 }
               },
               "queryRef": "*Measures.Flock Length",
-              "nativeQueryRef": "Flock Length"
+              "nativeQueryRef": "Flock Length (m)",
+              "displayName": "Flock Length (m)"
             }
           ]
         }
@@ -244,5 +248,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a33f353743d80ac4ce7a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Size"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4dca5c22a4e000b84ed0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Weight"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5185de252d52423613ba",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Height"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f0f33850ba01bb1274ae",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Length"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "03d55c9b1729359e40e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Past Year"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
