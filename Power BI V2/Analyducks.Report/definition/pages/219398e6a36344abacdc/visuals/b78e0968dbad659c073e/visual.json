@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "b78e0968dbad659c073e",
   "position": {
-    "x": 98.888888888888886,
-    "y": 54.444444444444443,
+    "x": 205,
+    "y": 91,
     "z": 1000,
-    "height": 313.33333333333331,
-    "width": 760,
+    "height": 371,
+    "width": 1039,
     "tabOrder": 6000
   },
   "visual": {
@@ -113,5 +113,61 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "796786a095e0b06aa0c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_City"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6ee0bd9027864ab0a39c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Longitude"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "36e6c0e8998ac864922e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Latitude"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -18975,7 +18975,7 @@
                     }
                   },
                   {
-                    "value": ", with XXX additions."
+                    "value": ", with XXX additions. This year my flock has grown by XXX | X%."
                   }
                 ]
               },
@@ -18989,7 +18989,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "And for anyone asking \"where's the AI?\", I ran an ML regression model in Python and determined that, based on my flock, you can predict a rubber duck's weight via the equation: Weight (g) = XL x XW x XH (with dimensions in cm)."
+                    "value": "And for anyone asking \"where's the AI?\", I ran an ML regression model and determined that, based on my flock, you can predict a rubber duck's weight via the equation: Weight (g) = XL x XW x XH (with dimensions in cm). And also, I named my Copilot QuackerJack."
                   }
                 ]
               }

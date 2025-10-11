@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "be6a157159a0a4468438",
+  "name": "944b4bd2dc03eaa416d1",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 0,
-    "height": 720,
-    "width": 197.5,
-    "tabOrder": 4000
+    "x": 999,
+    "y": 381,
+    "z": 12000,
+    "height": 136,
+    "width": 180,
+    "tabOrder": 6009
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
+                    "value": "One duck per page (description if posible)? + one for my linkedin/github + fun quack facts"
                   }
                 ]
               }
@@ -29,17 +29,20 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
+      "border": [
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F7EC21'"
-                    }
-                  }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
                 }
               }
             }
@@ -48,6 +51,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "2d5aeca81c230e0754bc"
+  }
 }

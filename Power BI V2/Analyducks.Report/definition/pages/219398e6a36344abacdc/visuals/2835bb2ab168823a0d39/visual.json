@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "2835bb2ab168823a0d39",
   "position": {
-    "x": 461,
-    "y": 383,
+    "x": 205,
+    "y": 91,
     "z": 3000,
-    "height": 313,
-    "width": 608,
+    "height": 371,
+    "width": 1039,
     "tabOrder": 1000
   },
   "visual": {
@@ -237,6 +237,39 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "70211e34704274507dcd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_State"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e21b6e24c0d7379a3b18",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Quantity"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -1,56 +1,60 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "9dcc2af52498e1b819a1",
+  "name": "672b10cee52e939b07d6",
   "position": {
-    "x": 10,
-    "y": 185,
+    "x": 251,
+    "y": 112,
     "z": 1000,
-    "height": 315,
-    "width": 178.75,
-    "tabOrder": 5000
+    "height": 107,
+    "width": 109,
+    "tabOrder": 6008
   },
   "visual": {
-    "visualType": "pageNavigator",
+    "visualType": "shape",
     "objects": {
-      "layout": [
+      "shape": [
         {
           "properties": {
-            "orientation": {
+            "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "'oval'"
                 }
               }
             }
           }
         }
       ],
-      "text": [
+      "rotation": [
         {
           "properties": {
-            "horizontalAlignment": {
+            "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
-                }
-              }
-            },
-            "leftMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "9L"
+                  "Value": "0L"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualLink": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2d5aeca81c230e0754bc",
   "howCreated": "InsertVisualButton"
 }
