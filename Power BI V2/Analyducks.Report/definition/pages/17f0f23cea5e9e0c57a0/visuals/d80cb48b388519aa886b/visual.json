@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "aeaff2fea56c07816d90",
+  "name": "d80cb48b388519aa886b",
   "position": {
-    "x": 525,
-    "y": 484,
-    "z": 7000,
-    "height": 236,
-    "width": 243,
-    "tabOrder": 6003
+    "x": 0,
+    "y": 538,
+    "z": 12005,
+    "height": 173,
+    "width": 175,
+    "tabOrder": 6015
   },
   "visual": {
     "visualType": "image",
@@ -21,6 +21,21 @@
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
                   "ItemName": "2DRubberDuck25840587792795295.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

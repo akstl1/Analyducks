@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "94dc2f0c90a01d2056b1",
   "position": {
-    "x": 473,
-    "y": 416,
+    "x": 439,
+    "y": 392,
     "z": 6000,
     "height": 101,
     "width": 163,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Click on my companions to learn more about my collection, as well as some fun places to grow yours!",
+                    "value": "Click on my companions to learn more about my collection, fun facts, and fun places to grow your collection!",
                     "textStyle": {
                       "fontWeight": "bold"
                     }
