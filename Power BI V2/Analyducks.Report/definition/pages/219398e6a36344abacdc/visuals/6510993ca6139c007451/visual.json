@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 74,
     "width": 1071,
-    "tabOrder": 6001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -248,79 +248,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "db7e5dda0e224d7ac780",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Size"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3441313e6c5e00e3b0e0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Weight"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8549af31d0c09bd9c759",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Past Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "dd11a740920e83b95056",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Height"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a6497b5e50506a2e82ed",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Length"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

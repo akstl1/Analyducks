@@ -82,42 +82,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2d5aeca81c230e0754bc",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b5514273cba607703a1e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Buyer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e4af03669cbd43523ea7",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Buyer"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "2d5aeca81c230e0754bc"
 }

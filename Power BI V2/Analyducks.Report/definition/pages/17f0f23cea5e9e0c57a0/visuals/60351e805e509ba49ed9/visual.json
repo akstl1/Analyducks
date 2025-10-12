@@ -4,10 +4,9 @@
   "position": {
     "x": 15,
     "y": 29,
-    "z": 3000,
+    "z": 2000,
     "height": 55,
-    "width": 1249,
-    "tabOrder": 3000
+    "width": 1249
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +18,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "You may have seen data/delta lakes, now welcome to my data pond - where information about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels."
+                    "value": "You may have seen data/delta lakes, now welcome to my data pond - where information about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels. (And no, I don't own a Jeep.)"
                   }
                 ]
               }

@@ -237,39 +237,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "70211e34704274507dcd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_State"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e21b6e24c0d7379a3b18",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Quantity"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

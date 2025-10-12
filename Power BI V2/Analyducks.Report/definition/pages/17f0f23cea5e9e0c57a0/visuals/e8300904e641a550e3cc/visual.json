@@ -1,37 +1,39 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "672b10cee52e939b07d6",
+  "name": "e8300904e641a550e3cc",
   "position": {
-    "x": 251,
-    "y": 112,
-    "z": 1000,
-    "height": 107,
-    "width": 109,
-    "tabOrder": 5000
+    "x": 0,
+    "y": 538,
+    "z": 17001,
+    "height": 173,
+    "width": 175
   },
   "visual": {
-    "visualType": "shape",
+    "visualType": "actionButton",
     "objects": {
-      "shape": [
+      "icon": [
         {
           "properties": {
-            "tileShape": {
+            "shapeType": {
               "expr": {
                 "Literal": {
-                  "Value": "'oval'"
+                  "Value": "'blank'"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
-      "rotation": [
+      "outline": [
         {
           "properties": {
-            "shapeAngle": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "true"
                 }
               }
             }
@@ -46,7 +48,21 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PageNavigation'"
+                }
+              }
+            },
+            "navigationSection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2d1eb82274b0be07a8be'"
                 }
               }
             }

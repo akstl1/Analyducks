@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "944b4bd2dc03eaa416d1",
+  "name": "af9c5aace4766c86a67d",
   "position": {
-    "x": 620,
-    "y": 237,
-    "z": 7000,
-    "height": 136,
-    "width": 180,
-    "tabOrder": 6000
+    "x": 800,
+    "y": 635,
+    "z": 15000,
+    "height": 34,
+    "width": 112,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "One duck per page (description if posible)? + one for my linkedin/github + fun quack facts/anatomy"
+                    "value": "Where To Collect",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               }
             ]
           }
@@ -29,20 +33,20 @@
       ]
     },
     "visualContainerObjects": {
-      "border": [
+      "background": [
         {
           "properties": {
-            "show": {
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "57D"
                 }
               }
             },
-            "radius": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "false"
                 }
               }
             }

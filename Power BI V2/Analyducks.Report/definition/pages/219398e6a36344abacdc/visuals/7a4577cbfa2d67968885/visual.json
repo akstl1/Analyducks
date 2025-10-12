@@ -317,42 +317,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "42e55d2f3d372a2403c8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_Country"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "296833aabd3b20d1b035",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Quantity"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

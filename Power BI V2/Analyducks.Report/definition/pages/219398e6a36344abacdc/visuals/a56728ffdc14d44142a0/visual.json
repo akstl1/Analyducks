@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 234,
     "width": 512,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -81,42 +81,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "08408fcccc00624eac7b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Buyer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "65d869d2974155b0e01e",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Buyer"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

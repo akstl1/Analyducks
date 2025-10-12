@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "fe5d7260e67d91374e2e",
+  "position": {
+    "x": 100,
+    "y": 100,
+    "z": 6001,
+    "height": 300,
+    "width": 300,
+    "tabOrder": 5001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "insert pie chart of distribution of buying methods, to look like a lilly pad?"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
