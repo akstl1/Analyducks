@@ -3,8 +3,8 @@
   "name": "94dc2f0c90a01d2056b1",
   "position": {
     "x": 439,
-    "y": 392,
-    "z": 3000,
+    "y": 395,
+    "z": 2000,
     "height": 101,
     "width": 163,
     "tabOrder": 1000
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Click on my companions to learn more about my collection, fun facts, and fun places to grow your collection!",
+                    "value": "Click on my companions to learn more about the collection, fun facts, and fun places to grow your collection!",
                     "textStyle": {
                       "fontWeight": "bold"
                     }

@@ -3,9 +3,9 @@
   "name": "60351e805e509ba49ed9",
   "position": {
     "x": 15,
-    "y": 29,
-    "z": 2000,
-    "height": 55,
+    "y": 16,
+    "z": 30000,
+    "height": 57,
     "width": 1249
   },
   "visual": {
@@ -77,6 +77,19 @@
                       "Value": "'#f0e199'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Welcome to my duck dashboard!'"
                 }
               }
             }

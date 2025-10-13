@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "468eb18347c856ed7123",
   "position": {
-    "x": 1153,
-    "y": 617,
-    "z": 17000,
-    "height": 69,
+    "x": 1147,
+    "y": 621,
+    "z": 15000,
+    "height": 62,
     "width": 92,
     "tabOrder": 17000
   },
@@ -33,7 +33,8 @@
                     "value": "LinkedIn",
                     "textStyle": {
                       "fontSize": "9pt"
-                    }
+                    },
+                    "url": "https://www.linkedin.com/in/allan-khariton/"
                   }
                 ],
                 "horizontalTextAlignment": "center"
@@ -44,7 +45,8 @@
                     "value": "Portfolio",
                     "textStyle": {
                       "fontSize": "9pt"
-                    }
+                    },
+                    "url": "https://akstl1.github.io/"
                   }
                 ],
                 "horizontalTextAlignment": "center"
