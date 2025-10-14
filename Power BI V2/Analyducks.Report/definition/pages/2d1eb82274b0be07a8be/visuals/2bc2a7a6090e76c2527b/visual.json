@@ -41,8 +41,8 @@
                 }
               },
               "queryRef": "*Measures.Past Year",
-              "nativeQueryRef": "# Added in Past Year",
-              "displayName": "# Added in Past Year"
+              "nativeQueryRef": "# Added in Current Year",
+              "displayName": "# Added in Current Year"
             },
             {
               "field": {

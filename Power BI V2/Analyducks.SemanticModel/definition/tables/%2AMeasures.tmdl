@@ -45,7 +45,7 @@ table *Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Past Year' = CALCULATE(SUM(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),Sheet1[Date_Bought]>=TODAY()-365)
+	measure 'Past Year' = CALCULATE(SUM(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),year(Sheet1[Date_Bought])=year(max(Sheet1[Date_Bought])))
 		formatString: 0
 		lineageTag: e3888411-43b3-4350-858a-dadc945fe9fb
 
@@ -66,6 +66,22 @@ table *Measures
 		lineageTag: 58a8217f-d0f8-4bb9-8367-1f9132af7100
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Title Individual Year QuantWeight' =
+			
+			SWITCH(TRUE(),
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),"New Additions in Each Year",
+			        "Added Weight in Each Year (g)"
+			)
+		lineageTag: ca967319-3040-4d18-9261-2430ee817dda
+
+	measure 'Title Cumulative Year QuantWeight' =
+			
+			SWITCH(TRUE(),
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),"Cumulative Flock Size by Year",
+			        "Cumulative Flock Weight by Year"
+			)
+		lineageTag: 8aa76d80-824c-4ab7-a7fd-338d549fab66
 
 	column *Measures
 		dataType: string
