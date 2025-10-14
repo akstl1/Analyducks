@@ -181,18 +181,28 @@ table Sheet1
 
 		annotation SummarizationSetBy = Automatic
 
+	column image
+		dataType: string
+		lineageTag: 8ebde27d-d2fc-4026-93ba-f7c389aed67f
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: image
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Sheet1 = m
 		mode: import
 		source =
 				let
-				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1BbVzpc5LwK7ZyxPtB0XZcuOibME3M5iD4CakzYrT-8Y/edit?pli=1&gid=0#gid=0"),
-				    Sheet1_Table = Source{[name="Sheet1",ItemKind="Table"]}[Data],
-				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Table, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Duck", type text}, {"Name", type any}, {"Purchase_Method", type text}, {"Purchase_Retailer", type text}, {"Purchase_City", type text}, {"Purchase_State", type text}, {"Purchase_Country", type text}, {"ISO_Code", type text}, {"Date_Bought", type date}, {"Latitude", type number}, {"Longitude", type number}, {"About Me", type any}, {"Buyer", type text}, {"Quantity", Int64.Type}, {"Total_Weight", type number}, {"Height", type number}, {"Width", type number}, {"Length", type number}}),
+				    Source = Excel.Workbook(File.Contents("C:\Users\allan\Documents\DS_Projects\Analyducks\Power BI V2\Data\DuckDataBI.xlsx"), null, true),
+				    Table1_Table = Source{[Item="Table1",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Duck", type text}, {"Name", type any}, {"Purchase_Method", type text}, {"Purchase_Retailer", type text}, {"Purchase_City", type text}, {"Purchase_State", type text}, {"Purchase_Country", type text}, {"ISO_Code", type text}, {"Date_Bought", type date}, {"Latitude", type number}, {"Longitude", type number}, {"About Me", type any}, {"Buyer", type text}, {"Quantity", Int64.Type}, {"Total_Weight", type number}, {"Height", type number}, {"Width", type number}, {"Length", type number}}),
 				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.RoundDown([Total_Weight]/[Quantity])),
-				    #"Added Index" = Table.AddIndexColumn(#"Added Custom", "Index", 1, 1, Int64.Type)
+				    #"Added Index" = Table.AddIndexColumn(#"Added Custom", "Index", 1, 1, Int64.Type),
+				    #"Added Custom1" = Table.AddColumn(#"Added Index", "image", each "https://wallpaperaccess.com/full/4723250.jpg"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom1",{{"image", type text}})
 				in
-				    #"Added Index"
+				    #"Changed Type1"
 
 	annotation PBI_NavigationStepName = Navigation
 

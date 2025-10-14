@@ -83,6 +83,13 @@ table *Measures
 			)
 		lineageTag: 8aa76d80-824c-4ab7-a7fd-338d549fab66
 
+	measure LWHweight = max(Sheet1[Length])&" x "&max(Sheet1[Width])&" x "&max(Sheet1[Height])&"cm || "&max(Sheet1[Total_Weight])&"g"
+		lineageTag: ec929d33-723b-4ca0-85bc-c24bd24f26e8
+
+	measure pictest = "https://github.com/akstl1/Analyducks/blob/main/Power%20BI%20V2/Images/DuckPNG.png"
+		lineageTag: ee963460-40de-4219-bc17-1040b18a09d4
+		dataCategory: ImageUrl
+
 	column *Measures
 		dataType: string
 		lineageTag: 61a4a6c4-c282-4b8a-ab2c-2170885a545c

@@ -3,10 +3,10 @@
   "name": "2835bb2ab168823a0d39",
   "position": {
     "x": 205,
-    "y": 91,
+    "y": 91.25,
     "z": 2000,
-    "height": 371,
-    "width": 1039,
+    "height": 371.25,
+    "width": 1061.25,
     "tabOrder": 1000
   },
   "visual": {
@@ -237,6 +237,39 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "267c51908ba71c027e4a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_State"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0b5fa6eb830720a00205",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Quantity"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
