@@ -1947,6 +1947,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "Flock Size View": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3141,102 +3151,637 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "measure.quantity_weight_switch": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "QuantityWeightSwitch"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quantity weight switch": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "QuantityWeightSwitch": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "switch": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "weight switch": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quantity weight adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quantity weight modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quantity weight alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "weight adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "weight modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "weight alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quantity weight change": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quantity weight shift": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quantity weight difference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "param cumulative quantity weight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ParamCumulativeQuantityWeight": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "param cumulative quantity heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "param cumulative quantity weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "param cumulative quantity mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "param cumulative quantity bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "param cumulative quantity heft": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "param cumulative quantity encumbrance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "param cumulative quantity burden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "param cumulative quantity load": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "param cumulative quantity credence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.464
+			          }
+			        },
+			        {
+			          "param cumulative quantity substance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.464
+			          }
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight.param_quantity_weight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ParamCumulativeQuantityWeight",
+			          "ConceptualProperty": "ParamQuantityWeight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "param quantity weight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ParamQuantityWeight": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "param quantity heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "param quantity weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "param quantity mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "param quantity bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "param quantity heft": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "param quantity encumbrance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "param quantity burden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "param quantity load": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "param quantity credence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "param quantity substance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight.ParamQuantityWeight_field": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ParamCumulativeQuantityWeight",
+			          "ConceptualProperty": "ParamQuantityWeight Fields"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ParamQuantityWeight field": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "paramquantityweight arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "paramquantityweight turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight meadow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "paramquantityweight grassland": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "paramquantityweight lea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "paramquantityweight pasture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "paramquantityweight countryside": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight.ParamQuantityWeight_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ParamCumulativeQuantityWeight",
+			          "ConceptualProperty": "ParamQuantityWeight Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ParamQuantityWeight order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "paramquantityweight instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "paramquantityweight direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "paramquantityweight edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "paramquantityweight command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight imperative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "paramquantityweight stability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "paramquantityweight harmony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "sheet_1_has_measure_flock_weight": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.flock_weight": {
-			          "Target": {
-			            "Entity": "measure.flock_weight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.flock_weight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_flock_weight"
-			        },
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Adjectives": [
-			              {
-			                "heavy": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "light": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "measure.flock_weight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "flock_weight_indicates_how_heavy_sheet_1_are"
-			        }
-			      ]
-			    },
-			    "sheet_1_has_measure_flock_size": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.flock_size": {
-			          "Target": {
-			            "Entity": "measure.flock_size"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.flock_size"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_flock_size"
-			        }
-			      ]
-			    },
 			    "date_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Dates"
@@ -3336,6 +3881,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "param_cumulative_quantity_weight_has_measure_difference": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "measure.difference": {
+			          "Target": {
+			            "Entity": "measure.difference"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "measure.difference"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_difference"
+			        }
+			      ]
+			    },
 			    "sheet_1_has_measure_max_axis": {
 			      "Binding": {
 			        "ConceptualEntity": "Sheet1"
@@ -3366,6 +3944,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "sheet_1_have_max_axis"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_measure_max_axis": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "measure.max_axis": {
+			          "Target": {
+			            "Entity": "measure.max_axis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "measure.max_axis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_max_axis"
 			        }
 			      ]
 			    },
@@ -4538,6 +5149,99 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sheet_1_is_heavy2": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.flock_weight": {
+			          "Target": {
+			            "Entity": "measure.flock_weight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Adjectives": [
+			              {
+			                "heavy": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "light": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "measure.flock_weight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "flock_weight_indicates_how_heavy_sheet_1_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.flock_weight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_flock_weight"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_measure_flock_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.flock_size": {
+			          "Target": {
+			            "Entity": "measure.flock_size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.flock_size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_flock_size"
+			        }
+			      ]
+			    },
 			    "sheet_1_has_measure_past_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Sheet1"
@@ -4634,6 +5338,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "sheet_1_have_flock_length"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_measure_quantity_weight_switch": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "measure.quantity_weight_switch": {
+			          "Target": {
+			            "Entity": "measure.quantity_weight_switch"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "measure.quantity_weight_switch"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_quantity_weight_switch"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_measure_quantity_weight_switch": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.quantity_weight_switch": {
+			          "Target": {
+			            "Entity": "measure.quantity_weight_switch"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.quantity_weight_switch"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_quantity_weight_switch"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_param_quantity_weight": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "param_cumulative_quantity_weight.param_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight.param_quantity_weight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "param_cumulative_quantity_weight.param_quantity_weight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_param_quantity_weights"
 			        }
 			      ]
 			    },

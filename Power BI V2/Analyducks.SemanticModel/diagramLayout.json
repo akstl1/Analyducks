@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 418.39999389648438,
         "y": 0
       },
       "nodes": [
@@ -42,6 +42,18 @@
           "nodeIndex": "Dates",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1118,
+            "y": 74
+          },
+          "nodeIndex": "ParamCumulativeQuantityWeight",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

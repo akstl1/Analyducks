@@ -16,17 +16,22 @@ table *Measures
 
 	measure 'Max Axis' =
 			
-			var _value = CALCULATE(sum(Sheet1[Quantity]),ALL(Sheet1))*1.15
-			return _value
-			// CALCULATE(
-			//     maxx(
-			//         all(Dates[Year]),
-			//         sum(Sheet1[Quantity]))*1.15,
-			//         ALLEXCEPT(Dates,Dates[Year])))
-		formatString: 0
+			SWITCH(TRUE(),
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),CALCULATE(sum(Sheet1[Quantity]),ALL(Sheet1))*1.15,
+			        CALCULATE(sum(Sheet1[Total_Weight]),ALL(Sheet1))*1.15
+			)
+			// var _value = CALCULATE(sum(Sheet1[Quantity]),ALL(Sheet1))*1.15
+			// return _value)
 		lineageTag: 1188dffe-67e8-4c7a-a3c4-a0d85465830d
 
-	measure Difference = [Max Axis]-[Cumulative Count]
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Difference =
+			
+			SWITCH(TRUE(),
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),[Max Axis]-[Cumulative Count],
+			        [Max Axis]-[Cumulative Weight]
+			)
 		lineageTag: 0267f3bc-5600-44c6-b892-1a95a3512345
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -51,6 +56,16 @@ table *Measures
 	measure 'Flock Length' = CALCULATE(SUM(Sheet1[Length]),all(Sheet1))/100
 		formatString: 0.0
 		lineageTag: 87cb69a9-c587-4190-bf54-5be0b33dafc6
+
+	measure QuantityWeightSwitch =
+			
+			SWITCH(TRUE(),
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),sum(Sheet1[Quantity]),
+			        sum(Sheet1[Total_Weight])
+			)
+		lineageTag: 58a8217f-d0f8-4bb9-8367-1f9132af7100
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column *Measures
 		dataType: string

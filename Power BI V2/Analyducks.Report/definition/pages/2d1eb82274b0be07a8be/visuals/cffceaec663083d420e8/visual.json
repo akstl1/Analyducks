@@ -35,23 +35,18 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Sheet1"
-                        }
-                      },
-                      "Property": "Quantity"
+                    "SourceRef": {
+                      "Entity": "*Measures"
                     }
                   },
-                  "Function": 0
+                  "Property": "QuantityWeightSwitch"
                 }
               },
-              "queryRef": "Sum(Sheet1.Quantity)",
-              "nativeQueryRef": "Quantity",
-              "displayName": "Quantity"
+              "queryRef": "*Measures.QuantityWeightSwitch",
+              "nativeQueryRef": "Value",
+              "displayName": "Value"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Sheet1"
-                      }
-                    },
-                    "Property": "Quantity"
+                  "SourceRef": {
+                    "Entity": "*Measures"
                   }
                 },
-                "Function": 0
+                "Property": "QuantityWeightSwitch"
               }
             },
             "direction": "Descending"
@@ -150,5 +140,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "89e611f980dd78ad5164",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dates"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2912ff4563168a041c26",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "QuantityWeightSwitch"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

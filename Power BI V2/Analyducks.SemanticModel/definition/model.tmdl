@@ -17,6 +17,7 @@ ref table DateTableTemplate_f42bbec9-b855-4220-88e6-4287a523d76f
 ref table *Measures
 ref table Dates
 ref table LocalDateTable_ab63dbb5-fa4a-432a-a1a3-1960568ea4cd
+ref table ParamCumulativeQuantityWeight
 
 ref cultureInfo en-US
 

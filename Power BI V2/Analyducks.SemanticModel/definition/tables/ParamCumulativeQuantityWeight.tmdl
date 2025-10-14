@@ -1,0 +1,48 @@
+table ParamCumulativeQuantityWeight
+	lineageTag: 2f4f7063-8287-4fd8-89d3-9b53f02aee41
+
+	column ParamQuantityWeight
+		lineageTag: 7126be75-42fe-4af6-aec7-7c4db750951b
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'ParamQuantityWeight Order'
+
+		relatedColumnDetails
+			groupByColumn: 'ParamQuantityWeight Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ParamQuantityWeight Fields'
+		isHidden
+		lineageTag: 48243fdf-acf6-4e41-b46c-ce2725c45fd4
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'ParamQuantityWeight Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ParamQuantityWeight Order'
+		isHidden
+		formatString: 0
+		lineageTag: 34203468-8b5d-42cd-a999-dfff6fb0728b
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ParamCumulativeQuantityWeight = calculated
+		mode: import
+		source =
+				{
+				    ("Flock Size View", NAMEOF([Cumulative Count]), 0),
+				    ("Flock Weight View", NAMEOF([Cumulative Weight]), 0)
+				}
+
+	annotation PBI_Id = d8f9dbf1187b4c199c5cb8645aca2f91
+
