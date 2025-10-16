@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "027d26122da0b70007a1",
-  "displayName": "✨ Fun Facts",
+  "displayName": "✨ Quack Facts",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280

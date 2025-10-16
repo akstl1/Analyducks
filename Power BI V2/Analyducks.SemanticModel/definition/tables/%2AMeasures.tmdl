@@ -90,6 +90,23 @@ table *Measures
 		lineageTag: ee963460-40de-4219-bc17-1040b18a09d4
 		dataCategory: ImageUrl
 
+	measure 'kg Comparison' =
+			
+			SWITCH(TRUE(),
+			        ROUNDDOWN([Flock Weight],0)>4 && ROUNDDOWN([Flock Weight],0)<=12, "bag of flour",
+			        ROUNDDOWN([Flock Weight],0)>12 && ROUNDDOWN([Flock Weight],0)<=17, "large watermelon",
+			        ROUNDDOWN([Flock Weight],0)>17 && ROUNDDOWN([Flock Weight],0)<=22, "5 gallon water jug",
+			        ROUNDDOWN([Flock Weight],0)>22 && ROUNDDOWN([Flock Weight],0)<=27, "2 gold bars",
+			        ROUNDDOWN([Flock Weight],0)>27 && ROUNDDOWN([Flock Weight],0)<=32, "fully grown dwarf goat",
+			        ".....lot of ducks"
+			)
+		lineageTag: 81d9aa4f-a484-4ce7-90d5-ee32184c86be
+
+	measure 'Past year %' = 100*([Past Year])/([Flock Size]-[Past Year])
+		lineageTag: 3939e498-3a46-4d53-88d4-58aa9ddfed18
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column *Measures
 		dataType: string
 		lineageTag: 61a4a6c4-c282-4b8a-ab2c-2170885a545c

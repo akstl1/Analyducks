@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "*Measures.Cumulative Count",
-              "nativeQueryRef": "Flock Size View",
-              "displayName": "Flock Size View"
+              "nativeQueryRef": "Flock Size",
+              "displayName": "Flock Size"
             },
             {
               "field": {
