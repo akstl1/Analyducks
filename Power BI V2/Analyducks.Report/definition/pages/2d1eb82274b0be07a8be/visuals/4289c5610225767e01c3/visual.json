@@ -42,12 +42,12 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Cumulative Count"
+                  "Property": "Cumulative Weight"
                 }
               },
-              "queryRef": "*Measures.Cumulative Count",
-              "nativeQueryRef": "Flock Size",
-              "displayName": "Flock Size"
+              "queryRef": "*Measures.Cumulative Weight",
+              "nativeQueryRef": "Flock Weight",
+              "displayName": "Flock Weight"
             },
             {
               "field": {
@@ -92,7 +92,7 @@
                     "Entity": "*Measures"
                   }
                 },
-                "Property": "Cumulative Count"
+                "Property": "Cumulative Weight"
               }
             },
             "direction": "Descending"

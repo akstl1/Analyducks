@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''*Measures''[Cumulative Count]'"
+                                "Value": "'''*Measures''[Cumulative Weight]'"
                               }
                             }
                           ]
@@ -109,7 +109,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''*Measures''[Cumulative Count]'"
+                                      "Value": "'''*Measures''[Cumulative Weight]'"
                                     }
                                   }
                                 ]
@@ -133,7 +133,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Flock Size"
+                            "0": "Flock Weight"
                           }
                         ]
                       }
