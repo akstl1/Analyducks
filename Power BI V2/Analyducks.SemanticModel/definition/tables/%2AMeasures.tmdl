@@ -107,6 +107,20 @@ table *Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Max Ducks Per Year' =
+			
+			MAXX(
+			    SUMMARIZE(
+			        'Sheet1',
+			        Dates[Year],
+			        "Total Qty",
+			        SUM(Sheet1[Quantity])
+			    ),
+			    [Total Qty]
+			)
+		formatString: 0
+		lineageTag: 4bad40a7-ddd9-4202-a6b7-11be690b71fd
+
 	column *Measures
 		dataType: string
 		lineageTag: 61a4a6c4-c282-4b8a-ab2c-2170885a545c

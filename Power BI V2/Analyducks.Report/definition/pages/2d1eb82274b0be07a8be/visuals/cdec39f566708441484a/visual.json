@@ -19092,6 +19092,62 @@
           "selector": {
             "id": "Value 4"
           }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "*",
+                                "Entity": "*Measures",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "*"
+                                    }
+                                  },
+                                  "Property": "Max Ducks Per Year"
+                                },
+                                "Name": "*Measures.Max Ducks Per Year"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "*Measures.Max Ducks Per Year"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 5",
+                      "utterance": "max ducks per year"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 5"
+          }
         }
       ],
       "general": [
@@ -19157,7 +19213,21 @@
                     }
                   },
                   {
-                    "value": ", with XXX additions. This year my flock has grown by "
+                    "value": ", with "
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 5"
+                      }
+                    }
+                  },
+                  {
+                    "value": " additions. This year my flock has grown by "
                   },
                   {
                     "value": {
@@ -19199,7 +19269,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "And for anyone asking \"where's the AI?\", I ran an ML regression model and determined that, based on my flock, you can predict a rubber duck's weight via the equation: Weight (g) = XL x XW x XH (with dimensions in cm). And also, I named my Copilot QuackerJack."
+                    "value": "And for anyone asking \"where's the AI?\", I ran an ML regression model and determined that, based on my flock, you can predict a rubber duck's weight via the equation: Weight (g) = XL x XW x XH (with dimensions in cm). And also, I named my MS Copilot QuackerJack."
                   }
                 ]
               }
