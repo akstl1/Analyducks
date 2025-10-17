@@ -121,6 +121,18 @@ table *Measures
 		formatString: 0
 		lineageTag: 4bad40a7-ddd9-4202-a6b7-11be690b71fd
 
+	measure 'Countries of Purchase' = DISTINCTCOUNT(Sheet1[Purchase_Country])
+		formatString: 0
+		lineageTag: 36d2305c-8d85-4952-83d9-a7ce17002b29
+
+	measure Donors = DISTINCTCOUNT(Sheet1[Buyer])
+		formatString: 0
+		lineageTag: 0f2cb320-ae60-4e68-b173-b40129c008c2
+
+	measure 'States of Purchase' = CALCULATE(DISTINCTCOUNT(Sheet1[Purchase_State]),Sheet1[Purchase_Country]="USA")
+		formatString: 0
+		lineageTag: d4ca819e-0971-4956-994e-2ae6b3fac962
+
 	column *Measures
 		dataType: string
 		lineageTag: 61a4a6c4-c282-4b8a-ab2c-2170885a545c

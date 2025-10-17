@@ -52,12 +52,11 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Flock Weight"
+                  "Property": "Countries of Purchase"
                 }
               },
-              "queryRef": "*Measures.Flock Weight",
-              "nativeQueryRef": "Flock Weight (kg)",
-              "displayName": "Flock Weight (kg)"
+              "queryRef": "*Measures.Countries of Purchase",
+              "nativeQueryRef": "Countries of Purchase"
             },
             {
               "field": {
@@ -67,12 +66,11 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Flock Height"
+                  "Property": "Donors"
                 }
               },
-              "queryRef": "*Measures.Flock Height",
-              "nativeQueryRef": "Flock Height (m)",
-              "displayName": "Flock Height (m)"
+              "queryRef": "*Measures.Donors",
+              "nativeQueryRef": "Donors"
             },
             {
               "field": {
@@ -82,12 +80,11 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Flock Length"
+                  "Property": "States of Purchase"
                 }
               },
-              "queryRef": "*Measures.Flock Length",
-              "nativeQueryRef": "Flock Length (m)",
-              "displayName": "Flock Length (m)"
+              "queryRef": "*Measures.States of Purchase",
+              "nativeQueryRef": "States of Purchase"
             }
           ]
         }
@@ -132,34 +129,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "*Measures.Flock Height"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "*Measures.Flock Length"
           }
         }
       ],
@@ -248,5 +217,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7c8f76c40c14657712dc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Size"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fd9b3d9488c09b6f363b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Past Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9967df4233a015f06f06",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Countries of Purchase"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ba705188a244d25ef99e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Donors"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0e8c5b578d9836596d9b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "States of Purchase"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
