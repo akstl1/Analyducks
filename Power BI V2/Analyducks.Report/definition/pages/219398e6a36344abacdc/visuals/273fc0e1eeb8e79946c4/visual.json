@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "273fc0e1eeb8e79946c4",
   "position": {
-    "x": 513.75,
-    "y": 468.75,
-    "z": 6001,
-    "height": 233.75,
-    "width": 382.5,
-    "tabOrder": 6001
+    "x": 533,
+    "y": 465,
+    "z": 6000,
+    "height": 234,
+    "width": 382,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "donutChart",
@@ -109,43 +109,39 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1ff91731319e0b595c03",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9DE0F7'"
+                    }
                   }
-                },
-                "Property": "Quantity"
+                }
               }
             },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "062fdb0792b4400c0720",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
               }
-            },
-            "Property": "Purchase_Method"
+            }
           }
-        },
-        "type": "Categorical"
-      }
-    ]
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
   }
 }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "1ca9a3e44081d7b917d0",
   "position": {
-    "x": 3.75,
-    "y": 546.25,
-    "z": 6001,
-    "height": 115,
-    "width": 188.75,
-    "tabOrder": 6001
+    "x": 7.0935960591133007,
+    "y": 406.99507389162562,
+    "z": 7000,
+    "height": 71.822660098522164,
+    "width": 151.62561576354679,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -51,6 +51,13 @@
       "general": [
         {
           "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
             "filter": {
               "filter": {
                 "Version": 2,
@@ -81,7 +88,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''*Measures''[Cumulative Weight]'"
+                                "Value": "'''*Measures''[Cumulative Count]'"
                               }
                             }
                           ]
@@ -109,7 +116,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''*Measures''[Cumulative Weight]'"
+                                      "Value": "'''*Measures''[Cumulative Count]'"
                                     }
                                   }
                                 ]
@@ -133,7 +140,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Flock Weight"
+                            "0": "View Flock Size"
                           }
                         ]
                       }
@@ -157,6 +164,32 @@
             }
           }
         }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -166,7 +199,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -218,26 +251,33 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e8cab52070975be5b4b7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ParamCumulativeQuantityWeight"
-              }
-            },
-            "Property": "ParamQuantityWeight"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

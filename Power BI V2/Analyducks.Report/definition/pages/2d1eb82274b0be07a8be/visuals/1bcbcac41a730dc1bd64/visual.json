@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "1bcbcac41a730dc1bd64",
   "position": {
-    "x": 703.75,
-    "y": 97.5,
+    "x": 688.16906038525622,
+    "y": 97.536945812807886,
     "z": 3000,
-    "height": 448.75,
-    "width": 565,
-    "tabOrder": 3000
+    "height": 448.66995073891627,
+    "width": 564.82758620689651,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196",
@@ -321,7 +321,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "64560c9ccbc9a5bb73a6",
+        "name": "248a432c0341013c2019",
         "field": {
           "Column": {
             "Expression": {
@@ -335,7 +335,7 @@
         "type": "Advanced"
       },
       {
-        "name": "dcfe9fb75670d81eb4b2",
+        "name": "9b184b7d08e84020db97",
         "field": {
           "Column": {
             "Expression": {
@@ -349,7 +349,7 @@
         "type": "Advanced"
       },
       {
-        "name": "30f97dca118a0cd3caac",
+        "name": "b9d0ea3bce29959cb469",
         "field": {
           "Column": {
             "Expression": {
@@ -363,7 +363,7 @@
         "type": "Advanced"
       },
       {
-        "name": "db1a1d6a58260780615f",
+        "name": "d35a3d9a9c2a02879793",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -382,7 +382,7 @@
         "type": "Advanced"
       },
       {
-        "name": "24ae035d20fbb2829954",
+        "name": "da5205e3d7e9114c017e",
         "field": {
           "Column": {
             "Expression": {
@@ -396,7 +396,7 @@
         "type": "Categorical"
       },
       {
-        "name": "4db8a052277ca6616c11",
+        "name": "debf32cb7b274336e7a5",
         "field": {
           "Column": {
             "Expression": {

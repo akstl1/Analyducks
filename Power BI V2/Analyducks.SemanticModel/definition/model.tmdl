@@ -10,7 +10,7 @@ annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop","TMDLView_Desktop"
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Sheet1","*Measures","Sheet1 (3)","Sheet1 (4)"]
+annotation PBI_QueryOrder = ["Sheet1","*Measures","Sheet1 (3)","Coefficients"]
 
 ref table Sheet1
 ref table DateTableTemplate_f42bbec9-b855-4220-88e6-4287a523d76f
@@ -18,7 +18,7 @@ ref table *Measures
 ref table Dates
 ref table LocalDateTable_ab63dbb5-fa4a-432a-a1a3-1960568ea4cd
 ref table ParamCumulativeQuantityWeight
-ref table 'Sheet1 (4)'
+ref table Coefficients
 
 ref cultureInfo en-US
 

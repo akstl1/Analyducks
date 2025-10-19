@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "cffceaec663083d420e8",
   "position": {
-    "x": 211.25,
-    "y": 97.5,
+    "x": 195.78236087662793,
+    "y": 97.536945812694213,
     "z": 0,
     "height": 296.25,
-    "width": 480
+    "width": 480,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "columnChart",
@@ -172,37 +173,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "89e611f980dd78ad5164",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dates"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2912ff4563168a041c26",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "QuantityWeightSwitch"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

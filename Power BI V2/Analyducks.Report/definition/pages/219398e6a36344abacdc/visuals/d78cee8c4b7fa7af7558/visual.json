@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "d78cee8c4b7fa7af7558",
   "position": {
-    "x": 910,
-    "y": 468.75,
+    "x": 0,
+    "y": 0,
     "z": 1500,
-    "height": 233.75,
-    "width": 356.25,
-    "tabOrder": 2000
+    "height": 234,
+    "width": 334
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -80,44 +79,40 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9DE0F7'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2d5aeca81c230e0754bc",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f43f71a6655d70843349",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Buyer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "eb2dfa862711581184ca",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Buyer"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "2d5aeca81c230e0754bc"
 }

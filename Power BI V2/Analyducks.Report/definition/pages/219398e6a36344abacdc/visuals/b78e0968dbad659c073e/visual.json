@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "b78e0968dbad659c073e",
   "position": {
-    "x": 205,
+    "x": 182,
     "y": 91,
     "z": 0,
     "height": 371,
-    "width": 1039,
-    "tabOrder": 3000
+    "width": 1083,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "azureMap",
@@ -27,54 +27,9 @@
                 }
               },
               "queryRef": "Sheet1.Purchase_City",
-              "nativeQueryRef": "Purchase_City",
-              "active": true
-            }
-          ]
-        },
-        "X": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Sheet1"
-                        }
-                      },
-                      "Property": "Longitude"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Avg(Sheet1.Longitude)",
-              "nativeQueryRef": "Average of Longitude"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Sheet1"
-                        }
-                      },
-                      "Property": "Latitude"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Avg(Sheet1.Latitude)",
-              "nativeQueryRef": "Average of Latitude"
+              "nativeQueryRef": "City",
+              "active": true,
+              "displayName": "City"
             }
           ]
         }
@@ -87,6 +42,96 @@
       "dataPoint": [
         {
           "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Sheet1"
+                                }
+                              },
+                              "Property": "Purchase_City"
+                            }
+                          },
+                          "Function": 5
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'minColor'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'maxColor'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "worldWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -97,7 +142,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Purchase Locations'"
+                  "Value": "'Cities of Purchase'"
                 }
               }
             },
@@ -110,8 +155,73 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9DE0F7'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f8ac3670dd9a8edcb901",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_City"
+          }
+        },
+        "type": "Categorical",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "isHidden": true
 }

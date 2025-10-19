@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "176b20ce7ada6bb60c02",
   "position": {
     "x": 77,
@@ -7,7 +7,7 @@
     "z": 22000,
     "height": 74,
     "width": 1071,
-    "tabOrder": 23005
+    "tabOrder": 22000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -332,79 +332,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "453b3340007050e9c7d4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Size"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "317c22bb32800649da07",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Weight"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "458528932044076a87ce",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Past Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9c1c57e02cd1724be5cd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Height"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4bcdd72dd903b5167a79",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Length"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

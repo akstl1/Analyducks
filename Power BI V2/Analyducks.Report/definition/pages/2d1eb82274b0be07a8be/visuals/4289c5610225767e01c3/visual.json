@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "4289c5610225767e01c3",
   "position": {
-    "x": 211.0344827586207,
+    "x": 195.96059113300493,
     "y": 406.99507389162562,
     "z": 5000,
     "height": 296.1576354679803,
     "width": 479.70443349753697,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "stackedAreaChart",
@@ -42,12 +42,12 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Cumulative Weight"
+                  "Property": "Cumulative Count"
                 }
               },
-              "queryRef": "*Measures.Cumulative Weight",
-              "nativeQueryRef": "Flock Weight",
-              "displayName": "Flock Weight"
+              "queryRef": "*Measures.Cumulative Count",
+              "nativeQueryRef": "View Flock Size",
+              "displayName": "View Flock Size"
             },
             {
               "field": {
@@ -92,7 +92,7 @@
                     "Entity": "*Measures"
                   }
                 },
-                "Property": "Cumulative Weight"
+                "Property": "Cumulative Count"
               }
             },
             "direction": "Descending"
@@ -333,37 +333,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9558dac081b0145b50c7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dates"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7efba32936504474acd9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Difference"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

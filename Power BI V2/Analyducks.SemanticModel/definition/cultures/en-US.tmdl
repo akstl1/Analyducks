@@ -1949,7 +1949,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Flock Size View": {
+			          "View Flock Size": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3961,9 +3961,988 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "sheet_1.image": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "image"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "image": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "doppelgänger": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "copy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "twin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "double": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "duplicate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "persona": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "aura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "semblance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "measure.LW_hweight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "LWHweight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LW hweight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LWHweight": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "measure.pictest": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "pictest"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pictest": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure.kg_comparison": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "kg Comparison"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kg comparison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "comparison": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kg judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kg judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kg assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kg evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kg appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measure.past_year_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "Past year %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "past year %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "past yr %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "past year percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "past year pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "history year %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "antiquity year %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "measure.max_ducks_per_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "Max Ducks Per Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "max ducks per year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ducks": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "max ducks": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "max duck per yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "maximum duck per year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum duck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "max luv per year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "max dearie per year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "max luv": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max dearie": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max dear per year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "max ducky per year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "max chuck per year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measure.countries_of_purchase": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "Countries of Purchase"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "countries of purchase": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "countries": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "measure.donors": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "Donors"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "donors": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "giver": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "contributor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "benefactor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supporter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "presenter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measure.states_of_purchase": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "*Measures",
+			          "ConceptualProperty": "States of Purchase"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "states of purchase": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "states": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_4": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Coefficients"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sheet1 (4)": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "measure_has_max_ducks_per_year": {
+			      "Binding": {
+			        "ConceptualEntity": "*Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure": {
+			          "Target": {
+			            "Entity": "measure"
+			          }
+			        },
+			        "measure.max_ducks_per_year": {
+			          "Target": {
+			            "Entity": "measure.max_ducks_per_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure"
+			            },
+			            "Object": {
+			              "Role": "measure.max_ducks_per_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_have_max_ducks_per_year"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_measure_past_year_": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.past_year_": {
+			          "Target": {
+			            "Entity": "measure.past_year_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.past_year_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_past_year_"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_measure_kg_comparison": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.kg_comparison": {
+			          "Target": {
+			            "Entity": "measure.kg_comparison"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.kg_comparison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_kg_comparison"
+			        }
+			      ]
+			    },
+			    "measure_has_pictest": {
+			      "Binding": {
+			        "ConceptualEntity": "*Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure": {
+			          "Target": {
+			            "Entity": "measure"
+			          }
+			        },
+			        "measure.pictest": {
+			          "Target": {
+			            "Entity": "measure.pictest"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure"
+			            },
+			            "Object": {
+			              "Role": "measure.pictest"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_have_pictest"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_measure_LW_hweight": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.LW_hweight": {
+			          "Target": {
+			            "Entity": "measure.LW_hweight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.LW_hweight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_LW_hweight"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_image": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.image": {
+			          "Target": {
+			            "Entity": "sheet_1.image"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.image"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_images"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_measure_title_cumulative_year_QuantWeight": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "measure.title_cumulative_year_QuantWeight": {
+			          "Target": {
+			            "Entity": "measure.title_cumulative_year_QuantWeight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "measure.title_cumulative_year_QuantWeight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_title_cumulative_year_QuantWeight"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_measure_title_individual_year_QuantWeight": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "measure.title_individual_year_QuantWeight": {
+			          "Target": {
+			            "Entity": "measure.title_individual_year_QuantWeight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "measure.title_individual_year_QuantWeight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_title_individual_year_QuantWeight"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_param_quantity_weight": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "param_cumulative_quantity_weight.param_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight.param_quantity_weight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "param_cumulative_quantity_weight.param_quantity_weight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_param_quantity_weights"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_measure_quantity_weight_switch": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "measure.quantity_weight_switch": {
+			          "Target": {
+			            "Entity": "measure.quantity_weight_switch"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "measure.quantity_weight_switch"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_quantity_weight_switch"
+			        }
+			      ]
+			    },
+			    "param_cumulative_quantity_weight_has_measure_quantity_weight_switch": {
+			      "Binding": {
+			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "param_cumulative_quantity_weight": {
+			          "Target": {
+			            "Entity": "param_cumulative_quantity_weight"
+			          }
+			        },
+			        "measure.quantity_weight_switch": {
+			          "Target": {
+			            "Entity": "measure.quantity_weight_switch"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "param_cumulative_quantity_weight"
+			            },
+			            "Object": {
+			              "Role": "measure.quantity_weight_switch"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "param_cumulative_quantity_weights_have_quantity_weight_switch"
+			        }
+			      ]
+			    },
 			    "sheet_1_has_measure_flock_length": {
 			      "Binding": {
 			        "ConceptualEntity": "Sheet1"
@@ -5523,40 +6502,53 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "param_cumulative_quantity_weight_has_measure_quantity_weight_switch": {
+			    "Sheet1_4_is_named_name": {
 			      "Binding": {
-			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			        "ConceptualEntity": "Coefficients"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "param_cumulative_quantity_weight": {
+			        "Sheet1_4": {
 			          "Target": {
-			            "Entity": "param_cumulative_quantity_weight"
+			            "Entity": "Sheet1_4"
 			          }
 			        },
-			        "measure.quantity_weight_switch": {
+			        "Sheet1_4.name": {
 			          "Target": {
-			            "Entity": "measure.quantity_weight_switch"
+			            "Entity": "Sheet1_4.name"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Name": {
 			            "Subject": {
-			              "Role": "param_cumulative_quantity_weight"
+			              "Role": "Sheet1_4"
 			            },
-			            "Object": {
-			              "Role": "measure.quantity_weight_switch"
+			            "Name": {
+			              "Role": "Sheet1_4.name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "param_cumulative_quantity_weights_have_quantity_weight_switch"
+			          "ID": "names_are_names_IDs_of_Sheet1_4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_4"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_4.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_4_have_names"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_quantity_weight_switch": {
+			    "sheet_1_has_measure_countries_of_purchase": {
 			      "Binding": {
 			        "ConceptualEntity": "Sheet1"
 			      },
@@ -5567,9 +6559,9 @@ cultureInfo en-US
 			            "Entity": "sheet_1"
 			          }
 			        },
-			        "measure.quantity_weight_switch": {
+			        "measure.countries_of_purchase": {
 			          "Target": {
-			            "Entity": "measure.quantity_weight_switch"
+			            "Entity": "measure.countries_of_purchase"
 			          }
 			        }
 			      },
@@ -5580,29 +6572,29 @@ cultureInfo en-US
 			              "Role": "sheet_1"
 			            },
 			            "Object": {
-			              "Role": "measure.quantity_weight_switch"
+			              "Role": "measure.countries_of_purchase"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_quantity_weight_switch"
+			          "ID": "sheet_1_have_countries_of_purchase"
 			        }
 			      ]
 			    },
-			    "param_cumulative_quantity_weight_has_param_quantity_weight": {
+			    "sheet_1_has_measure_donors": {
 			      "Binding": {
-			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			        "ConceptualEntity": "Sheet1"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "param_cumulative_quantity_weight": {
+			        "sheet_1": {
 			          "Target": {
-			            "Entity": "param_cumulative_quantity_weight"
+			            "Entity": "sheet_1"
 			          }
 			        },
-			        "param_cumulative_quantity_weight.param_quantity_weight": {
+			        "measure.donors": {
 			          "Target": {
-			            "Entity": "param_cumulative_quantity_weight.param_quantity_weight"
+			            "Entity": "measure.donors"
 			          }
 			        }
 			      },
@@ -5610,32 +6602,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "param_cumulative_quantity_weight"
+			              "Role": "sheet_1"
 			            },
 			            "Object": {
-			              "Role": "param_cumulative_quantity_weight.param_quantity_weight"
+			              "Role": "measure.donors"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "param_cumulative_quantity_weights_have_param_quantity_weights"
+			          "ID": "sheet_1_have_donors"
 			        }
 			      ]
 			    },
-			    "param_cumulative_quantity_weight_has_measure_title_individual_year_QuantWeight": {
+			    "sheet_1_has_measure_states_of_purchase": {
 			      "Binding": {
-			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
+			        "ConceptualEntity": "Sheet1"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "param_cumulative_quantity_weight": {
+			        "sheet_1": {
 			          "Target": {
-			            "Entity": "param_cumulative_quantity_weight"
+			            "Entity": "sheet_1"
 			          }
 			        },
-			        "measure.title_individual_year_QuantWeight": {
+			        "measure.states_of_purchase": {
 			          "Target": {
-			            "Entity": "measure.title_individual_year_QuantWeight"
+			            "Entity": "measure.states_of_purchase"
 			          }
 			        }
 			      },
@@ -5643,48 +6635,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "param_cumulative_quantity_weight"
+			              "Role": "sheet_1"
 			            },
 			            "Object": {
-			              "Role": "measure.title_individual_year_QuantWeight"
+			              "Role": "measure.states_of_purchase"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "param_cumulative_quantity_weights_have_title_individual_year_QuantWeight"
-			        }
-			      ]
-			    },
-			    "param_cumulative_quantity_weight_has_measure_title_cumulative_year_QuantWeight": {
-			      "Binding": {
-			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "param_cumulative_quantity_weight": {
-			          "Target": {
-			            "Entity": "param_cumulative_quantity_weight"
-			          }
-			        },
-			        "measure.title_cumulative_year_QuantWeight": {
-			          "Target": {
-			            "Entity": "measure.title_cumulative_year_QuantWeight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "param_cumulative_quantity_weight"
-			            },
-			            "Object": {
-			              "Role": "measure.title_cumulative_year_QuantWeight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "param_cumulative_quantity_weights_have_title_cumulative_year_QuantWeight"
+			          "ID": "sheet_1_have_states_of_purchase"
 			        }
 			      ]
 			    },

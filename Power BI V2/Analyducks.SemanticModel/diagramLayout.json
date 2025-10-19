@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 184.80000305175781,
+        "x": 469,
         "y": 0
       },
       "nodes": [
@@ -63,8 +63,7 @@
             "x": 1402,
             "y": 98
           },
-          "nodeIndex": "Sheet1 (4)",
-          "nodeLineageTag": "e4fba9a0-6319-489a-9273-0739b982c79b",
+          "nodeIndex": "Coefficients",
           "size": {
             "height": 104,
             "width": 234

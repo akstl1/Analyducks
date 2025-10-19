@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "2bc2a7a6090e76c2527b",
   "position": {
-    "x": 205,
-    "y": 14,
+    "x": 189.53236087662793,
+    "y": 14.036945812694217,
     "z": 6000,
     "height": 74,
     "width": 1071,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -248,79 +248,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "30d9fa4dece01c49861c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Size"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0df298eea2e7ce7ad691",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Weight"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a19c32e05e41900788aa",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Past Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3c80dcbe50219805762d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Height"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b699f81505d475d8d668",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Length"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

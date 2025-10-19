@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "2835bb2ab168823a0d39",
   "position": {
-    "x": 205,
-    "y": 91.25,
+    "x": 182,
+    "y": 91,
     "z": 2000,
-    "height": 371.25,
-    "width": 1061.25,
-    "tabOrder": 1000
+    "height": 372,
+    "width": 1084
   },
   "visual": {
     "visualType": "azureMap",
@@ -156,6 +155,72 @@
             }
           }
         }
+      ],
+      "heatMapLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "barChart": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "traffic": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showTrafficControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "worldWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -165,7 +230,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Purchase Locations'"
+                  "Value": "'Purchase by US State'"
                 }
               }
             },
@@ -173,6 +238,37 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9DE0F7'"
+                    }
+                  }
                 }
               }
             }
@@ -239,7 +335,7 @@
         "howCreated": "User"
       },
       {
-        "name": "267c51908ba71c027e4a",
+        "name": "45d772232b4b62b0c717",
         "field": {
           "Column": {
             "Expression": {
@@ -253,7 +349,7 @@
         "type": "Categorical"
       },
       {
-        "name": "0b5fa6eb830720a00205",
+        "name": "de03fd990e8000108a47",
         "field": {
           "Aggregation": {
             "Expression": {

@@ -40,8 +40,8 @@ table ParamCumulativeQuantityWeight
 		mode: import
 		source =
 				{
-				    ("Flock Size", NAMEOF([Cumulative Count]), 0),
-				    ("Flock Weight", NAMEOF([Cumulative Weight]), 0)
+				    ("View Flock Size", NAMEOF([Cumulative Count]), 0),
+				    ("View Flock Weight", NAMEOF([Cumulative Weight]), 0)
 				}
 
 	annotation PBI_Id = d8f9dbf1187b4c199c5cb8645aca2f91

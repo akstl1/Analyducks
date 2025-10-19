@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "6510993ca6139c007451",
   "position": {
-    "x": 205,
+    "x": 175,
     "y": 14,
     "z": 4000,
     "height": 74,
-    "width": 1071,
-    "tabOrder": 4000
+    "width": 1101,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -217,79 +217,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7c8f76c40c14657712dc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Flock Size"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fd9b3d9488c09b6f363b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Past Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9967df4233a015f06f06",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Countries of Purchase"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ba705188a244d25ef99e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "Donors"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0e8c5b578d9836596d9b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "*Measures"
-              }
-            },
-            "Property": "States of Purchase"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
