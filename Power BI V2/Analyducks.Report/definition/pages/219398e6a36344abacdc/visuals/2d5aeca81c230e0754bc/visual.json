@@ -4,10 +4,10 @@
   "position": {
     "x": 931,
     "y": 465,
-    "z": 5000,
+    "z": 6000,
     "height": 234,
     "width": 334,
-    "tabOrder": 11000
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "Navbar+Constants",

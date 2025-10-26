@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "2835bb2ab168823a0d39",
   "position": {
-    "x": 182,
-    "y": 91,
-    "z": 2000,
-    "height": 372,
-    "width": 1084
+    "x": 7.7777777777777777,
+    "y": 124.44444444444444,
+    "z": 3000,
+    "height": 338.88888888888886,
+    "width": 1257.7777777777778
   },
   "visual": {
     "visualType": "azureMap",
@@ -333,40 +333,8 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "45d772232b4b62b0c717",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_State"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "de03fd990e8000108a47",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Quantity"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
-  }
+  },
+  "isHidden": true
 }

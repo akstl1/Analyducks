@@ -4,7 +4,7 @@
   "position": {
     "x": 533,
     "y": 465,
-    "z": 6000,
+    "z": 7000,
     "height": 234,
     "width": 382,
     "tabOrder": 4000
@@ -102,6 +102,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }

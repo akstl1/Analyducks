@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "1bcbcac41a730dc1bd64",
   "position": {
-    "x": 688.16906038525622,
-    "y": 97.536945812807886,
+    "x": 520,
+    "y": 134.44444444444443,
     "z": 3000,
-    "height": 448.66995073891627,
-    "width": 564.82758620689651,
+    "height": 412.22222222222223,
+    "width": 733.33333333333337,
     "tabOrder": 2000
   },
   "visual": {
@@ -317,98 +317,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "248a432c0341013c2019",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Width"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b184b7d08e84020db97",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Height"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b9d0ea3bce29959cb469",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Length"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d35a3d9a9c2a02879793",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Total_Weight"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "da5205e3d7e9114c017e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Avg Weight"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "debf32cb7b274336e7a5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "798b7e45c6e124a893ed",
   "position": {
-    "x": 7.0935960591133007,
-    "y": 20.39408866995074,
+    "x": 95.555555555555557,
+    "y": 2.2222222222222223,
     "z": 2000,
-    "height": 373.30049261083747,
-    "width": 151.62561576354679,
+    "height": 46.666666666666664,
+    "width": 883.33333333333326,
     "tabOrder": 1000
   },
   "visual": {
@@ -18,7 +18,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             }
@@ -31,14 +31,14 @@
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
             "leftMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "9L"
+                  "Value": "0L"
                 }
               }
             },
@@ -60,6 +60,13 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -126,6 +133,28 @@
           },
           "selector": {
             "id": "e05168756a4ad03a8e52"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
           }
         }
       ]

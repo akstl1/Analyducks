@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "1ca9a3e44081d7b917d0",
   "position": {
-    "x": 7.0935960591133007,
-    "y": 406.99507389162562,
+    "x": 1007.7777777777777,
+    "y": 1.1111111111111112,
     "z": 7000,
-    "height": 71.822660098522164,
-    "width": 151.62561576354679,
+    "height": 48.888888888888886,
+    "width": 272.22222222222223,
     "tabOrder": 6000
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
         "Values": {
@@ -27,8 +27,7 @@
                 }
               },
               "queryRef": "ParamQuantityWeight.ParamQuantityWeight",
-              "nativeQueryRef": "ParamQuantityWeight",
-              "active": true
+              "nativeQueryRef": "ParamQuantityWeight"
             }
           ]
         }
@@ -37,27 +36,12 @@
     "objects": {
       "data": [
         {
-          "properties": {
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Basic'"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "general": [
         {
           "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "filter": {
               "filter": {
                 "Version": 2,
@@ -88,7 +72,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''*Measures''[Cumulative Count]'"
+                                "Value": "'''*Measures''[Cumulative Weight]'"
                               }
                             }
                           ]
@@ -116,7 +100,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''*Measures''[Cumulative Count]'"
+                                      "Value": "'''*Measures''[Cumulative Weight]'"
                                     }
                                   }
                                 ]
@@ -140,26 +124,13 @@
                         },
                         "valueMap": [
                           {
-                            "0": "View Flock Size"
+                            "0": "View Flock Weight"
                           }
                         ]
                       }
                     }
                   }
                 ]
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
               }
             }
           }
@@ -178,16 +149,99 @@
           }
         }
       ],
-      "items": [
+      "value": [
         {
           "properties": {
-            "textSize": {
+            "fontSize": {
               "expr": {
                 "Literal": {
                   "Value": "9D"
                 }
               }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "shapeCustomRectangle": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRoundedByPixel'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "cellPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "8L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "paddingSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Custom'"
+                }
+              }
+            },
+            "topMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -241,9 +295,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
+                    "Literal": {
+                      "Value": "'#F7EC21'"
                     }
                   }
                 }
@@ -270,7 +323,48 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "18D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }

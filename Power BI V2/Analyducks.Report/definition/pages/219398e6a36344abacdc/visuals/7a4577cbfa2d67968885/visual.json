@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "7a4577cbfa2d67968885",
   "position": {
-    "x": 182,
-    "y": 91,
-    "z": 1000,
-    "height": 372,
-    "width": 1083,
+    "x": 7.7777777777777777,
+    "y": 124.44444444444444,
+    "z": 2000,
+    "height": 338.88888888888886,
+    "width": 1257.7777777777778,
     "tabOrder": 5000
   },
   "visual": {
@@ -179,7 +179,7 @@
             "autoZoom": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -194,6 +194,41 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "autoZoomIncludesReferenceLayer": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "52D"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "pitch": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -408,7 +443,22 @@
         }
       },
       {
-        "name": "f63c18175a609477c01e",
+        "name": "0efaeee8c7955c130b7a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Buyer"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "4bbea7a791d344f25b98",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -425,23 +475,7 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "0efaeee8c7955c130b7a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Buyer"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
       }
     ]
-  },
-  "isHidden": true
+  }
 }

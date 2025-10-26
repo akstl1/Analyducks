@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "f882a1880fe285babec2",
+  "position": {
+    "x": 1055.5555555555554,
+    "y": 691.11111111111109,
+    "z": 3000,
+    "height": 28.888888888888889,
+    "width": 224.44444444444443,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Allan Khariton | ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "LinkedIn",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    },
+                    "url": "https://www.linkedin.com/in/allan-khariton/"
+                  },
+                  {
+                    "value": " | "
+                  },
+                  {
+                    "value": "Portfolio",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    },
+                    "url": "https://akstl1.github.io/"
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "57D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
