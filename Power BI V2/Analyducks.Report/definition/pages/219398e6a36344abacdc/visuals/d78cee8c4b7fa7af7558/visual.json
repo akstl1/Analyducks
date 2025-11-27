@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "d78cee8c4b7fa7af7558",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
     "height": 224.39795784788583,
-    "width": 400.53829035214039
+    "width": 400.53829035214039,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -162,42 +163,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2d5aeca81c230e0754bc",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "235bdf554b99233d81b3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Buyer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f3951a285238b15ce8e1",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Buyer"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "2d5aeca81c230e0754bc"
 }

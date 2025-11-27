@@ -1,0 +1,93 @@
+table Locations
+	lineageTag: e5333977-de95-4b70-b5d7-96bbdf84fde3
+
+	column 'Shop Name'
+		dataType: string
+		lineageTag: 6a315a24-5848-4990-a8c9-a715910ae8e0
+		summarizeBy: none
+		sourceColumn: Shop Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: f263678b-221a-4835-843d-20f081ada142
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 1d6fc395-6640-4205-ad84-172912ca74c4
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 3516ade3-e3c7-49de-ad05-f167a8f5ecf7
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISO_Code
+		dataType: string
+		lineageTag: d08b4788-78e1-4577-93c3-64e66b273ec4
+		summarizeBy: none
+		sourceColumn: ISO_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: f85b15ec-90a5-4fbe-a4ff-e27a38817cdc
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 900b598a-cbf3-4ae5-ae92-f1fbaaed92ac
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Link
+		dataType: string
+		lineageTag: 687a8df3-37f8-4ab7-9458-431f38f998dc
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: 29665ee1-8adc-4718-9023-9a1463fdb5e7
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Locations = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\allan\Documents\DS_Projects\Analyducks\Power BI V2\Data\DuckDataBI.xlsx"), null, true),
+				    Table1_Table = Source{[Item="Locations",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Shop Name", type text}, {"City", type text}, {"State", type text}, {"Country", type text}, {"ISO_Code", type text}, {"Latitude", type number}, {"Longitude", type number}, {"Link", type text}, {"Address", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

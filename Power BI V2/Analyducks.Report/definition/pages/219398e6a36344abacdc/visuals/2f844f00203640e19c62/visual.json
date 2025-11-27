@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "2f844f00203640e19c62",
   "position": {
     "x": 1.8164972145859697,
@@ -163,42 +163,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "a3508c237e141d7a74af",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "26e3a89221dc396ba72d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_City"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "de7c34a737fcb343b138",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Purchase_City"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "a3508c237e141d7a74af"
 }

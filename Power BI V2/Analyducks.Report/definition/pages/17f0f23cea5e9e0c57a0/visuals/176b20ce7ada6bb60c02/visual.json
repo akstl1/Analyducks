@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "176b20ce7ada6bb60c02",
   "position": {
-    "x": 77,
-    "y": 156,
+    "x": 36.193219007723521,
+    "y": 153.21796046602958,
     "z": 22000,
-    "height": 74,
-    "width": 1071,
-    "tabOrder": 21000
+    "height": 125.46982589344154,
+    "width": 1206.440633590784,
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -118,7 +118,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "20D"
                 }
               }
             },
@@ -205,7 +205,19 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -312,6 +324,44 @@
           },
           "selector": {
             "metadata": "*Measures.Past Year"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#71D57E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#71D57E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

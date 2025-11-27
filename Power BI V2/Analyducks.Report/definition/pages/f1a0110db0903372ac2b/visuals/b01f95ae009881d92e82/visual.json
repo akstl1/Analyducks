@@ -1,59 +1,51 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "2835bb2ab168823a0d39",
+  "name": "b01f95ae009881d92e82",
   "position": {
-    "x": 1.3970996785501288,
-    "y": 0,
-    "z": 0,
-    "height": 336,
-    "width": 1257.7777777777778,
-    "tabOrder": 1000
+    "x": 9.6515250687262721,
+    "y": 59.11559104594842,
+    "z": 2500,
+    "height": 351.07422437491817,
+    "width": 1259.5240214687785,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "azureMap",
     "query": {
       "queryState": {
-        "Category": {
+        "X": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "Locations"
                     }
                   },
-                  "Property": "Purchase_State"
+                  "Property": "Longitude"
                 }
               },
-              "queryRef": "Sheet1.Purchase_State",
-              "nativeQueryRef": "State",
-              "active": true,
-              "displayName": "State"
+              "queryRef": "Sum(Locations.Longitude)",
+              "nativeQueryRef": "Longitude"
             }
           ]
         },
-        "Tooltips": {
+        "Y": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Sheet1"
-                        }
-                      },
-                      "Property": "Quantity"
+                    "SourceRef": {
+                      "Entity": "Locations"
                     }
                   },
-                  "Function": 0
+                  "Property": "Latitude"
                 }
               },
-              "queryRef": "Sum(Sheet1.Quantity)",
-              "nativeQueryRef": "Quantity",
-              "displayName": "Quantity"
+              "queryRef": "Sum(Locations.Latitude)",
+              "nativeQueryRef": "Latitude"
             }
           ]
         }
@@ -83,7 +75,7 @@
                                   "Entity": "Sheet1"
                                 }
                               },
-                              "Property": "Purchase_State"
+                              "Property": "Purchase_City"
                             }
                           },
                           "Function": 5
@@ -131,81 +123,16 @@
           }
         }
       ],
-      "bubbleLayer": [
+      "mapControls": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "filledMap": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "heatMapLayer": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "barChart": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "traffic": [
-        {
-          "properties": {
-            "show": {
+            "worldWrap": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showTrafficControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "mapControls": [
-        {
-          "properties": {
             "showStylePicker": {
               "expr": {
                 "Literal": {
@@ -213,10 +140,10 @@
                 }
               }
             },
-            "worldWrap": {
+            "showNavigationControls": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -231,7 +158,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Purchase by US State'"
+                  "Value": "'Cities of Purchase'"
                 }
               }
             },
@@ -255,13 +182,6 @@
                 }
               }
             },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
@@ -272,6 +192,13 @@
                   }
                 }
               }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
             }
           }
         }
@@ -279,11 +206,10 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "27f175a0741989922970",
   "filterConfig": {
     "filters": [
       {
-        "name": "ced54cc0027ae4d814a6",
+        "name": "f8ac3670dd9a8edcb901",
         "field": {
           "Column": {
             "Expression": {
@@ -291,50 +217,54 @@
                 "Entity": "Sheet1"
               }
             },
-            "Property": "Purchase_Country"
+            "Property": "Purchase_City"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
+        "howCreated": "User",
+        "objects": {
+          "general": [
             {
-              "Name": "s",
-              "Entity": "Sheet1",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "s"
-                          }
-                        },
-                        "Property": "Purchase_Country"
-                      }
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
                     }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'USA'"
-                        }
-                      }
-                    ]
-                  ]
+                  }
                 }
               }
             }
           ]
+        }
+      },
+      {
+        "name": "f9af6e95ec7920552040",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Latitude"
+          }
         },
-        "howCreated": "User"
+        "type": "Advanced"
+      },
+      {
+        "name": "1de7ebb0db522736cc0d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Longitude"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

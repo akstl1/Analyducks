@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "2d5aeca81c230e0754bc",
   "position": {
     "x": 868.63725618536455,
     "y": 465.68608456604267,
     "z": 2000,
     "height": 224.39795784788583,
-    "width": 400.53829035214034
+    "width": 400.53829035214034,
+    "tabOrder": 9000
   },
   "visualGroup": {
     "displayName": "Navbar+Constants",

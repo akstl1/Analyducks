@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "a5e34ff8039b90b1cd0c",
   "position": {
     "x": 96.666666666666657,
@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 557.77777777777771,
     "width": 1086.6666666666667,
-    "tabOrder": 13000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "multiInfoCards9D184BB3D4E44A139DA08142D76EFD36",
@@ -50,7 +50,8 @@
                 }
               },
               "queryRef": "Min(Sheet1.Date_Bought)",
-              "nativeQueryRef": "Earliest Date_Bought"
+              "nativeQueryRef": "Date Bought",
+              "displayName": "Date Bought"
             },
             {
               "field": {
@@ -69,7 +70,8 @@
                 }
               },
               "queryRef": "Min(Sheet1.Purchase_City)",
-              "nativeQueryRef": "First Purchase_City"
+              "nativeQueryRef": "Purchase City",
+              "displayName": "Purchase City"
             },
             {
               "field": {
@@ -88,7 +90,8 @@
                 }
               },
               "queryRef": "Min(Sheet1.Buyer)",
-              "nativeQueryRef": "First Buyer"
+              "nativeQueryRef": "Buyer",
+              "displayName": "Buyer"
             },
             {
               "field": {
@@ -107,7 +110,8 @@
                 }
               },
               "queryRef": "Min(Sheet1.Dimensions)",
-              "nativeQueryRef": "First Dimensions"
+              "nativeQueryRef": "Dimensions",
+              "displayName": "Dimensions"
             },
             {
               "field": {
@@ -126,7 +130,8 @@
                 }
               },
               "queryRef": "Min(Sheet1.About Me)",
-              "nativeQueryRef": "First About Me"
+              "nativeQueryRef": "About Me",
+              "displayName": "About Me"
             }
           ]
         },
@@ -149,7 +154,8 @@
                 }
               },
               "queryRef": "Min(Sheet1.image)",
-              "nativeQueryRef": "First image"
+              "nativeQueryRef": "Image",
+              "displayName": "Image"
             }
           ]
         }

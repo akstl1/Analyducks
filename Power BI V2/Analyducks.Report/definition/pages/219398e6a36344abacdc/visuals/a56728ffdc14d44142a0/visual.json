@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "a56728ffdc14d44142a0",
   "position": {
     "x": 1.206440633590784,
     "y": 340.73661474014921,
     "z": 1000,
     "height": 224,
-    "width": 400
+    "width": 400,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -162,42 +163,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b4f25ff7dc9d720ab610",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "12c4b0b50b2d77df2970",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Purchase_Country"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dc7122dea3e2ada7ccd9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Purchase_Country"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "b4f25ff7dc9d720ab610"
 }
