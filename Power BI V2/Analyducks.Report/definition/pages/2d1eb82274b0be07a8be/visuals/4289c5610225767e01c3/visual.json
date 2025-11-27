@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4289c5610225767e01c3",
   "position": {
-    "x": 31.111111111111111,
-    "y": 417.77777777777777,
+    "x": 28.966237726138939,
+    "y": 417.28114685426988,
     "z": 5000,
     "height": 273.33333333333331,
     "width": 480,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "stackedAreaChart",
@@ -42,12 +42,12 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Cumulative Weight"
+                  "Property": "Cumulative Count"
                 }
               },
-              "queryRef": "*Measures.Cumulative Weight",
-              "nativeQueryRef": "View Flock Weight",
-              "displayName": "View Flock Weight"
+              "queryRef": "*Measures.Cumulative Count",
+              "nativeQueryRef": "View Flock Size",
+              "displayName": "View Flock Size"
             },
             {
               "field": {
@@ -92,7 +92,7 @@
                     "Entity": "*Measures"
                   }
                 },
-                "Property": "Cumulative Weight"
+                "Property": "Cumulative Count"
               }
             },
             "direction": "Descending"

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "b78e0968dbad659c073e",
   "position": {
-    "x": 7.7777777777777777,
-    "y": 124.44444444444444,
-    "z": 1000,
-    "height": 337.77777777777777,
-    "width": 1257.7777777777778,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 336.59693677182878,
+    "width": 1259.5240214687785,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "azureMap",
@@ -190,6 +190,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "a3508c237e141d7a74af",
   "filterConfig": {
     "filters": [
       {
@@ -222,6 +223,5 @@
         }
       }
     ]
-  },
-  "isHidden": true
+  }
 }

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cd524c068708bbc0661b",
+  "position": {
+    "x": 99.555555555555557,
+    "y": 99.555555555555557,
+    "z": 13001,
+    "height": 365.51111111111112,
+    "width": 731.02222222222224,
+    "tabOrder": 13001
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Sheet1.Name",
+              "nativeQueryRef": "Name"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "cardImage": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "imageType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'imageData'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "410454b2b48c43beb7dc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

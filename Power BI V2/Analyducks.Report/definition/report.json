@@ -72,6 +72,17 @@
           "type": "Image"
         }
       ]
+    },
+    {
+      "name": "SVGReader1234567890ABCDEF",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "SVGReader1234567890ABCDEF.pbiviz.json",
+          "path": "SVGReader1234567890ABCDEF.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
     }
   ],
   "settings": {

@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "6510993ca6139c007451",
   "position": {
-    "x": 7.7777777777777777,
-    "y": 51.111111111111107,
-    "z": 5000,
-    "height": 73.333333333333329,
-    "width": 1257.7777777777778,
-    "tabOrder": 3000
+    "x": 10.857965702317056,
+    "y": 50.670506610812929,
+    "z": 1000,
+    "height": 73.592878649037829,
+    "width": 1258.3175808351878
   },
   "visual": {
     "visualType": "cardVisual",
@@ -37,12 +36,26 @@
                       "Entity": "*Measures"
                     }
                   },
+                  "Property": "Donors"
+                }
+              },
+              "queryRef": "*Measures.Donors",
+              "nativeQueryRef": "Donors"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "*Measures"
+                    }
+                  },
                   "Property": "Past Year"
                 }
               },
               "queryRef": "*Measures.Past Year",
-              "nativeQueryRef": "# Added in Past Year",
-              "displayName": "# Added in Past Year"
+              "nativeQueryRef": "# Added This Year",
+              "displayName": "# Added This Year"
             },
             {
               "field": {
@@ -57,20 +70,6 @@
               },
               "queryRef": "*Measures.Countries of Purchase",
               "nativeQueryRef": "Countries of Purchase"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "*Measures"
-                    }
-                  },
-                  "Property": "Donors"
-                }
-              },
-              "queryRef": "*Measures.Donors",
-              "nativeQueryRef": "Donors"
             },
             {
               "field": {
@@ -199,6 +198,22 @@
             "id": "default"
           }
         }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "paddingSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Custom'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -237,5 +252,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "84d39df58af4028e3c6a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Size"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eb25ad602036df99af9f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Past Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "45b0cf750a3ad5dbda22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Countries of Purchase"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "186bb1e425e318f38c90",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "States of Purchase"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6a308ccd10fddd840d8a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Donors"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

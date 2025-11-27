@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "7a4577cbfa2d67968885",
   "position": {
-    "x": 7.7777777777777777,
-    "y": 124.44444444444444,
-    "z": 2000,
-    "height": 338.88888888888886,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 336.20232010750249,
     "width": 1257.7777777777778,
-    "tabOrder": 5000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "azureMap",
@@ -411,6 +411,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "b4f25ff7dc9d720ab610",
   "filterConfig": {
     "filters": [
       {
@@ -458,7 +459,7 @@
         "howCreated": "User"
       },
       {
-        "name": "4bbea7a791d344f25b98",
+        "name": "c30c7a8e2539c46b583c",
         "field": {
           "Aggregation": {
             "Expression": {

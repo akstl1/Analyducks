@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "273fc0e1eeb8e79946c4",
   "position": {
-    "x": 533,
-    "y": 465,
-    "z": 7000,
-    "height": 234,
-    "width": 382,
-    "tabOrder": 4000
+    "x": 439.14439062704542,
+    "y": 465.68608456604267,
+    "z": 3000,
+    "height": 224.39795784788583,
+    "width": 400.53829035214034,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -153,8 +153,65 @@
             }
           }
         }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Purchase Methods'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2faacf19027301837c44",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_Method"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3beca505db22cacf3362",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Quantity"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

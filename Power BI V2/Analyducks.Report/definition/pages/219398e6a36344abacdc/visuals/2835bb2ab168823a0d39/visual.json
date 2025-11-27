@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "2835bb2ab168823a0d39",
   "position": {
-    "x": 7.7777777777777777,
-    "y": 124.44444444444444,
-    "z": 3000,
-    "height": 338.88888888888886,
+    "x": 1.3970996785501288,
+    "y": 0,
+    "z": 0,
+    "height": 336,
     "width": 1257.7777777777778
   },
   "visual": {
@@ -278,6 +278,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "27f175a0741989922970",
   "filterConfig": {
     "filters": [
       {
@@ -333,8 +334,40 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "089276ac21dd1ea30abd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Purchase_State"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8793834f0fa56a07f28f",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Quantity"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
-  },
-  "isHidden": true
+  }
 }

@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "a5e34ff8039b90b1cd0c",
   "position": {
     "x": 96.666666666666657,
     "y": 121.11111111111111,
     "z": 1000,
     "height": 557.77777777777771,
-    "width": 1086.6666666666667
+    "width": 1086.6666666666667,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "multiInfoCards9D184BB3D4E44A139DA08142D76EFD36",
@@ -301,140 +302,28 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "57D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "45e01c3c45215612ce97",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2e0c76c2f0a3acf2cae5",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Date_Bought"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6b6bebdda1eb94ed1367",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Purchase_City"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d723d4d3962796b4a00b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Buyer"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ab7785bf8643b1b0a996",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "About Me"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b6305d1de5475f1ca645",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "image"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0cae9703c7df32beb034",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "Dimensions"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

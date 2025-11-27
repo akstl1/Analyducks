@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "1bcbcac41a730dc1bd64",
   "position": {
-    "x": 520,
-    "y": 134.44444444444443,
+    "x": 517.85512661502787,
+    "y": 133.94781352093656,
     "z": 3000,
     "height": 412.22222222222223,
     "width": 733.33333333333337,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "plotlyJSVisualEEDDFAAB4619388784AE7972BC162ECDFAAB46196",
@@ -317,5 +317,98 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7835fc9905f5b867dfe5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Width"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "becbc2e3039785d67769",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Height"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1dcae3ed46a84eb1cf46",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Length"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a43d2378a8e089b13e83",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "Total_Weight"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e41f9929637baf2ee27f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Avg Weight"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e755b8a2210fd86b9bb2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

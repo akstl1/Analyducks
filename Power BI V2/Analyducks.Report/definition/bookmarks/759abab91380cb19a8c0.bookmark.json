@@ -5,9 +5,15 @@
   "options": {
     "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
-      "7a4577cbfa2d67968885",
+      "a3508c237e141d7a74af",
+      "27f175a0741989922970",
+      "b4f25ff7dc9d720ab610",
+      "2f844f00203640e19c62",
       "b78e0968dbad659c073e",
-      "2835bb2ab168823a0d39"
+      "2835bb2ab168823a0d39",
+      "ea06462083c89d119cb0",
+      "a56728ffdc14d44142a0",
+      "7a4577cbfa2d67968885"
     ],
     "suppressData": true
   },
@@ -21,7 +27,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "77e0d41ae43aa1580a68",
+                  "name": "5a0dc9d7a7d29acde245",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -36,7 +42,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e2356052518abcbad51b",
+                  "name": "cf5dbe7bfdc908fdc0a6",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -154,7 +160,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "18c614e4b56688710169",
+                  "name": "fa6b47883bce6991a731",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -169,7 +175,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "31babf061c005a41ad03",
+                  "name": "dfc6b0380c182c31f806",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -206,17 +212,20 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
+            }
+          },
+          "2850bbf0237070c5b901": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
             }
           },
           "d78cee8c4b7fa7af7558": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "c30fbaf37505088261ae",
+                  "name": "ac863eb0463c078ee9d9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -231,7 +240,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "117c5ad0c92e389a9cb4",
+                  "name": "e4b10fe8dc81822bb5c4",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -295,7 +304,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cea345d07cd0386b7910",
+                  "name": "07d896ec901c69c3d443",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -310,7 +319,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2f2c8bc1ac583ad50050",
+                  "name": "85b3d6fca7510f2b0faa",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -325,7 +334,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b54f4c37b17a5e5e68a1",
+                  "name": "1ffe76e7f66b90a4bfc8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -340,7 +349,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8b292f685ea072e0b472",
+                  "name": "7573a614c504e5d5f21f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -355,7 +364,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bc34e609636e2b4698b1",
+                  "name": "bee6650558cd32599f86",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -410,7 +419,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d6c68e0030a40601dd1c",
+                  "name": "0efaeee8c7955c130b7a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "Buyer"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "cd52a719f16881518261",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -450,11 +474,23 @@
               }
             }
           },
+          "8214e5288cad87a6e84b": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
+          "a55419c8f0559daf92cd": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "a56728ffdc14d44142a0": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "4459e323d068d1415d8e",
+                  "name": "cc0a19e5861d56e2337d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -463,13 +499,13 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "Buyer"
+                      "Property": "Purchase_Country"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "0964f45c8c76c7b0b280",
+                  "name": "d6b1aceb79640668945b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -480,7 +516,7 @@
                               "Entity": "Sheet1"
                             }
                           },
-                          "Property": "Buyer"
+                          "Property": "Purchase_Country"
                         }
                       },
                       "Function": 5
@@ -505,7 +541,7 @@
                               "Entity": "Sheet1"
                             }
                           },
-                          "Property": "Buyer"
+                          "Property": "Purchase_Country"
                         }
                       },
                       "Function": 5
@@ -522,7 +558,7 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "Buyer"
+                      "Property": "Purchase_Country"
                     }
                   }
                 ]
@@ -565,11 +601,189 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
+          },
+          "c699aa237e912d818fc5": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d01356f1227285aace16": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "2f844f00203640e19c62": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2d60b1b312bb74ca7200",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "Purchase_City"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "92e1f1fa2d67d7190f6f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Sheet1"
+                            }
+                          },
+                          "Property": "Purchase_City"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Sheet1"
+                            }
+                          },
+                          "Property": "Purchase_City"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "Purchase_City"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ea06462083c89d119cb0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6085ef2b6ae6d15a541f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "Purchase_State"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5e2babe39e0b9ae521fb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Sheet1"
+                            }
+                          },
+                          "Property": "Purchase_State"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Sheet1"
+                            }
+                          },
+                          "Property": "Purchase_State"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "Purchase_State"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "27f175a0741989922970": {
+            "isHidden": true
+          },
+          "b4f25ff7dc9d720ab610": {
+            "isHidden": false
+          },
+          "a3508c237e141d7a74af": {
+            "isHidden": true
           }
         }
       }

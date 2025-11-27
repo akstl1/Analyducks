@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "a3508c237e141d7a74af",
+  "position": {
+    "x": 8.18350278541403,
+    "y": 124.01894121564327,
+    "z": 10000,
+    "height": 564.98105878435672,
+    "width": 1259.5240214687785,
+    "tabOrder": 9000
+  },
+  "visualGroup": {
+    "displayName": "Cities",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}
