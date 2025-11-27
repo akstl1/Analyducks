@@ -64,6 +64,7 @@ table Locations
 	column Link
 		dataType: string
 		lineageTag: 687a8df3-37f8-4ab7-9458-431f38f998dc
+		dataCategory: WebUrl
 		summarizeBy: none
 		sourceColumn: Link
 

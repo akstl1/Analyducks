@@ -4,10 +4,10 @@
   "position": {
     "x": 9.6515250687262721,
     "y": 59.11559104594842,
-    "z": 2500,
+    "z": 3000,
     "height": 351.07422437491817,
     "width": 1259.5240214687785,
-    "tabOrder": 0
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "azureMap",
@@ -168,6 +168,13 @@
                   "Value": "'center'"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -197,6 +204,19 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'3bbb0631e4055b0a007d'"
                 }
               }
             }
@@ -239,7 +259,7 @@
         }
       },
       {
-        "name": "f9af6e95ec7920552040",
+        "name": "3ffe80a096b92e59d232",
         "field": {
           "Column": {
             "Expression": {
@@ -253,7 +273,7 @@
         "type": "Advanced"
       },
       {
-        "name": "1de7ebb0db522736cc0d",
+        "name": "d78acbe2b98d162a8400",
         "field": {
           "Column": {
             "Expression": {

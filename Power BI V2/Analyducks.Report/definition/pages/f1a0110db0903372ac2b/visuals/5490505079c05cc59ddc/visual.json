@@ -4,35 +4,121 @@
   "position": {
     "x": 9.6515250687262721,
     "y": 421.04778112318365,
-    "z": 3001,
+    "z": 5000,
     "height": 256.971854954837,
     "width": 820.37963084173316,
-    "tabOrder": 3001
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Rows": {
+        "Values": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "Locations"
                     }
                   },
-                  "Property": "About Me"
+                  "Property": "Shop Name"
                 }
               },
-              "queryRef": "Sheet1.About Me",
-              "nativeQueryRef": "About Me",
-              "active": true
+              "queryRef": "Locations.Shop Name",
+              "nativeQueryRef": "Shop Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locations"
+                    }
+                  },
+                  "Property": "City"
+                }
+              },
+              "queryRef": "Locations.City",
+              "nativeQueryRef": "City"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locations"
+                    }
+                  },
+                  "Property": "Country"
+                }
+              },
+              "queryRef": "Locations.Country",
+              "nativeQueryRef": "Country"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locations"
+                    }
+                  },
+                  "Property": "Address"
+                }
+              },
+              "queryRef": "Locations.Address",
+              "nativeQueryRef": "Address"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locations"
+                    }
+                  },
+                  "Property": "Link"
+                }
+              },
+              "queryRef": "Locations.Link",
+              "nativeQueryRef": "Link"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "urlIcon": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "432.482434754046D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Locations.Address"
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "border": [
@@ -69,23 +155,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0db29ce4a928d0b6cb42",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "About Me"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

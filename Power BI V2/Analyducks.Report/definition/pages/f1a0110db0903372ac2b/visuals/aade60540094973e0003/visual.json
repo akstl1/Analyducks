@@ -4,29 +4,34 @@
   "position": {
     "x": 845.71488414713963,
     "y": 421.04778112318365,
-    "z": 3002,
+    "z": 6000,
     "height": 256.971854954837,
     "width": 423.4606623903652,
-    "tabOrder": 3002
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Rows": {
+        "Data": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Sheet1"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "About Me"
                     }
                   },
-                  "Property": "About Me"
+                  "Function": 3
                 }
               },
-              "queryRef": "Sheet1.About Me",
+              "queryRef": "Min(Sheet1.About Me)",
               "nativeQueryRef": "About Me"
             }
           ]
@@ -65,6 +70,80 @@
             }
           }
         }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Visit Mama Duck!'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Make sure to see our glorious leader, largest of all ducks'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -72,18 +151,23 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "38718f544aa119a58a49",
+        "name": "f7f56ee771dd26d0757b",
         "field": {
-          "Column": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "About Me"
               }
             },
-            "Property": "About Me"
+            "Function": 3
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       }
     ]
   }
