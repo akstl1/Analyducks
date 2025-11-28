@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "b01f95ae009881d92e82",
   "position": {
-    "x": 9.6515250687262721,
-    "y": 59.11559104594842,
+    "x": 142.80724826057039,
+    "y": 58.876672528480768,
     "z": 3000,
-    "height": 351.07422437491817,
-    "width": 1259.5240214687785,
+    "height": 350.75464485052373,
+    "width": 1126.1729490022174,
     "tabOrder": 1000
   },
   "visual": {
@@ -72,7 +72,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "Sheet1"
+                                  "Entity": "DuckData"
                                 }
                               },
                               "Property": "Purchase_City"
@@ -144,6 +144,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "tileLayer": [
+        {
+          "properties": {
+            "tileLayerUrl": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }
@@ -234,7 +247,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "DuckData"
               }
             },
             "Property": "Purchase_City"
@@ -259,7 +272,7 @@
         }
       },
       {
-        "name": "3ffe80a096b92e59d232",
+        "name": "c38e3d07d8428a4c3ec8",
         "field": {
           "Column": {
             "Expression": {
@@ -273,7 +286,7 @@
         "type": "Advanced"
       },
       {
-        "name": "d78acbe2b98d162a8400",
+        "name": "6c110ca57c8d15b38ae0",
         "field": {
           "Column": {
             "Expression": {

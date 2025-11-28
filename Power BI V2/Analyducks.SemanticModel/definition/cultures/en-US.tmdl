@@ -5,10 +5,10 @@ cultureInfo en-US
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "sheet_1.purchase_country": {
+			    "duck_data.purchase_country": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Purchase_Country"
 			        }
 			      },
@@ -58,32 +58,138 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1": {
+			    "duck_data": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1"
+			          "ConceptualEntity": "DuckData"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "sheet 1": {
+			          "duck data": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Sheet1": {
+			          "DuckData": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "data": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "duck information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "duck fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "duck info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "duck statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "duck document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "duck figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
 			        }
 			      ]
 			    },
-			    "sheet_1.duck": {
+			    "duck_data.duck": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Duck"
 			        }
 			      },
@@ -96,10 +202,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.name": {
+			    "duck_data.name": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Name"
 			        }
 			      },
@@ -143,10 +249,10 @@ cultureInfo en-US
 			      ],
 			      "NameType": "Name"
 			    },
-			    "sheet_1.purchase_method": {
+			    "duck_data.purchase_method": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Purchase_Method"
 			        }
 			      },
@@ -272,10 +378,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.purchase_retailer": {
+			    "duck_data.purchase_retailer": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Purchase_Retailer"
 			        }
 			      },
@@ -401,10 +507,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.purchase_city": {
+			    "duck_data.purchase_city": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Purchase_City"
 			        }
 			      },
@@ -484,10 +590,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.purchase_state": {
+			    "duck_data.purchase_state": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Purchase_State"
 			        }
 			      },
@@ -567,10 +673,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.ISO_code": {
+			    "duck_data.ISO_code": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "ISO_Code"
 			        }
 			      },
@@ -610,10 +716,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.date_bought": {
+			    "duck_data.date_bought": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Date_Bought"
 			        }
 			      },
@@ -660,10 +766,10 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "sheet_1.latitude": {
+			    "duck_data.latitude": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Latitude"
 			        }
 			      },
@@ -776,10 +882,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.longitude": {
+			    "duck_data.longitude": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Longitude"
 			        }
 			      },
@@ -792,10 +898,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.about_me": {
+			    "duck_data.about_me": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "About Me"
 			        }
 			      },
@@ -808,10 +914,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.buyer": {
+			    "duck_data.buyer": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Buyer"
 			        }
 			      },
@@ -864,10 +970,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.quantity": {
+			    "duck_data.quantity": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Quantity"
 			        }
 			      },
@@ -920,10 +1026,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.total_weight": {
+			    "duck_data.total_weight": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Total_Weight"
 			        }
 			      },
@@ -1049,10 +1155,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.height": {
+			    "duck_data.height": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Height"
 			        }
 			      },
@@ -1165,10 +1271,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.width": {
+			    "duck_data.width": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Width"
 			        }
 			      },
@@ -1221,10 +1327,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.length": {
+			    "duck_data.length": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Length"
 			        }
 			      },
@@ -1337,10 +1443,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.avg_weight": {
+			    "duck_data.avg_weight": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Avg Weight"
 			        }
 			      },
@@ -1453,10 +1559,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.index": {
+			    "duck_data.index": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Index"
 			        }
 			      },
@@ -1569,10 +1675,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.measure": {
+			    "duck_data.measure": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Measure"
 			        }
 			      },
@@ -3910,10 +4016,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.image": {
+			    "duck_data.image": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "image"
 			        }
 			      },
@@ -4566,10 +4672,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1.dimension": {
+			    "duck_data.dimension": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Sheet1",
+			          "ConceptualEntity": "DuckData",
 			          "ConceptualProperty": "Dimensions"
 			        }
 			      },
@@ -5767,18 +5873,738 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "chain": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chains"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chain": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hawser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "restraint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shackle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "manacle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fetter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "series": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "succession": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "string": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "chain.store_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chains",
+			          "ConceptualProperty": "Store Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "store": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "store nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "store title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "store label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "store tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "accumulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "collection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "stock": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "supply": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stockpile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hoard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "sheet_1_has_measure_past_year_": {
+			    "location_has_country": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "Locations"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "location": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "location"
+			          }
+			        },
+			        "location.country": {
+			          "Target": {
+			            "Entity": "location.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_countries"
+			        }
+			      ]
+			    },
+			    "location_has_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.state": {
+			          "Target": {
+			            "Entity": "location.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_states"
+			        }
+			      ]
+			    },
+			    "location_has_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.city": {
+			          "Target": {
+			            "Entity": "location.city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_cities"
+			        }
+			      ]
+			    },
+			    "location_has_shop_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.shop_name": {
+			          "Target": {
+			            "Entity": "location.shop_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.shop_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_shop_names"
+			        }
+			      ]
+			    },
+			    "coefficient_has_formula": {
+			      "Binding": {
+			        "ConceptualEntity": "Coefficients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "coefficient": {
+			          "Target": {
+			            "Entity": "coefficient"
+			          }
+			        },
+			        "coefficient.formula": {
+			          "Target": {
+			            "Entity": "coefficient.formula"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "coefficient"
+			            },
+			            "Object": {
+			              "Role": "coefficient.formula"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "coefficients_have_formulae"
+			        }
+			      ]
+			    },
+			    "coefficient_has_height": {
+			      "Binding": {
+			        "ConceptualEntity": "Coefficients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "coefficient": {
+			          "Target": {
+			            "Entity": "coefficient"
+			          }
+			        },
+			        "coefficient.height": {
+			          "Target": {
+			            "Entity": "coefficient.height"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "coefficient"
+			            },
+			            "Object": {
+			              "Role": "coefficient.height"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "coefficients_have_heights"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "coefficient"
+			            },
+			            "Adjectives": [
+			              {
+			                "tall": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "short": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "coefficient.height"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "height_indicates_how_tall_coefficients_are"
+			        }
+			      ]
+			    },
+			    "coefficient_has_width": {
+			      "Binding": {
+			        "ConceptualEntity": "Coefficients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "coefficient": {
+			          "Target": {
+			            "Entity": "coefficient"
+			          }
+			        },
+			        "coefficient.width": {
+			          "Target": {
+			            "Entity": "coefficient.width"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "coefficient"
+			            },
+			            "Object": {
+			              "Role": "coefficient.width"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "coefficients_have_widths"
+			        }
+			      ]
+			    },
+			    "coefficient_has_length": {
+			      "Binding": {
+			        "ConceptualEntity": "Coefficients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "coefficient": {
+			          "Target": {
+			            "Entity": "coefficient"
+			          }
+			        },
+			        "coefficient.length": {
+			          "Target": {
+			            "Entity": "coefficient.length"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "coefficient"
+			            },
+			            "Object": {
+			              "Role": "coefficient.length"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "coefficients_have_lengths"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "coefficient"
+			            },
+			            "Adjectives": [
+			              {
+			                "long": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "short": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "coefficient.length"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "length_indicates_how_long_coefficients_are"
+			        }
+			      ]
+			    },
+			    "duck_data_has_dimension": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
+			          }
+			        },
+			        "duck_data.dimension": {
+			          "Target": {
+			            "Entity": "duck_data.dimension"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "duck_data"
+			            },
+			            "Object": {
+			              "Role": "duck_data.dimension"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "duck_data_have_dimensions"
+			        }
+			      ]
+			    },
+			    "duck_data_has_measure_states_of_purchase": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
+			          }
+			        },
+			        "measure.states_of_purchase": {
+			          "Target": {
+			            "Entity": "measure.states_of_purchase"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "duck_data"
+			            },
+			            "Object": {
+			              "Role": "measure.states_of_purchase"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "duck_data_have_states_of_purchase"
+			        }
+			      ]
+			    },
+			    "duck_data_has_measure_donors": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
+			          }
+			        },
+			        "measure.donors": {
+			          "Target": {
+			            "Entity": "measure.donors"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "duck_data"
+			            },
+			            "Object": {
+			              "Role": "measure.donors"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "duck_data_have_donors"
+			        }
+			      ]
+			    },
+			    "duck_data_has_measure_countries_of_purchase": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
+			          }
+			        },
+			        "measure.countries_of_purchase": {
+			          "Target": {
+			            "Entity": "measure.countries_of_purchase"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "duck_data"
+			            },
+			            "Object": {
+			              "Role": "measure.countries_of_purchase"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "duck_data_have_countries_of_purchase"
+			        }
+			      ]
+			    },
+			    "measure_has_max_ducks_per_year": {
+			      "Binding": {
+			        "ConceptualEntity": "*Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure": {
+			          "Target": {
+			            "Entity": "measure"
+			          }
+			        },
+			        "measure.max_ducks_per_year": {
+			          "Target": {
+			            "Entity": "measure.max_ducks_per_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure"
+			            },
+			            "Object": {
+			              "Role": "measure.max_ducks_per_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_have_max_ducks_per_year"
+			        }
+			      ]
+			    },
+			    "duck_data_has_measure_past_year_": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.past_year_": {
@@ -5791,7 +6617,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.past_year_"
@@ -5799,19 +6625,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_past_year_"
+			          "ID": "duck_data_have_past_year_"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_kg_comparison": {
+			    "duck_data_has_measure_kg_comparison": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.kg_comparison": {
@@ -5824,7 +6650,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.kg_comparison"
@@ -5832,7 +6658,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_kg_comparison"
+			          "ID": "duck_data_have_kg_comparison"
 			        }
 			      ]
 			    },
@@ -5902,20 +6728,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_image": {
+			    "duck_data_has_image": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.image": {
+			        "duck_data.image": {
 			          "Target": {
-			            "Entity": "sheet_1.image"
+			            "Entity": "duck_data.image"
 			          }
 			        }
 			      },
@@ -5923,15 +6749,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.image"
+			              "Role": "duck_data.image"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_images"
+			          "ID": "duck_data_have_images"
 			        }
 			      ]
 			    },
@@ -6034,39 +6860,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_quantity_weight_switch": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.quantity_weight_switch": {
-			          "Target": {
-			            "Entity": "measure.quantity_weight_switch"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.quantity_weight_switch"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_quantity_weight_switch"
-			        }
-			      ]
-			    },
 			    "param_cumulative_quantity_weight_has_measure_quantity_weight_switch": {
 			      "Binding": {
 			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
@@ -6100,15 +6893,48 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_flock_length": {
+			    "duck_data_has_measure_quantity_weight_switch": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
+			          }
+			        },
+			        "measure.quantity_weight_switch": {
+			          "Target": {
+			            "Entity": "measure.quantity_weight_switch"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "duck_data"
+			            },
+			            "Object": {
+			              "Role": "measure.quantity_weight_switch"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "duck_data_have_quantity_weight_switch"
+			        }
+			      ]
+			    },
+			    "duck_data_has_measure_flock_length": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.flock_length": {
@@ -6121,7 +6947,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.flock_length"
@@ -6129,19 +6955,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_flock_length"
+			          "ID": "duck_data_have_flock_length"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_flock_height": {
+			    "duck_data_has_measure_flock_height": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.flock_height": {
@@ -6154,7 +6980,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.flock_height"
@@ -6162,19 +6988,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_flock_height"
+			          "ID": "duck_data_have_flock_height"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_past_year": {
+			    "duck_data_has_measure_past_year": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.past_year": {
@@ -6187,7 +7013,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.past_year"
@@ -6195,19 +7021,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_past_year"
+			          "ID": "duck_data_have_past_year"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_flock_weight": {
+			    "duck_data_has_measure_flock_weight": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.flock_weight": {
@@ -6220,7 +7046,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.flock_weight"
@@ -6228,12 +7054,12 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_flock_weight"
+			          "ID": "duck_data_have_flock_weight"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Adjectives": [
 			              {
@@ -6255,19 +7081,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "flock_weight_indicates_how_heavy_sheet_1_are"
+			          "ID": "flock_weight_indicates_how_heavy_duck_data_are"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_flock_size": {
+			    "duck_data_has_measure_flock_size": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.flock_size": {
@@ -6280,7 +7106,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.flock_size"
@@ -6288,7 +7114,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_flock_size"
+			          "ID": "duck_data_have_flock_size"
 			        }
 			      ]
 			    },
@@ -6358,39 +7184,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_difference": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.difference": {
-			          "Target": {
-			            "Entity": "measure.difference"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.difference"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_difference"
-			        }
-			      ]
-			    },
 			    "param_cumulative_quantity_weight_has_measure_difference": {
 			      "Binding": {
 			        "ConceptualEntity": "ParamCumulativeQuantityWeight"
@@ -6424,20 +7217,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_max_axis": {
+			    "duck_data_has_measure_difference": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "measure.max_axis": {
+			        "measure.difference": {
 			          "Target": {
-			            "Entity": "measure.max_axis"
+			            "Entity": "measure.difference"
 			          }
 			        }
 			      },
@@ -6445,15 +7238,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "measure.max_axis"
+			              "Role": "measure.difference"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_max_axis"
+			          "ID": "duck_data_have_difference"
 			        }
 			      ]
 			    },
@@ -6490,15 +7283,48 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_cumulative_weight": {
+			    "duck_data_has_measure_max_axis": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
+			          }
+			        },
+			        "measure.max_axis": {
+			          "Target": {
+			            "Entity": "measure.max_axis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "duck_data"
+			            },
+			            "Object": {
+			              "Role": "measure.max_axis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "duck_data_have_max_axis"
+			        }
+			      ]
+			    },
+			    "duck_data_has_measure_cumulative_weight": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.cumulative_weight": {
@@ -6511,7 +7337,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.cumulative_weight"
@@ -6519,12 +7345,12 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_cumulative_weight"
+			          "ID": "duck_data_have_cumulative_weight"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Adjectives": [
 			              {
@@ -6546,19 +7372,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "cumulative_weight_indicates_how_heavy_sheet_1_are"
+			          "ID": "cumulative_weight_indicates_how_heavy_duck_data_are"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure_cumulative_count": {
+			    "duck_data_has_measure_cumulative_count": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "measure.cumulative_count": {
@@ -6571,7 +7397,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "measure.cumulative_count"
@@ -6579,7 +7405,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_cumulative_count"
+			          "ID": "duck_data_have_cumulative_count"
 			        }
 			      ]
 			    },
@@ -6629,20 +7455,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_measure": {
+			    "duck_data_has_measure": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.measure": {
+			        "duck_data.measure": {
 			          "Target": {
-			            "Entity": "sheet_1.measure"
+			            "Entity": "duck_data.measure"
 			          }
 			        }
 			      },
@@ -6650,32 +7476,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.measure"
+			              "Role": "duck_data.measure"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_measure"
+			          "ID": "duck_data_have_measure"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_index": {
+			    "duck_data_has_index": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.index": {
+			        "duck_data.index": {
 			          "Target": {
-			            "Entity": "sheet_1.index"
+			            "Entity": "duck_data.index"
 			          }
 			        }
 			      },
@@ -6683,32 +7509,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.index"
+			              "Role": "duck_data.index"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_indices"
+			          "ID": "duck_data_have_indices"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_avg_weight": {
+			    "duck_data_has_avg_weight": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.avg_weight": {
+			        "duck_data.avg_weight": {
 			          "Target": {
-			            "Entity": "sheet_1.avg_weight"
+			            "Entity": "duck_data.avg_weight"
 			          }
 			        }
 			      },
@@ -6716,32 +7542,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.avg_weight"
+			              "Role": "duck_data.avg_weight"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_avg_weights"
+			          "ID": "duck_data_have_avg_weights"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_length": {
+			    "duck_data_has_length": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.length": {
+			        "duck_data.length": {
 			          "Target": {
-			            "Entity": "sheet_1.length"
+			            "Entity": "duck_data.length"
 			          }
 			        }
 			      },
@@ -6749,20 +7575,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.length"
+			              "Role": "duck_data.length"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_lengths"
+			          "ID": "duck_data_have_lengths"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Adjectives": [
 			              {
@@ -6779,29 +7605,29 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "sheet_1.length"
+			              "Role": "duck_data.length"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "length_indicates_how_long_sheet_1_are"
+			          "ID": "length_indicates_how_long_duck_data_are"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_width": {
+			    "duck_data_has_width": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.width": {
+			        "duck_data.width": {
 			          "Target": {
-			            "Entity": "sheet_1.width"
+			            "Entity": "duck_data.width"
 			          }
 			        }
 			      },
@@ -6809,32 +7635,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.width"
+			              "Role": "duck_data.width"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_widths"
+			          "ID": "duck_data_have_widths"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_height": {
+			    "duck_data_has_height": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.height": {
+			        "duck_data.height": {
 			          "Target": {
-			            "Entity": "sheet_1.height"
+			            "Entity": "duck_data.height"
 			          }
 			        }
 			      },
@@ -6842,20 +7668,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.height"
+			              "Role": "duck_data.height"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_heights"
+			          "ID": "duck_data_have_heights"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Adjectives": [
 			              {
@@ -6872,29 +7698,29 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "sheet_1.height"
+			              "Role": "duck_data.height"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "height_indicates_how_tall_sheet_1_are"
+			          "ID": "height_indicates_how_tall_duck_data_are"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_total_weight": {
+			    "duck_data_has_total_weight": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.total_weight": {
+			        "duck_data.total_weight": {
 			          "Target": {
-			            "Entity": "sheet_1.total_weight"
+			            "Entity": "duck_data.total_weight"
 			          }
 			        }
 			      },
@@ -6902,20 +7728,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.total_weight"
+			              "Role": "duck_data.total_weight"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_total_weights"
+			          "ID": "duck_data_have_total_weights"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Adjectives": [
 			              {
@@ -6932,29 +7758,29 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "sheet_1.total_weight"
+			              "Role": "duck_data.total_weight"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "total_weight_indicates_how_heavy_sheet_1_are"
+			          "ID": "total_weight_indicates_how_heavy_duck_data_are"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_quantity": {
+			    "duck_data_has_quantity": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.quantity": {
+			        "duck_data.quantity": {
 			          "Target": {
-			            "Entity": "sheet_1.quantity"
+			            "Entity": "duck_data.quantity"
 			          }
 			        }
 			      },
@@ -6962,32 +7788,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.quantity"
+			              "Role": "duck_data.quantity"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_quantities"
+			          "ID": "duck_data_have_quantities"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_buyer": {
+			    "duck_data_has_buyer": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.buyer": {
+			        "duck_data.buyer": {
 			          "Target": {
-			            "Entity": "sheet_1.buyer"
+			            "Entity": "duck_data.buyer"
 			          }
 			        }
 			      },
@@ -6995,20 +7821,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.buyer"
+			              "Role": "duck_data.buyer"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_buyers"
+			          "ID": "duck_data_have_buyers"
 			        },
 			        {
 			          "Verb": {
 			            "Subject": {
-			              "Role": "sheet_1.buyer"
+			              "Role": "duck_data.buyer"
 			            },
 			            "Verbs": [
 			              {
@@ -7018,42 +7844,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.75,
-			          "ID": "buyers_buy_sheet_1"
+			          "ID": "buyers_buy_duck_data"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1.buyer"
+			              "Role": "duck_data.buyer"
 			            },
 			            "Object": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "buyers_have_sheet_1"
+			          "ID": "buyers_have_duck_data"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_about_me": {
+			    "duck_data_has_about_me": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.about_me": {
+			        "duck_data.about_me": {
 			          "Target": {
-			            "Entity": "sheet_1.about_me"
+			            "Entity": "duck_data.about_me"
 			          }
 			        }
 			      },
@@ -7061,32 +7887,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.about_me"
+			              "Role": "duck_data.about_me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_about_me"
+			          "ID": "duck_data_have_about_me"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_longitude": {
+			    "duck_data_has_longitude": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.longitude": {
+			        "duck_data.longitude": {
 			          "Target": {
-			            "Entity": "sheet_1.longitude"
+			            "Entity": "duck_data.longitude"
 			          }
 			        }
 			      },
@@ -7094,32 +7920,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.longitude"
+			              "Role": "duck_data.longitude"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_longitudes"
+			          "ID": "duck_data_have_longitudes"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_latitude": {
+			    "duck_data_has_latitude": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.latitude": {
+			        "duck_data.latitude": {
 			          "Target": {
-			            "Entity": "sheet_1.latitude"
+			            "Entity": "duck_data.latitude"
 			          }
 			        }
 			      },
@@ -7127,32 +7953,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.latitude"
+			              "Role": "duck_data.latitude"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_latitudes"
+			          "ID": "duck_data_have_latitudes"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_date_bought": {
+			    "duck_data_has_date_bought": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.date_bought": {
+			        "duck_data.date_bought": {
 			          "Target": {
-			            "Entity": "sheet_1.date_bought"
+			            "Entity": "duck_data.date_bought"
 			          }
 			        }
 			      },
@@ -7160,32 +7986,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.date_bought"
+			              "Role": "duck_data.date_bought"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_date_bought"
+			          "ID": "duck_data_have_date_bought"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_ISO_code": {
+			    "duck_data_has_ISO_code": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.ISO_code": {
+			        "duck_data.ISO_code": {
 			          "Target": {
-			            "Entity": "sheet_1.ISO_code"
+			            "Entity": "duck_data.ISO_code"
 			          }
 			        }
 			      },
@@ -7193,32 +8019,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.ISO_code"
+			              "Role": "duck_data.ISO_code"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_ISO_codes"
+			          "ID": "duck_data_have_ISO_codes"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_purchase_state": {
+			    "duck_data_has_purchase_state": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_state": {
+			        "duck_data.purchase_state": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_state"
+			            "Entity": "duck_data.purchase_state"
 			          }
 			        }
 			      },
@@ -7226,32 +8052,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.purchase_state"
+			              "Role": "duck_data.purchase_state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_purchase_states"
+			          "ID": "duck_data_have_purchase_states"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_purchase_city": {
+			    "duck_data_has_purchase_city": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_city": {
+			        "duck_data.purchase_city": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_city"
+			            "Entity": "duck_data.purchase_city"
 			          }
 			        }
 			      },
@@ -7259,32 +8085,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.purchase_city"
+			              "Role": "duck_data.purchase_city"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_purchase_cities"
+			          "ID": "duck_data_have_purchase_cities"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_purchase_retailer": {
+			    "duck_data_has_purchase_retailer": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_retailer": {
+			        "duck_data.purchase_retailer": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_retailer"
+			            "Entity": "duck_data.purchase_retailer"
 			          }
 			        }
 			      },
@@ -7292,20 +8118,20 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.purchase_retailer"
+			              "Role": "duck_data.purchase_retailer"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_purchase_retailers"
+			          "ID": "duck_data_have_purchase_retailers"
 			        },
 			        {
 			          "Verb": {
 			            "Subject": {
-			              "Role": "sheet_1.purchase_retailer"
+			              "Role": "duck_data.purchase_retailer"
 			            },
 			            "Verbs": [
 			              {
@@ -7315,42 +8141,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.75,
-			          "ID": "purchase_retailers_retail_sheet_1"
+			          "ID": "purchase_retailers_retail_duck_data"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1.purchase_retailer"
+			              "Role": "duck_data.purchase_retailer"
 			            },
 			            "Object": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "purchase_retailers_have_sheet_1"
+			          "ID": "purchase_retailers_have_duck_data"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_purchase_method": {
+			    "duck_data_has_purchase_method": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_method": {
+			        "duck_data.purchase_method": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_method"
+			            "Entity": "duck_data.purchase_method"
 			          }
 			        }
 			      },
@@ -7358,32 +8184,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.purchase_method"
+			              "Role": "duck_data.purchase_method"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_purchase_methods"
+			          "ID": "duck_data_have_purchase_methods"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_name": {
+			    "duck_data_has_name": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.name": {
+			        "duck_data.name": {
 			          "Target": {
-			            "Entity": "sheet_1.name"
+			            "Entity": "duck_data.name"
 			          }
 			        }
 			      },
@@ -7391,45 +8217,45 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.name"
+			              "Role": "duck_data.name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_names"
+			          "ID": "duck_data_have_names"
 			        },
 			        {
 			          "Name": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Name": {
-			              "Role": "sheet_1.name"
+			              "Role": "duck_data.name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "names_are_names_IDs_of_sheet_1"
+			          "ID": "names_are_names_IDs_of_duck_data"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_duck": {
+			    "duck_data_has_duck": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.duck": {
+			        "duck_data.duck": {
 			          "Target": {
-			            "Entity": "sheet_1.duck"
+			            "Entity": "duck_data.duck"
 			          }
 			        }
 			      },
@@ -7437,32 +8263,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.duck"
+			              "Role": "duck_data.duck"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_ducks"
+			          "ID": "duck_data_have_ducks"
 			        }
 			      ]
 			    },
-			    "sheet_1_has_purchase_country": {
+			    "duck_data_has_purchase_country": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_country": {
+			        "duck_data.purchase_country": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_country"
+			            "Entity": "duck_data.purchase_country"
 			          }
 			        }
 			      },
@@ -7470,15 +8296,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
-			              "Role": "sheet_1.purchase_country"
+			              "Role": "duck_data.purchase_country"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_purchase_countries"
+			          "ID": "duck_data_have_purchase_countries"
 			        }
 			      ]
 			    },
@@ -7662,33 +8488,33 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_in_purchase_state": {
+			    "duck_data_in_purchase_state": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_state": {
+			        "duck_data.purchase_state": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_state"
+			            "Entity": "duck_data.purchase_state"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "sheet_1.purchase_state"
+			          "Role": "duck_data.purchase_state"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Prepositions": [
 			              {
@@ -7698,42 +8524,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "sheet_1.purchase_state"
+			              "Role": "duck_data.purchase_state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_are_in_purchase_states"
+			          "ID": "duck_data_are_in_purchase_states"
 			        }
 			      ]
 			    },
-			    "sheet_1_in_purchase_city": {
+			    "duck_data_in_purchase_city": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_city": {
+			        "duck_data.purchase_city": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_city"
+			            "Entity": "duck_data.purchase_city"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "sheet_1.purchase_city"
+			          "Role": "duck_data.purchase_city"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Prepositions": [
 			              {
@@ -7743,42 +8569,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "sheet_1.purchase_city"
+			              "Role": "duck_data.purchase_city"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_are_in_purchase_cities"
+			          "ID": "duck_data_are_in_purchase_cities"
 			        }
 			      ]
 			    },
-			    "sheet_1_in_purchase_country": {
+			    "duck_data_in_purchase_country": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.purchase_country": {
+			        "duck_data.purchase_country": {
 			          "Target": {
-			            "Entity": "sheet_1.purchase_country"
+			            "Entity": "duck_data.purchase_country"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "sheet_1.purchase_country"
+			          "Role": "duck_data.purchase_country"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Prepositions": [
 			              {
@@ -7788,35 +8614,35 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "sheet_1.purchase_country"
+			              "Role": "duck_data.purchase_country"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_are_in_purchase_countries"
+			          "ID": "duck_data_are_in_purchase_countries"
 			        }
 			      ]
 			    },
-			    "sheet_1_is_bought_on_date_bought": {
+			    "duck_data_is_bought_on_date_bought": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "DuckData"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "duck_data": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "duck_data"
 			          }
 			        },
-			        "sheet_1.date_bought": {
+			        "duck_data.date_bought": {
 			          "Target": {
-			            "Entity": "sheet_1.date_bought"
+			            "Entity": "duck_data.date_bought"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "When": {
-			          "Role": "sheet_1.date_bought"
+			          "Role": "duck_data.date_bought"
 			        }
 			      },
 			      "Phrasings": [
@@ -7830,495 +8656,12 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.9,
-			          "ID": "sheet_1_are_bought_on_date_bought"
-			        }
-			      ]
-			    },
-			    "coefficient_is_tall": {
-			      "Binding": {
-			        "ConceptualEntity": "Coefficients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "coefficient": {
-			          "Target": {
-			            "Entity": "coefficient"
-			          }
-			        },
-			        "coefficient.height": {
-			          "Target": {
-			            "Entity": "coefficient.height"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "coefficient"
-			            },
-			            "Adjectives": [
-			              {
-			                "tall": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "short": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "coefficient.height"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "height_indicates_how_tall_coefficients_are"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "coefficient"
-			            },
-			            "Object": {
-			              "Role": "coefficient.height"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "coefficients_have_heights"
-			        }
-			      ]
-			    },
-			    "coefficient_is_long": {
-			      "Binding": {
-			        "ConceptualEntity": "Coefficients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "coefficient": {
-			          "Target": {
-			            "Entity": "coefficient"
-			          }
-			        },
-			        "coefficient.length": {
-			          "Target": {
-			            "Entity": "coefficient.length"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "coefficient"
-			            },
-			            "Adjectives": [
-			              {
-			                "long": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "short": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "coefficient.length"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "length_indicates_how_long_coefficients_are"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "coefficient"
-			            },
-			            "Object": {
-			              "Role": "coefficient.length"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "coefficients_have_lengths"
-			        }
-			      ]
-			    },
-			    "measure_has_max_ducks_per_year": {
-			      "Binding": {
-			        "ConceptualEntity": "*Measures"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "measure": {
-			          "Target": {
-			            "Entity": "measure"
-			          }
-			        },
-			        "measure.max_ducks_per_year": {
-			          "Target": {
-			            "Entity": "measure.max_ducks_per_year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "measure"
-			            },
-			            "Object": {
-			              "Role": "measure.max_ducks_per_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "measures_have_max_ducks_per_year"
-			        }
-			      ]
-			    },
-			    "sheet_1_has_measure_countries_of_purchase": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.countries_of_purchase": {
-			          "Target": {
-			            "Entity": "measure.countries_of_purchase"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.countries_of_purchase"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_countries_of_purchase"
-			        }
-			      ]
-			    },
-			    "sheet_1_has_measure_donors": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.donors": {
-			          "Target": {
-			            "Entity": "measure.donors"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.donors"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_donors"
-			        }
-			      ]
-			    },
-			    "sheet_1_has_measure_states_of_purchase": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "measure.states_of_purchase": {
-			          "Target": {
-			            "Entity": "measure.states_of_purchase"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "measure.states_of_purchase"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_states_of_purchase"
-			        }
-			      ]
-			    },
-			    "sheet_1_has_dimension": {
-			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sheet_1": {
-			          "Target": {
-			            "Entity": "sheet_1"
-			          }
-			        },
-			        "sheet_1.dimension": {
-			          "Target": {
-			            "Entity": "sheet_1.dimension"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sheet_1"
-			            },
-			            "Object": {
-			              "Role": "sheet_1.dimension"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sheet_1_have_dimensions"
-			        }
-			      ]
-			    },
-			    "coefficient_has_width": {
-			      "Binding": {
-			        "ConceptualEntity": "Coefficients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "coefficient": {
-			          "Target": {
-			            "Entity": "coefficient"
-			          }
-			        },
-			        "coefficient.width": {
-			          "Target": {
-			            "Entity": "coefficient.width"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "coefficient"
-			            },
-			            "Object": {
-			              "Role": "coefficient.width"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "coefficients_have_widths"
-			        }
-			      ]
-			    },
-			    "coefficient_has_formula": {
-			      "Binding": {
-			        "ConceptualEntity": "Coefficients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "coefficient": {
-			          "Target": {
-			            "Entity": "coefficient"
-			          }
-			        },
-			        "coefficient.formula": {
-			          "Target": {
-			            "Entity": "coefficient.formula"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "coefficient"
-			            },
-			            "Object": {
-			              "Role": "coefficient.formula"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "coefficients_have_formulae"
-			        }
-			      ]
-			    },
-			    "location_has_shop_name": {
-			      "Binding": {
-			        "ConceptualEntity": "Locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.shop_name": {
-			          "Target": {
-			            "Entity": "location.shop_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.shop_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_shop_names"
-			        }
-			      ]
-			    },
-			    "location_has_city": {
-			      "Binding": {
-			        "ConceptualEntity": "Locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.city": {
-			          "Target": {
-			            "Entity": "location.city"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.city"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_cities"
-			        }
-			      ]
-			    },
-			    "location_has_state": {
-			      "Binding": {
-			        "ConceptualEntity": "Locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.state": {
-			          "Target": {
-			            "Entity": "location.state"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.state"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_states"
-			        }
-			      ]
-			    },
-			    "location_has_country": {
-			      "Binding": {
-			        "ConceptualEntity": "Locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.country": {
-			          "Target": {
-			            "Entity": "location.country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_countries"
+			          "ID": "duck_data_are_bought_on_date_bought"
 			        }
 			      ]
 			    },
@@ -8487,15 +8830,48 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sheet_1_has_date": {
+			    "chain_has_store_name": {
 			      "Binding": {
-			        "ConceptualEntity": "Sheet1"
+			        "ConceptualEntity": "Chains"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sheet_1": {
+			        "chain": {
 			          "Target": {
-			            "Entity": "sheet_1"
+			            "Entity": "chain"
+			          }
+			        },
+			        "chain.store_name": {
+			          "Target": {
+			            "Entity": "chain.store_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chain"
+			            },
+			            "Object": {
+			              "Role": "chain.store_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chains_have_store_names"
+			        }
+			      ]
+			    },
+			    "duck_data_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DuckData"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "duck_data": {
+			          "Target": {
+			            "Entity": "duck_data"
 			          }
 			        },
 			        "date": {
@@ -8508,7 +8884,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            },
 			            "Object": {
 			              "Role": "date"
@@ -8516,7 +8892,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sheet_1_have_dates"
+			          "ID": "duck_data_have_dates"
 			        },
 			        {
 			          "Attribute": {
@@ -8524,12 +8900,12 @@ cultureInfo en-US
 			              "Role": "date"
 			            },
 			            "Object": {
-			              "Role": "sheet_1"
+			              "Role": "duck_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dates_have_sheet_1"
+			          "ID": "dates_have_duck_data"
 			        }
 			      ]
 			    },

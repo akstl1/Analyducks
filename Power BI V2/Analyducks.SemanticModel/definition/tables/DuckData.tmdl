@@ -1,4 +1,4 @@
-table Sheet1
+table DuckData
 	lineageTag: 967938bc-37ac-43ed-acd4-f9ce5d8fd5f0
 
 	measure Measure = Khariton.Convert.DayHourMinute(32400,9)
@@ -200,7 +200,7 @@ table Sheet1
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Sheet1 = m
+	partition DuckData = m
 		mode: import
 		source =
 				let

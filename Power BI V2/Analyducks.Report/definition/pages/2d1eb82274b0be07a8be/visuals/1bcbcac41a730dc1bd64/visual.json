@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Width"
@@ -34,7 +34,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Height"
@@ -48,7 +48,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Length"
@@ -64,7 +64,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Total_Weight"
@@ -81,7 +81,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Avg Weight"
@@ -95,7 +95,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Name"
@@ -114,7 +114,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Sheet1"
+                    "Entity": "DuckData"
                   }
                 },
                 "Property": "Width"

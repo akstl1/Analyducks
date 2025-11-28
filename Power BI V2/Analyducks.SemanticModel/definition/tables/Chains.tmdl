@@ -1,0 +1,25 @@
+table Chains
+	lineageTag: 47c2d8fa-666f-40d8-8a52-0793bdc976b6
+
+	column 'Store Name'
+		dataType: string
+		lineageTag: fc210530-8f01-41f8-9323-2de03644fe77
+		summarizeBy: none
+		sourceColumn: Store Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Chains = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\allan\Documents\DS_Projects\Analyducks\Power BI V2\Data\DuckDataBI.xlsx"), null, true),
+				    Table1_Table = Source{[Item="Chains",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Store Name", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

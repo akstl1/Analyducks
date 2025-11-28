@@ -4,6 +4,6 @@ relationship 509ba199-e274-436a-a647-a8232d53854e
 	toColumn: LocalDateTable_ab63dbb5-fa4a-432a-a1a3-1960568ea4cd.Date
 
 relationship 9c5e3aaf-544d-a1ee-caf5-8e303ce14c91
-	fromColumn: Sheet1.Date_Bought
+	fromColumn: DuckData.Date_Bought
 	toColumn: Dates.Date
 

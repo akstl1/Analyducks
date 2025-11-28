@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Purchase_State"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Purchase_State"
@@ -65,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "DuckData"
                       }
                     },
                     "Property": "Purchase_State"
@@ -172,7 +172,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "DuckData"
               }
             },
             "Property": "Purchase_State"
@@ -184,7 +184,7 @@
           "From": [
             {
               "Name": "s",
-              "Entity": "Sheet1",
+              "Entity": "DuckData",
               "Type": 0
             }
           ],

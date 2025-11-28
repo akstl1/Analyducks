@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Purchase_Country"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Purchase_Country"
@@ -65,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "DuckData"
                       }
                     },
                     "Property": "Purchase_Country"

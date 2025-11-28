@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "DuckData"
                     }
                   },
                   "Property": "Name"
@@ -40,7 +40,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Date_Bought"
@@ -60,7 +60,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Purchase_City"
@@ -80,7 +80,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Buyer"
@@ -100,7 +100,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "Dimensions"
@@ -120,7 +120,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "About Me"
@@ -144,7 +144,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "DuckData"
                         }
                       },
                       "Property": "image"
@@ -169,7 +169,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "DuckData"
                       }
                     },
                     "Property": "Date_Bought"
@@ -331,5 +331,137 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "09ce824e2bca9b3b7953",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DuckData"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "18323bbeb2db947c0039",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Date_Bought"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ef0925fdee5e236155a8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Purchase_City"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ed34da8bbd0418e036b1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Buyer"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a2594814b4b23bace106",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Dimensions"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "62647391009ca5d7aee0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "About Me"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "331d3b4f33b781ad0e28",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "image"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

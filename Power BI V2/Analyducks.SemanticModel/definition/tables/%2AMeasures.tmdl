@@ -3,13 +3,13 @@ table *Measures
 
 	measure 'Cumulative Count' =
 			
-			CALCULATE(sum(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Dates[Year]))
+			CALCULATE(sum(DuckData[Quantity]),ALLEXCEPT(DuckData,DuckData[Date_Bought]),YEAR(DuckData[Date_Bought])<=SELECTEDVALUE(Dates[Year]))
 		formatString: 0
 		lineageTag: c8c312f4-a647-4aea-95dd-2c3741e9608e
 
 	measure 'Cumulative Weight' =
 			
-			CALCULATE(sum(Sheet1[Total_Weight]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),YEAR(Sheet1[Date_Bought])<=SELECTEDVALUE(Dates[Year]))
+			CALCULATE(sum(DuckData[Total_Weight]),ALLEXCEPT(DuckData,DuckData[Date_Bought]),YEAR(DuckData[Date_Bought])<=SELECTEDVALUE(Dates[Year]))
 		lineageTag: 0f1404d1-53f7-4a91-b0b8-2f7ba5ca19b3
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -17,8 +17,8 @@ table *Measures
 	measure 'Max Axis' =
 			
 			SWITCH(TRUE(),
-			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),CALCULATE(sum(Sheet1[Quantity]),ALL(Sheet1))*1.15,
-			        CALCULATE(sum(Sheet1[Total_Weight]),ALL(Sheet1))*1.15
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),CALCULATE(sum(DuckData[Quantity]),ALL(DuckData))*1.15,
+			        CALCULATE(sum(DuckData[Total_Weight]),ALL(DuckData))*1.15
 			)
 			// var _value = CALCULATE(sum(Sheet1[Quantity]),ALL(Sheet1))*1.15
 			// return _value)
@@ -36,32 +36,32 @@ table *Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Flock Size' = CALCULATE(SUM(Sheet1[Quantity]),all(Sheet1))
+	measure 'Flock Size' = CALCULATE(SUM(DuckData[Quantity]),all(DuckData))
 		formatString: 0
 		lineageTag: b45e41d8-5f83-49f7-994d-d6233c50b92f
 
-	measure 'Flock Weight' = CALCULATE(SUM(Sheet1[Total_Weight]),all(Sheet1))/1000
+	measure 'Flock Weight' = CALCULATE(SUM(DuckData[Total_Weight]),all(DuckData))/1000
 		lineageTag: e41aa4a5-efae-4a83-8400-36d27cb849a1
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Past Year' = CALCULATE(SUM(Sheet1[Quantity]),ALLEXCEPT(Sheet1,Sheet1[Date_Bought]),year(Sheet1[Date_Bought])=year(max(Sheet1[Date_Bought])))
+	measure 'Past Year' = CALCULATE(SUM(DuckData[Quantity]),ALLEXCEPT(DuckData,DuckData[Date_Bought]),year(DuckData[Date_Bought])=year(max(DuckData[Date_Bought])))
 		formatString: 0
 		lineageTag: e3888411-43b3-4350-858a-dadc945fe9fb
 
-	measure 'Flock Height' = CALCULATE(SUM(Sheet1[Height]),all(Sheet1))/100
+	measure 'Flock Height' = CALCULATE(SUM(DuckData[Height]),all(DuckData))/100
 		formatString: 0.0
 		lineageTag: 0a20451c-1c1f-4533-851a-6a9fbf79f58a
 
-	measure 'Flock Length' = CALCULATE(SUM(Sheet1[Length]),all(Sheet1))/100
+	measure 'Flock Length' = CALCULATE(SUM(DuckData[Length]),all(DuckData))/100
 		formatString: 0.0
 		lineageTag: 87cb69a9-c587-4190-bf54-5be0b33dafc6
 
 	measure QuantityWeightSwitch =
 			
 			SWITCH(TRUE(),
-			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),sum(Sheet1[Quantity]),
-			        sum(Sheet1[Total_Weight])
+			        CONTAINSSTRING(SELECTEDVALUE(ParamCumulativeQuantityWeight[ParamQuantityWeight Fields]),"Count"),sum(DuckData[Quantity]),
+			        sum(DuckData[Total_Weight])
 			)
 		lineageTag: 58a8217f-d0f8-4bb9-8367-1f9132af7100
 
@@ -85,11 +85,11 @@ table *Measures
 
 	measure LWHweight =
 			
-			var _duck = SELECTEDVALUE(Sheet1[Name])
-			var _length = CONVERT(CALCULATE(max(Sheet1[Length]),Sheet1[Name]=_duck),STRING)
-			var _width = CONVERT(CALCULATE(max(Sheet1[Width]),Sheet1[Name]=_duck),STRING)
-			var _height = CALCULATE(max(Sheet1[Height]),Sheet1[Name]=_duck)
-			var _weight = CALCULATE(max(Sheet1[Total_Weight]),Sheet1[Name]=_duck)
+			var _duck = SELECTEDVALUE(DuckData[Name])
+			var _length = CONVERT(CALCULATE(max(DuckData[Length]),DuckData[Name]=_duck),STRING)
+			var _width = CONVERT(CALCULATE(max(DuckData[Width]),DuckData[Name]=_duck),STRING)
+			var _height = CALCULATE(max(DuckData[Height]),DuckData[Name]=_duck)
+			var _weight = CALCULATE(max(DuckData[Total_Weight]),DuckData[Name]=_duck)
 			var _final = CONCATENATE(_length,"x")
 			return _final
 			// CONVERT(_length,STRING)&" x "
@@ -121,25 +121,25 @@ table *Measures
 			
 			MAXX(
 			    SUMMARIZE(
-			        'Sheet1',
+			        'DuckData',
 			        Dates[Year],
 			        "Total Qty",
-			        SUM(Sheet1[Quantity])
+			        SUM(DuckData[Quantity])
 			    ),
 			    [Total Qty]
 			)
 		formatString: 0
 		lineageTag: 4bad40a7-ddd9-4202-a6b7-11be690b71fd
 
-	measure 'Countries of Purchase' = DISTINCTCOUNT(Sheet1[Purchase_Country])
+	measure 'Countries of Purchase' = DISTINCTCOUNT(DuckData[Purchase_Country])
 		formatString: 0
 		lineageTag: 36d2305c-8d85-4952-83d9-a7ce17002b29
 
-	measure Donors = DISTINCTCOUNT(Sheet1[Buyer])
+	measure Donors = DISTINCTCOUNT(DuckData[Buyer])
 		formatString: 0
 		lineageTag: 0f2cb320-ae60-4e68-b173-b40129c008c2
 
-	measure 'States of Purchase' = CALCULATE(DISTINCTCOUNT(Sheet1[Purchase_State]),Sheet1[Purchase_Country]="USA")
+	measure 'States of Purchase' = CALCULATE(DISTINCTCOUNT(DuckData[Purchase_State]),DuckData[Purchase_Country]="USA")
 		formatString: 0
 		lineageTag: d4ca819e-0971-4956-994e-2ae6b3fac962
 

@@ -3,10 +3,10 @@
   "name": "5490505079c05cc59ddc",
   "position": {
     "x": 9.6515250687262721,
-    "y": 421.04778112318365,
+    "y": 418.63489985600205,
     "z": 5000,
-    "height": 256.971854954837,
-    "width": 820.37963084173316,
+    "height": 259.38473622201855,
+    "width": 873.46301871972764,
     "tabOrder": 5000
   },
   "visual": {
@@ -83,7 +83,8 @@
                 }
               },
               "queryRef": "Locations.Link",
-              "nativeQueryRef": "Link"
+              "nativeQueryRef": " ",
+              "displayName": " "
             }
           ]
         }
@@ -109,13 +110,68 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "432.482434754046D"
+                  "Value": "483.0972859689623D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Locations.Address"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.66214994622338D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Locations.City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.90071682076544D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Locations.Country"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "173.52271349949254D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Locations.Shop Name"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
           }
         }
       ]
@@ -152,8 +208,109 @@
             }
           }
         }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Unique Purchase Locations'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ea7a3ef87b6e09972090",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Shop Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "795f65d713556080e7cc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Address"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "299897032300e2c1a64b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Link"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7de495af526e059c0096",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Country"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a7e8be873cc228d0296c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "City"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
