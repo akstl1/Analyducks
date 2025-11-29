@@ -183,23 +183,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e8229a521600e1c15c29",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Locations"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

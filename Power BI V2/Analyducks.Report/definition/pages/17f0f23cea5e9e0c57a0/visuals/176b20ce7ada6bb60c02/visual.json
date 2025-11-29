@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "176b20ce7ada6bb60c02",
   "position": {
-    "x": 36.193219007723521,
-    "y": 153.21796046602958,
+    "x": 36.328159645232816,
+    "y": 152.82880954201391,
     "z": 22000,
-    "height": 125.46982589344154,
-    "width": 1206.440633590784,
+    "height": 102.72100313479623,
+    "width": 1206.3454392537656,
     "tabOrder": 20000
   },
   "visual": {
@@ -41,8 +41,8 @@
                 }
               },
               "queryRef": "*Measures.Past Year",
-              "nativeQueryRef": "# Added in Past Year",
-              "displayName": "# Added in Past Year"
+              "nativeQueryRef": "# Added in Current Year",
+              "displayName": "# Added in Current Year"
             },
             {
               "field": {
@@ -126,6 +126,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -220,6 +227,13 @@
                   }
                 }
               }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
@@ -276,7 +290,14 @@
             "imageTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "43D"
+                  "Value": "70D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "95D"
                 }
               }
             }
@@ -301,14 +322,14 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "lillyRotated06161609487225039.png"
+                      "ItemName": "lillyRotated5026553044353345.png"
                     }
                   }
                 },
                 "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Fill'"
+                      "Value": "'Normal'"
                     }
                   }
                 }
@@ -338,10 +359,49 @@
                   }
                 }
               }
+            },
+            "imageShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "imageFit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fill'"
+                }
+              }
+            },
+            "imageTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ],
@@ -362,6 +422,31 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#71D57E'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "*Measures.Flock Size"
           }
         }
       ]

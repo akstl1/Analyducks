@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "60351e805e509ba49ed9",
   "position": {
-    "x": 15,
-    "y": 16,
+    "x": 15.032341922165303,
+    "y": 16.285037082345745,
     "z": 30000,
-    "height": 57,
-    "width": 1249,
+    "height": 72.656319290465632,
+    "width": 1248.9370746999007,
     "tabOrder": 28000
   },
   "visual": {
@@ -19,7 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "You may have seen data/delta lakes, now welcome to my data pond - where information about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels. (And no, I don't own a Jeep.)"
+                    "value": "You may have seen data lakes, now welcome to my data pond - where information about my rubber ducks gets stored and visualized. I've been collecting rubber ducks since 2017, and my flock has really taken flight since then! I hope that you enjoy learning about them as much as I enjoy finding them during my travels. (And no, I don't own a Jeep.)",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }

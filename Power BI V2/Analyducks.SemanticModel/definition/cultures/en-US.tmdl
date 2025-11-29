@@ -2913,16 +2913,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "# Added in Past Year": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "# Added in Current Year": {
 			            "State": "Suggested",
 			            "Source": {
@@ -6113,6 +6103,39 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
+			    "location_has_ISO_code": {
+			      "Binding": {
+			        "ConceptualEntity": "Locations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "location": {
+			          "Target": {
+			            "Entity": "location"
+			          }
+			        },
+			        "location.ISO_code": {
+			          "Target": {
+			            "Entity": "location.ISO_code"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "location"
+			            },
+			            "Object": {
+			              "Role": "location.ISO_code"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "locations_have_ISO_codes"
+			        }
+			      ]
+			    },
 			    "location_has_country": {
 			      "Binding": {
 			        "ConceptualEntity": "Locations"
@@ -8662,39 +8685,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "duck_data_are_bought_on_date_bought"
-			        }
-			      ]
-			    },
-			    "location_has_ISO_code": {
-			      "Binding": {
-			        "ConceptualEntity": "Locations"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "location": {
-			          "Target": {
-			            "Entity": "location"
-			          }
-			        },
-			        "location.ISO_code": {
-			          "Target": {
-			            "Entity": "location.ISO_code"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "location"
-			            },
-			            "Object": {
-			              "Role": "location.ISO_code"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "locations_have_ISO_codes"
 			        }
 			      ]
 			    },

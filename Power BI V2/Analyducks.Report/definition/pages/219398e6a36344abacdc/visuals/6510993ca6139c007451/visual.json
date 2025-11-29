@@ -51,21 +51,6 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Past Year"
-                }
-              },
-              "queryRef": "*Measures.Past Year",
-              "nativeQueryRef": "# Added This Year",
-              "displayName": "# Added This Year"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "*Measures"
-                    }
-                  },
                   "Property": "Countries of Purchase"
                 }
               },
