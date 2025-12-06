@@ -153,9 +153,8 @@
                   "Function": 3
                 }
               },
-              "queryRef": "Min(Sheet1.image)",
-              "nativeQueryRef": "Image",
-              "displayName": "Image"
+              "queryRef": "Min(DuckData.image)",
+              "nativeQueryRef": "First image"
             }
           ]
         }
@@ -230,7 +229,7 @@
             "coverImageHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "100D"
+                  "Value": "150D"
                 }
               }
             }
@@ -331,5 +330,137 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1f3c0d2dc10bdbe234c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DuckData"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3ab34d33051b3b778954",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Date_Bought"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e9b7ae5da33e0ee38e30",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Purchase_City"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eac71360a0241212ac88",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Buyer"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "190e98ea31ec34590556",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "Dimensions"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5973bd23775575a0c666",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "About Me"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c22f63afa681846b87be",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DuckData"
+                  }
+                },
+                "Property": "image"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -33,14 +33,6 @@ table Locations
 
 		annotation SummarizationSetBy = Automatic
 
-	column ISO_Code
-		dataType: string
-		lineageTag: d08b4788-78e1-4577-93c3-64e66b273ec4
-		summarizeBy: none
-		sourceColumn: ISO_Code
-
-		annotation SummarizationSetBy = Automatic
-
 	column Latitude
 		dataType: double
 		lineageTag: f85b15ec-90a5-4fbe-a4ff-e27a38817cdc
@@ -84,7 +76,7 @@ table Locations
 				let
 				    Source = Excel.Workbook(File.Contents("C:\Users\allan\Documents\DS_Projects\Analyducks\Power BI V2\Data\DuckDataBI.xlsx"), null, true),
 				    Table1_Table = Source{[Item="Locations",Kind="Table"]}[Data],
-				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Shop Name", type text}, {"City", type text}, {"State", type text}, {"Country", type text}, {"ISO_Code", type text}, {"Latitude", type number}, {"Longitude", type number}, {"Link", type text}, {"Address", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Shop Name", type text}, {"City", type text}, {"State", type text}, {"Country", type text},  {"Latitude", type number}, {"Longitude", type number}, {"Link", type text}, {"Address", type text}})
 				in
 				    #"Changed Type"
 

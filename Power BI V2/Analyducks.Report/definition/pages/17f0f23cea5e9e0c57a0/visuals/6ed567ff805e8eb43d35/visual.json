@@ -21,6 +21,7 @@
                   {
                     "value": "Click on the other ducks to learn more",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "9pt"
                     }
                   }

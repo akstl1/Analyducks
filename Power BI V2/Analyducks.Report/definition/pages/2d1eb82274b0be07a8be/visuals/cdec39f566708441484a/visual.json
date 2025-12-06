@@ -19219,6 +19219,67 @@
           "selector": {
             "id": "Value 6"
           }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "c",
+                                "Entity": "Coefficients",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "Score"
+                                    }
+                                  },
+                                  "Function": 0
+                                },
+                                "Name": "Sum(Coefficients.Score)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Sum(Coefficients.Score)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 7",
+                      "utterance": "score"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 7"
+          }
         }
       ],
       "general": [
@@ -19405,7 +19466,27 @@
                     }
                   },
                   {
-                    "value": " (dimensions in cm). And also, I named my MS Copilot QuackerJack.",
+                    "value": " (dimensions in cm) - though the ducks have a lot of size variability so the R-squared score is only ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 7"
+                      }
+                    },
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": ". And also, I named my MS Copilot QuackerJack.",
                     "textStyle": {
                       "fontSize": "9pt"
                     }

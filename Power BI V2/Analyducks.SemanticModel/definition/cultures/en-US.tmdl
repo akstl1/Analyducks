@@ -5527,49 +5527,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "location.ISO_code": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Locations",
-			          "ConceptualProperty": "ISO_Code"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ISO code": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ISO_Code": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "iso id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "iso key": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
 			    "location.latitude": {
 			      "Definition": {
 			        "Binding": {

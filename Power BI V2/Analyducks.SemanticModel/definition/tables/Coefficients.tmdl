@@ -39,6 +39,26 @@ table Coefficients
 
 		annotation SummarizationSetBy = Automatic
 
+	column Int
+		dataType: double
+		lineageTag: 3bac4c97-18d3-4a86-83ea-adc384648075
+		summarizeBy: sum
+		sourceColumn: Int
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Score
+		dataType: double
+		lineageTag: fee66b50-6735-4dce-aa2c-a486eb6931f4
+		summarizeBy: sum
+		sourceColumn: Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Coefficients = m
 		mode: import
 		source =
@@ -46,21 +66,25 @@ table Coefficients
 				    Source = Excel.Workbook(File.Contents("C:\Users\allan\Documents\DS_Projects\Analyducks\Power BI V2\Data\DuckDataBI.xlsx"), null, true),
 				    Table1_Table = Source{[Item="Table1",Kind="Table"]}[Data],
 				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Duck", type text}, {"Name", type any}, {"Purchase_Method", type text}, {"Purchase_Retailer", type text}, {"Purchase_City", type text}, {"Purchase_State", type text}, {"Purchase_Country", type text}, {"ISO_Code", type text}, {"Date_Bought", type date}, {"Latitude", type number}, {"Longitude", type number}, {"About Me", type any}, {"Buyer", type text}, {"Quantity", Int64.Type}, {"Total_Weight", type number}, {"Height", type number}, {"Width", type number}, {"Length", type number}}),
-				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.RoundDown([Total_Weight]/[Quantity])),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.Round([Total_Weight]/[Quantity],1)),
 				    #"Added Index" = Table.AddIndexColumn(#"Added Custom", "Index", 1, 1, Int64.Type),
 				    #"Added Custom1" = Table.AddColumn(#"Added Index", "image", each "https://wallpaperaccess.com/full/4723250.jpg"),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom1",{{"image", type text}}),
-				    #"Run Python script" = Python.Execute("import pandas as pd#(lf)import numpy as np#(lf)import matplotlib.pyplot as plt#(lf)import seaborn as sns#(lf)from sklearn.model_selection import train_test_split#(lf)from sklearn.linear_model import LinearRegression#(lf)from sklearn.metrics import mean_squared_error, mean_absolute_error#(lf)from sklearn import preprocessing#(lf)#(lf)# importing data#(lf)df = dataset#(lf)df['Avg_Weight']=df['Total_Weight']/df['Quantity']#(lf)# print(df[df['Quantity']>1])#(lf)#(lf)# print(df.columns)#(lf)def regression():#(lf)    #(lf)# creating feature variables#(lf)    X = df[['Length', 'Width','Height']]#(lf)    y = df['Avg_Weight']#(lf)#(lf)#(lf)# print(y)#(lf)#(lf)# creating train and test sets#(lf)    X_train, X_test, y_train, y_test = train_test_split(#(lf)    X, y, test_size=0.3, random_state=101)#(lf)#(lf)# creating a regression model#(lf)    model = LinearRegression()#(lf)#(lf)# fitting the model#(lf)    model.fit(X_train, y_train)#(lf)# making predictions#(lf)    predictions = model.predict(X_test)#(lf)    return model.coef_#(lf)# print(model.coef_)#(lf)regression()#(lf)#(lf)data = {'Name': regression(),'Index':['Length','Width','Height']#(lf)        }#(lf)#(lf)# Create DataFrame#(lf)coefficients = pd.DataFrame(data)",[dataset=#"Changed Type1"]),
+				    #"Run Python script" = Python.Execute("import pandas as pd#(lf)import numpy as np#(lf)import matplotlib.pyplot as plt#(lf)import seaborn as sns#(lf)from sklearn.model_selection import train_test_split#(lf)from sklearn.linear_model import LinearRegression#(lf)from sklearn.metrics import mean_squared_error, mean_absolute_error#(lf)from sklearn import preprocessing#(lf)#(lf)# importing data#(lf)df = pd.read_excel('C:/Users/allan/Documents/DS_Projects/Analyducks/Power BI V2/Data/DuckDataBI.xlsx')#(lf)df['Avg_Weight']=df['Total_Weight']/df['Quantity']#(lf)# print(df[df['Quantity']>1])#(lf)#(lf)# print(df.columns)#(lf)# def regression():#(lf)    #(lf)# creating feature variables#(lf)X = df[['Length', 'Width','Height']]#(lf)y = df['Avg_Weight']#(lf)#(lf)#(lf)# print(y)#(lf)#(lf)# creating train and test sets#(lf)# X_train, X_test, y_train, y_test = train_test_split(#(lf)# X, y, test_size=0.3, random_state=101)#(lf)#(lf)# creating a regression model#(lf)model = LinearRegression()#(lf)#(lf)# fitting the model#(lf)model.fit(X, y)#(lf)# making predictions#(lf)predictions = model.predict(X)#(lf)# model.summary()#(lf)# print(model.coef_)#(lf)# regression()#(lf)#(lf)data = {'Name': model.coef_,'Index':['Length','Width','Height']#(lf)        }#(lf)#(lf)data2 = {'Name': model.intercept_,'Index':['Int']#(lf)        }#(lf)#(lf)data3 = {'Name': 100*model.score(X,y),'Index':['Score']#(lf)        }#(lf)#(lf)# Create DataFrame#(lf)coefficients = pd.concat([pd.DataFrame(data),pd.DataFrame(data2),pd.DataFrame(data3)])#(lf)print(coefficients)",[dataset=#"Changed Type1"]),
 				    #"Filtered Rows" = Table.SelectRows(#"Run Python script", each ([Name] = "coefficients")),
 				    #"Expanded Value" = Table.ExpandTableColumn(#"Filtered Rows", "Value", {"Name", "Index"}, {"Name.1", "Index"}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Expanded Value",{"Name"}),
 				    #"Changed Type2" = Table.TransformColumnTypes(#"Removed Columns",{{"Name.1", type number}, {"Index", type text}}),
 				    #"Rounded Off" = Table.TransformColumns(#"Changed Type2",{{"Name.1", each Number.Round(_, 2), type number}}),
 				    #"Pivoted Column" = Table.Pivot(#"Rounded Off", List.Distinct(#"Rounded Off"[Index]), "Index", "Name.1", List.Sum),
-				    #"Added Custom2" = Table.AddColumn(#"Pivoted Column", "Formula", each Number.ToText([Length])&"L + "&Number.ToText([Width])&"W + "&Number.ToText([Height])&"H"),
-				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom2",{{"Formula", type text}})
+				    #"Added Custom3" = Table.AddColumn(#"Pivoted Column", "WidthSign", each if Text.Contains(Number.ToText([Width]),"-") then " - " else " + "),
+				    #"Added Custom4" = Table.AddColumn(#"Added Custom3", "HeightSign", each if Text.Contains(Number.ToText([Height]),"-") then " - " else " + "),
+				    #"Added Custom5" = Table.AddColumn(#"Added Custom4", "IntSign", each if Text.Contains(Number.ToText([Int]),"-") then " - " else " + "),
+				    #"Added Custom2" = Table.AddColumn(#"Added Custom5", "Formula", each Number.ToText([Length])&"L"&[WidthSign]&Number.ToText(Number.Abs([Width]))&"W"&[HeightSign]&Number.ToText(Number.Abs([Height]))&"H"&[IntSign]&Number.ToText(Number.Abs([Int]))),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom2",{{"Formula", type text}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type3",{"WidthSign", "HeightSign", "IntSign"})
 				in
-				    #"Changed Type3"
+				    #"Removed Columns1"
 
 	annotation PBI_NavigationStepName = Navigation
 

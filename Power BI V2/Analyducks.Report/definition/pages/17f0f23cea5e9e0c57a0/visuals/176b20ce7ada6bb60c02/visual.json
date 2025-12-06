@@ -52,12 +52,11 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Flock Weight"
+                  "Property": "Donors"
                 }
               },
-              "queryRef": "*Measures.Flock Weight",
-              "nativeQueryRef": "Flock Weight (kg)",
-              "displayName": "Flock Weight (kg)"
+              "queryRef": "*Measures.Donors",
+              "nativeQueryRef": "Donors"
             },
             {
               "field": {
@@ -67,27 +66,11 @@
                       "Entity": "*Measures"
                     }
                   },
-                  "Property": "Flock Height"
+                  "Property": "Countries of Purchase"
                 }
               },
-              "queryRef": "*Measures.Flock Height",
-              "nativeQueryRef": "Flock Height (m)",
-              "displayName": "Flock Height (m)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "*Measures"
-                    }
-                  },
-                  "Property": "Flock Length"
-                }
-              },
-              "queryRef": "*Measures.Flock Length",
-              "nativeQueryRef": "Flock Length (m)",
-              "displayName": "Flock Length (m)"
+              "queryRef": "*Measures.Countries of Purchase",
+              "nativeQueryRef": "Countries of Purchase"
             }
           ]
         }
@@ -139,34 +122,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "*Measures.Flock Height"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "*Measures.Flock Length"
           }
         }
       ],
@@ -338,7 +293,14 @@
             "imageTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "59D"
+                  "Value": "70D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
                 }
               }
             }
@@ -402,6 +364,102 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'lillyRotatedAgain.png'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "lillyRotatedAgain4371974965532226.png"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
+                }
+              }
+            },
+            "imageTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "*Measures.Donors"
+          }
+        },
+        {
+          "properties": {
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'lillyRotated.png'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "lillyRotated6105552037694897.png"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            },
+            "imageTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "*Measures.Countries of Purchase"
           }
         }
       ],
@@ -467,5 +525,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bf69ab89ed92ec5c32c4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Flock Size"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fef7c6363081c3040067",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Past Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a3d3000ccc90066e1900",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Donors"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7752533460d48689062d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Countries of Purchase"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Cities",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

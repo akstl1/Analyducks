@@ -3,7 +3,7 @@
   "name": "3bbb0631e4055b0a007d",
   "displayName": "Shop tooltip",
   "displayOption": "ActualSize",
-  "height": 240,
+  "height": 160,
   "width": 320,
   "visibility": "HiddenInViewMode",
   "type": "Tooltip"
