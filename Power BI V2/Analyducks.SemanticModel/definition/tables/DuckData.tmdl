@@ -214,7 +214,7 @@ table DuckData
 		mode: import
 		source =
 				let
-				    Source = Excel.Workbook(File.Contents("C:\Users\allan\Documents\DS_Projects\Analyducks\Power BI V2\Data\DuckDataBI.xlsx"), null, true),
+				    Source = Excel.Workbook(Web.Contents("https://rubberduckanalytics.sharepoint.com/Shared%20Documents/Data/DuckDataBI.xlsx"), null, true),
 				    Table1_Table = Source{[Item="Table1",Kind="Table"]}[Data],
 				    #"Changed Type" = Table.TransformColumnTypes(Table1_Table,{{"Duck", type text}, {"Name", type any}, {"Purchase_Method", type text}, {"Purchase_Retailer", type text}, {"Purchase_City", type text}, {"Purchase_State", type text}, {"Purchase_Country", type text}, {"ISO_Code", type text}, {"Date_Bought", type date}, {"Latitude", type number}, {"Longitude", type number}, {"About Me", type any}, {"Buyer", type text}, {"Quantity", Int64.Type}, {"Total_Weight", type number}, {"Height", type number}, {"Width", type number}, {"Length", type number}}),
 				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Avg Weight", each Number.RoundDown([Total_Weight]/[Quantity])),
