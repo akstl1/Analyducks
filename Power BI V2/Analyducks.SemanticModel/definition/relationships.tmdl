@@ -7,12 +7,3 @@ relationship 9c5e3aaf-544d-a1ee-caf5-8e303ce14c91
 	fromColumn: DuckData.Date_Bought
 	toColumn: Dates.Date
 
-relationship ea115ee0-0003-4371-ba06-656666393e8a
-	joinOnDateBehavior: datePartOnly
-	fromColumn: DuckData2.Date_Bought
-	toColumn: LocalDateTable_50576dc1-7d6a-4abe-9499-75105a145c18.Date
-
-relationship AutoDetected_3ff5ff97-d6ef-4a0f-bd24-8a6782f47814
-	fromColumn: DuckData.Duck
-	toColumn: DuckData2.Duck
-

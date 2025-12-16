@@ -141,6 +141,26 @@ table Model
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column Regression =
+			
+			var _signL = if('Model'[Slope2]<0," - ","")
+			var _signW = if('Model'[Slope3]<0," - ", " + ")
+			var _signH = if('Model'[Slope1]<0," - "," + ")
+			var _signI = if('Model'[Intercept]<0," - "," + ")
+			return _signL&abs(round('Model'[Slope2],2))&"L"&_signW&abs(round('Model'[Slope3],2))&"W"&_signH&abs(round('Model'[Slope1],2))&"H"&_signI&abs(round('Model'[Intercept],2))
+		lineageTag: b9e9fca7-4526-462d-a07f-1dcc339e5baf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column R2 = round('Model'[CoefficientOfDetermination],4)*100
+		lineageTag: 6ccf486d-ddba-4814-b892-50b6d96181e5
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Model = calculated
 		mode: import
 		source = LINEST(DuckData[Avg Weight],DuckData[Height],DuckData[Length],DuckData[Width])

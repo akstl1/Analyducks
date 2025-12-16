@@ -270,6 +270,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "59a60ad6b4862e40e77a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Longitude"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "357532dca2ea4881b75f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Latitude"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

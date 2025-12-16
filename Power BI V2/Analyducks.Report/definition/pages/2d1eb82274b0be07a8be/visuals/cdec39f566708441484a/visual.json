@@ -19162,8 +19162,8 @@
                             "Version": 2,
                             "From": [
                               {
-                                "Name": "c",
-                                "Entity": "Coefficients",
+                                "Name": "m",
+                                "Entity": "Model",
                                 "Type": 0
                               }
                             ],
@@ -19172,12 +19172,12 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Source": "c"
+                                      "Source": "m"
                                     }
                                   },
-                                  "Property": "Formula"
+                                  "Property": "Regression"
                                 },
-                                "Name": "Coefficients.Formula"
+                                "Name": "Model.Regression"
                               }
                             ],
                             "OrderBy": [
@@ -19187,10 +19187,10 @@
                                   "Column": {
                                     "Expression": {
                                       "SourceRef": {
-                                        "Source": "c"
+                                        "Source": "m"
                                       }
                                     },
-                                    "Property": "Formula"
+                                    "Property": "Regression"
                                   }
                                 }
                               }
@@ -19198,7 +19198,7 @@
                           }
                         }
                       },
-                      "Property": "Coefficients.Formula"
+                      "Property": "Model.Regression"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -19209,7 +19209,7 @@
                     "kind": "NaturalLanguage",
                     "annotation": {
                       "name": "Value 6",
-                      "utterance": "max(formula)"
+                      "utterance": "max(Regression)"
                     }
                   }
                 }
@@ -19233,8 +19233,8 @@
                             "Version": 2,
                             "From": [
                               {
-                                "Name": "c",
-                                "Entity": "Coefficients",
+                                "Name": "m",
+                                "Entity": "Model",
                                 "Type": 0
                               }
                             ],
@@ -19245,21 +19245,21 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Source": "c"
+                                          "Source": "m"
                                         }
                                       },
-                                      "Property": "Score"
+                                      "Property": "R2"
                                     }
                                   },
                                   "Function": 0
                                 },
-                                "Name": "Sum(Coefficients.Score)"
+                                "Name": "Sum(Model.R2)"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "Sum(Coefficients.Score)"
+                      "Property": "Sum(Model.R2)"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -19270,7 +19270,7 @@
                     "kind": "NaturalLanguage",
                     "annotation": {
                       "name": "Value 7",
-                      "utterance": "score"
+                      "utterance": "max(R2)"
                     }
                   }
                 }
