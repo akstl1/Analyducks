@@ -373,23 +373,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b0c15d570385a384ac02",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ParamCumulativeQuantityWeight"
-              }
-            },
-            "Property": "ParamQuantityWeight"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

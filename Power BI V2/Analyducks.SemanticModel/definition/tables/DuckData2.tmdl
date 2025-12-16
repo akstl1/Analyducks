@@ -1,12 +1,9 @@
-table DuckData
-	lineageTag: 967938bc-37ac-43ed-acd4-f9ce5d8fd5f0
-
-	measure Measure = Khariton.Convert.DayHourMinute(32400,9)
-		lineageTag: 85ba2420-d7ae-47d1-8f5b-5e53f94ca695
+table DuckData2
+	lineageTag: 2b9f4e6d-9fe1-4695-ba5a-67c25453af94
 
 	column Duck
 		dataType: string
-		lineageTag: 27fe14da-daf8-4f73-b611-a8a750c4b24c
+		lineageTag: a4cabd0b-83bf-4313-b4ad-6242a6a6e86b
 		summarizeBy: none
 		sourceColumn: Duck
 
@@ -14,7 +11,7 @@ table DuckData
 
 	column Name
 		dataType: string
-		lineageTag: 943b1941-cca7-4813-9cd6-6b8eb9fa3caa
+		lineageTag: b261b9a7-ab7d-4876-bcde-f9bf67d7d0c8
 		summarizeBy: none
 		sourceColumn: Name
 
@@ -22,7 +19,7 @@ table DuckData
 
 	column Purchase_Method
 		dataType: string
-		lineageTag: dc228460-5dc0-4622-9591-fb510f8e8a31
+		lineageTag: b05001c6-eb73-45d3-9b9f-91df139dd63c
 		summarizeBy: none
 		sourceColumn: Purchase_Method
 
@@ -30,7 +27,7 @@ table DuckData
 
 	column Purchase_Retailer
 		dataType: string
-		lineageTag: 0de8b2e9-3c86-4aef-923b-3a2983540bdb
+		lineageTag: 026c09bf-cdd3-465e-8d1f-5085781cd699
 		summarizeBy: none
 		sourceColumn: Purchase_Retailer
 
@@ -38,7 +35,7 @@ table DuckData
 
 	column Purchase_City
 		dataType: string
-		lineageTag: 95afceec-63f8-45b5-bc2a-4fc018084d45
+		lineageTag: 243e5c7d-9961-4f8d-b34f-ea51ad1a29b4
 		summarizeBy: none
 		sourceColumn: Purchase_City
 
@@ -46,7 +43,7 @@ table DuckData
 
 	column Purchase_State
 		dataType: string
-		lineageTag: 286edfda-e929-4239-8da2-8765f950838d
+		lineageTag: aef0b813-f6fb-44f5-99a9-43c90210ed32
 		summarizeBy: none
 		sourceColumn: Purchase_State
 
@@ -54,7 +51,7 @@ table DuckData
 
 	column Purchase_Country
 		dataType: string
-		lineageTag: ec4f8510-50df-4ac0-99e9-9209151ebd8f
+		lineageTag: 7b1d30f2-7a4f-4a57-b2c6-891da1a106df
 		summarizeBy: none
 		sourceColumn: Purchase_Country
 
@@ -62,7 +59,7 @@ table DuckData
 
 	column ISO_Code
 		dataType: string
-		lineageTag: 8bd8ebf0-a77a-422c-ada3-1a954a1c9f0e
+		lineageTag: 7c0184a1-e575-4563-b791-bc92707959d3
 		summarizeBy: none
 		sourceColumn: ISO_Code
 
@@ -70,20 +67,23 @@ table DuckData
 
 	column Date_Bought
 		dataType: dateTime
-		formatString: mm/dd/yy
-		lineageTag: ed489913-d002-423d-b090-592a54da0156
+		formatString: Long Date
+		lineageTag: 9af7687b-d399-4a73-9837-6b59e852dc2b
 		summarizeBy: none
 		sourceColumn: Date_Bought
+
+		variation Variation
+			isDefault
+			relationship: ea115ee0-0003-4371-ba06-656666393e8a
+			defaultHierarchy: LocalDateTable_50576dc1-7d6a-4abe-9499-75105a145c18.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 
-		annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
 	column Latitude
 		dataType: double
-		lineageTag: dea1fd0a-be1b-44b6-b33c-114d22557a61
+		lineageTag: b5f177ba-2f98-4df0-85f2-80aff1d6ff83
 		summarizeBy: sum
 		sourceColumn: Latitude
 
@@ -93,7 +93,7 @@ table DuckData
 
 	column Longitude
 		dataType: double
-		lineageTag: 1784bb20-f82d-4c72-8160-eae1bec7f775
+		lineageTag: 726919a0-6c56-46a3-870c-3c778d471358
 		summarizeBy: sum
 		sourceColumn: Longitude
 
@@ -103,7 +103,7 @@ table DuckData
 
 	column 'About Me'
 		dataType: string
-		lineageTag: 55b4a01f-5c60-45c8-83ad-e10a3a1b3100
+		lineageTag: 83fe3b82-4c31-4e93-9e22-44ddab8ad53e
 		summarizeBy: none
 		sourceColumn: About Me
 
@@ -111,7 +111,7 @@ table DuckData
 
 	column Buyer
 		dataType: string
-		lineageTag: dedb75ba-0f54-433c-ad1d-34848f7c41a8
+		lineageTag: c2dc5af9-6774-43bf-87b8-fe5e262c67b9
 		summarizeBy: none
 		sourceColumn: Buyer
 
@@ -120,7 +120,7 @@ table DuckData
 	column Quantity
 		dataType: int64
 		formatString: 0
-		lineageTag: 18275f8b-4403-4607-92ff-eecc3c4aee7a
+		lineageTag: bd45fd15-fd3a-4faf-a857-54eb9230827e
 		summarizeBy: sum
 		sourceColumn: Quantity
 
@@ -128,7 +128,7 @@ table DuckData
 
 	column Total_Weight
 		dataType: double
-		lineageTag: 217a87d2-6df6-4613-b801-c7fd716dd58d
+		lineageTag: 8b54b227-85bf-4c30-812b-73f93608f547
 		summarizeBy: sum
 		sourceColumn: Total_Weight
 
@@ -138,7 +138,7 @@ table DuckData
 
 	column Height
 		dataType: double
-		lineageTag: 0608df18-8f5c-42c9-b9a0-95a9f18b3cd3
+		lineageTag: 0be8676a-17bc-41ff-b928-1270427f0a50
 		summarizeBy: sum
 		sourceColumn: Height
 
@@ -148,7 +148,7 @@ table DuckData
 
 	column Width
 		dataType: double
-		lineageTag: b3a8a15b-9d64-41b0-b15a-21752c8f6421
+		lineageTag: fc87624c-6217-4e35-9f42-3f7b42a484f6
 		summarizeBy: sum
 		sourceColumn: Width
 
@@ -158,7 +158,7 @@ table DuckData
 
 	column Length
 		dataType: double
-		lineageTag: dd604b6a-c701-4d45-a66c-4e8736b7f0da
+		lineageTag: 0cdbf249-654f-405b-9b78-af4a8597339b
 		summarizeBy: sum
 		sourceColumn: Length
 
@@ -166,9 +166,17 @@ table DuckData
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column Image
+		dataType: string
+		lineageTag: 423afb62-8a0b-4991-a802-8fd3ee364dda
+		summarizeBy: none
+		sourceColumn: Image
+
+		annotation SummarizationSetBy = Automatic
+
 	column 'Avg Weight'
 		dataType: double
-		lineageTag: 25625667-f9d4-4d6f-a40d-319ba7989876
+		lineageTag: 75e661f0-02b1-4f8c-99cf-f49fb0d733e5
 		summarizeBy: sum
 		sourceColumn: Avg Weight
 
@@ -179,16 +187,15 @@ table DuckData
 	column Index
 		dataType: int64
 		formatString: 0
-		lineageTag: ed7a425c-0432-46c5-8432-cae361007200
+		lineageTag: 31e0b3e8-e24d-43de-97c1-4147b379ab76
 		summarizeBy: sum
 		sourceColumn: Index
 
 		annotation SummarizationSetBy = Automatic
 
-	column image
+	column 'image 2'
 		dataType: string
-		lineageTag: 8ebde27d-d2fc-4026-93ba-f7c389aed67f
-		dataCategory: ImageUrl
+		lineageTag: 97c7a171-40f1-457f-9395-e62870bc48a3
 		summarizeBy: none
 		sourceColumn: image
 
@@ -196,21 +203,13 @@ table DuckData
 
 	column Dimensions
 		dataType: string
-		lineageTag: e9b9ed60-66f6-4398-9dfc-dc3a6ca0f001
+		lineageTag: bc6b4ffa-f532-4cbd-b490-258c2e9ddac4
 		summarizeBy: none
 		sourceColumn: Dimensions
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Image 2'
-		dataType: string
-		lineageTag: 47141f5f-db0f-47ca-8eb6-e6e5ec7c06ad
-		summarizeBy: none
-		sourceColumn: Image
-
-		annotation SummarizationSetBy = Automatic
-
-	partition DuckData = m
+	partition DuckData2 = m
 		mode: import
 		source =
 				let
@@ -222,11 +221,12 @@ table DuckData
 				    #"Added Custom1" = Table.AddColumn(#"Added Index", "image", each "https://wallpaperaccess.com/full/4723250.jpg"),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom1",{{"image", type text}}),
 				    #"Added Custom2" = Table.AddColumn(#"Changed Type1", "Dimensions", each Number.ToText(Number.Round([Length],1))&" x "&Number.ToText(Number.Round([Width],1))&" x "&Number.ToText(Number.Round([Height],1))&"cm || "&Number.ToText(Number.Round([Total_Weight],1))&"g "),
-				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom2",{{"Dimensions", type text}, {"Avg Weight", type number}})
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom2",{{"Dimensions", type text}, {"Avg Weight", type number}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type2", each Date.IsInCurrentYear([Date_Bought]))
 				in
-				    #"Changed Type2"
+				    #"Filtered Rows"
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

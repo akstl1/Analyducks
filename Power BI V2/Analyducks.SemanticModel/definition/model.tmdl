@@ -10,7 +10,7 @@ annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop","TMDLView_Desktop"
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DuckData","*Measures","Sheet1 (3)","Coefficients","Locations","Chains","Coefficients (3)"]
+annotation PBI_QueryOrder = ["DuckData","*Measures","Sheet1 (3)","Coefficients","Locations","Chains","Coefficients (3)","DuckData2"]
 
 ref table DuckData
 ref table DateTableTemplate_f42bbec9-b855-4220-88e6-4287a523d76f
@@ -21,6 +21,9 @@ ref table ParamCumulativeQuantityWeight
 ref table Coefficients
 ref table Locations
 ref table Chains
+ref table Model
+ref table DuckData2
+ref table LocalDateTable_50576dc1-7d6a-4abe-9499-75105a145c18
 
 ref cultureInfo en-US
 

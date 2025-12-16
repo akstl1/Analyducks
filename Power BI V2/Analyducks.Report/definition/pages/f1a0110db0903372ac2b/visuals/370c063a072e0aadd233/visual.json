@@ -146,23 +146,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5cc3f74c5cdb37053ea7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Chains"
-              }
-            },
-            "Property": "Store Name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

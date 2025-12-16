@@ -1,0 +1,149 @@
+table Model
+	lineageTag: 1b05cb55-c3e9-4b10-8d22-9f18f0ae8eb1
+
+	column Slope1
+		lineageTag: 12cc8a5b-71f0-43b8-954d-8920f266c7f4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Slope1]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Slope2
+		lineageTag: 168b88a8-0d87-44b3-b6be-344f9bb67f3f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Slope2]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Slope3
+		lineageTag: a288f263-60e2-4949-8d2f-277f88d92176
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Slope3]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Intercept
+		lineageTag: df474289-7d9c-432a-9ee3-55dc2c74a064
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Intercept]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardErrorSlope1
+		lineageTag: 313d1a9c-5a84-4007-bee3-a8a51501ef0c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [StandardErrorSlope1]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardErrorSlope2
+		lineageTag: baea311c-0cab-4adc-b00f-4400e3a2ded4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [StandardErrorSlope2]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardErrorSlope3
+		lineageTag: f9352ec1-1515-4c9b-b57f-bbc0453feb81
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [StandardErrorSlope3]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardErrorIntercept
+		lineageTag: 91ddb758-dd00-4e2d-83f8-91bef19b7f2e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [StandardErrorIntercept]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CoefficientOfDetermination
+		lineageTag: e7cbe4b2-ccc2-4239-ae14-7e359b6a239b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [CoefficientOfDetermination]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardError
+		lineageTag: 59adb24c-6a5b-46f8-81f2-d54499883865
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [StandardError]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FStatistic
+		lineageTag: 51cffb69-f932-446b-801b-174b64ec3f5a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [FStatistic]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DegreesOfFreedom
+		lineageTag: ee2c3141-bfa3-4407-a527-7847f028fc6a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DegreesOfFreedom]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RegressionSumOfSquares
+		lineageTag: eaabb058-e834-432b-af53-81ded66c8a04
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [RegressionSumOfSquares]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ResidualSumOfSquares
+		lineageTag: 034337c6-8252-4f93-bfd7-1eab0b6da35d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ResidualSumOfSquares]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Model = calculated
+		mode: import
+		source = LINEST(DuckData[Avg Weight],DuckData[Height],DuckData[Length],DuckData[Width])
+
+	annotation PBI_Id = 445a9a4dca9b462f942a04fc9e1644c2
+
