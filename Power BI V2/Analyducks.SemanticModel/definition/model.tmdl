@@ -18,7 +18,6 @@ ref table *Measures
 ref table Dates
 ref table LocalDateTable_ab63dbb5-fa4a-432a-a1a3-1960568ea4cd
 ref table ParamCumulativeQuantityWeight
-ref table Coefficients
 ref table Locations
 ref table Chains
 ref table Model

@@ -147,14 +147,14 @@
                           "Entity": "DuckData"
                         }
                       },
-                      "Property": "image"
+                      "Property": "Image"
                     }
                   },
                   "Function": 3
                 }
               },
-              "queryRef": "Min(DuckData.image)",
-              "nativeQueryRef": "First image"
+              "queryRef": "Min(DuckData.Image 2)",
+              "nativeQueryRef": "First Image"
             }
           ]
         }
@@ -334,7 +334,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fdcc8b5d9891120811a5",
+        "name": "eee13ee912aaa0d3db56",
         "field": {
           "Column": {
             "Expression": {
@@ -348,7 +348,7 @@
         "type": "Categorical"
       },
       {
-        "name": "4a69e1a2e083ea1d5c74",
+        "name": "eb3bef5aec3cbac90aa0",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -367,7 +367,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e2a4e0f3367fffb083df",
+        "name": "893ef917a14fa7ad4f8a",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -386,7 +386,7 @@
         "type": "Advanced"
       },
       {
-        "name": "9f110940279983441652",
+        "name": "0c201fc5e63b0f8bf69c",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -405,7 +405,7 @@
         "type": "Advanced"
       },
       {
-        "name": "b49096b5d5c2fae59d75",
+        "name": "47713f91bd7b4b358266",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -424,7 +424,7 @@
         "type": "Advanced"
       },
       {
-        "name": "5a3076c17351b3a11699",
+        "name": "c9a3bc545d2038c30786",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -443,7 +443,7 @@
         "type": "Advanced"
       },
       {
-        "name": "2158285ca656c946473b",
+        "name": "73ef1aad04c57e62b60b",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -453,7 +453,7 @@
                     "Entity": "DuckData"
                   }
                 },
-                "Property": "image"
+                "Property": "Image"
               }
             },
             "Function": 3
