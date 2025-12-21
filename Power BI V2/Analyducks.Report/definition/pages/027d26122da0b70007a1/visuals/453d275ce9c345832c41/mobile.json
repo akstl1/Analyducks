@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 860,
+    "z": 5000,
+    "height": 124,
+    "width": 324,
+    "tabOrder": 5000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Craig Samborski created the world's largest rubber duck in 2014. \"Mama Duck\" is 61 feet high, 69 feet wide and 79 feet long and weighs 31,000 pounds. The rubber ducky sails around the world to appear at festivals, where people can marvel at it.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

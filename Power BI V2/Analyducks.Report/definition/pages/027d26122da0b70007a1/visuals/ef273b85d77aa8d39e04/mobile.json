@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 1124,
+    "z": 12000,
+    "height": 164,
+    "width": 324,
+    "tabOrder": 12000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Rubber ducks enjoy immense popularity, with an estimated 1.4 billion sold each year worldwide. This staggering number underscores their status as a staple toy for children and a favorite gift option for baby showers and birthdays. Their affordability and charm make them an accessible toy that brings joy to children and families.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 1427,
+    "z": 10000,
+    "height": 124,
+    "width": 324,
+    "tabOrder": 10000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "During the years of World Wars I and II, rubber was considered a valuable commodity, and rationing became mandatory. By the 1940s, however, the rubber ducky began being produced in vinyl and plastic.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

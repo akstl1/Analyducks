@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 386,
+    "z": 9000,
+    "height": 124,
+    "width": 324,
+    "tabOrder": 9000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "The rubber duck became a Toy Hall of Fame inductee back in 2013. The Hall of Fame was founded in 1998 and has only inducted 52 other toys.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

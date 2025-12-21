@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "b01f95ae009881d92e82",
   "position": {
-    "x": 142.80724826057039,
-    "y": 58.876672528480768,
+    "x": 9.6515250687262721,
+    "y": 59.11559104594842,
     "z": 3000,
-    "height": 350.75464485052373,
-    "width": 1126.1729490022174,
+    "height": 351.07422437491817,
+    "width": 1259.5240214687785,
     "tabOrder": 1000
   },
   "visual": {
@@ -270,6 +270,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "4d7ca1b39d2ff2ddf9ea",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Longitude"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2a159709d18a24cba209",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Locations"
+              }
+            },
+            "Property": "Latitude"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

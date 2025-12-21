@@ -252,5 +252,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "416b0a13771acd34395f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DuckData"
+              }
+            },
+            "Property": "Purchase_Retailer"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

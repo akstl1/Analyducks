@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 991,
+    "z": 13000,
+    "height": 124,
+    "width": 324,
+    "tabOrder": 13000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Charlotte Lee, an American woman, holds the Guinness world record for the largest rubber duck collection. After starting her collection in 1996, she revealed on \"Today\" that she had gathered more than 9,000 floatable ducks as of 2019.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

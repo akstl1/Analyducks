@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 231,
+    "z": 7000,
+    "height": 147,
+    "width": 324,
+    "tabOrder": 7000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "In 1992, three containers full of rubber ducks fell off a cargo ship in the Pacific Ocean. They drifted into other bodies of water, with some ending up in England, South America, Australia and even the west coast of Canada. In effect, the ducks helped scientists learn more about ocean currents and waves.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

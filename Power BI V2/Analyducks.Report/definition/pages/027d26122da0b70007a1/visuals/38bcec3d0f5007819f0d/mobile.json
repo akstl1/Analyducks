@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 668,
+    "z": 8000,
+    "height": 144,
+    "width": 324,
+    "tabOrder": 8000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Rubber ducks are good for child development. Playing with rubber ducks during bath time inspires water play that develops muscle strength and coordination. With their bright color, smooth texture, and squeaky or quacky sounds, rubber ducks are known to sharpen a toddler's senses.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

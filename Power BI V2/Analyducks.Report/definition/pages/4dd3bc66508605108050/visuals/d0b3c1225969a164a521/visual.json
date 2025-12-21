@@ -3,10 +3,10 @@
   "name": "d0b3c1225969a164a521",
   "position": {
     "x": 0,
-    "y": 51.111111111111107,
+    "y": 50.670506610812929,
     "z": 6000,
-    "height": 52.222222222222221,
-    "width": 160,
+    "height": 53.0833878779945,
+    "width": 160.45660426757428,
     "tabOrder": 3000
   },
   "visual": {
@@ -242,5 +242,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ff9c98937204a4b8565b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DuckData"
+              }
+            },
+            "Property": "Buyer"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

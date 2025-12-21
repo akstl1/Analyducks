@@ -1,0 +1,229 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 726,
+    "z": 4000,
+    "height": 247,
+    "width": 324,
+    "tabOrder": 1000
+  },
+  "objects": {
+    "values": [],
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "My flock currently stands at a sizable ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "CurrentDuckSum"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": " ducks, weighing in at ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": "kg total - or roughly the weight of a ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 2"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": ". The collection grew the most in ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "MaxQuantityYear"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": ", with ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 5"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": " additions. This year my flock has grown by ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 3"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": " ducks, or ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 4"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": "%.",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": "And for anyone asking \"where's the AI/ML?\", I ran a regression model and determined that, based on my flock, you can predict a rubber duck's weight via the equation: Weight (g) = ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 6"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": " (dimensions in cm) - though the ducks have a lot of size variability so the R-squared score is only ",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 7"
+                    }
+                  },
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                },
+                {
+                  "value": ". And also, I named my MS Copilot QuackerJack.",
+                  "textStyle": {
+                    "fontSize": "9pt"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

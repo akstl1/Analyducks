@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 529,
+    "z": 5000,
+    "height": 185,
+    "width": 324,
+    "tabOrder": 2000
+  },
+  "objects": {
+    "plotArea": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "100D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "valueAxis": [],
+    "legend": [],
+    "categoryAxis": [
+      {
+        "properties": {
+          "end": {
+            "expr": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dates"
+                      }
+                    },
+                    "Property": "Year"
+                  }
+                },
+                "Function": 4
+              }
+            }
+          }
+        }
+      }
+    ],
+    "dataPoint": [],
+    "lineStyles": []
+  }
+}

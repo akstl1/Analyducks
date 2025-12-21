@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 61,
+    "y": 513,
+    "z": 21000,
+    "height": 84,
+    "width": 208,
+    "tabOrder": 14000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Click on my companions to learn more about the collection, fun facts, and places to grow your collection!",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt"
+                  }
+                }
+              ],
+              "horizontalTextAlignment": "center"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 518,
+    "z": 11000,
+    "height": 142,
+    "width": 324,
+    "tabOrder": 11000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Thanks to numerous TV characters and pop culture, the rubber duck has become a comforting symbol in mental health communities. The simple act of holding or even seeing a duck can spark joy, reduce anxiety, and offer a nostalgic connection to safer times.",
+                  "textStyle": {
+                    "fontFamily": "Merriweather, georgia, times new roman, serif",
+                    "fontSize": "11pt",
+                    "color": "#222222"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
