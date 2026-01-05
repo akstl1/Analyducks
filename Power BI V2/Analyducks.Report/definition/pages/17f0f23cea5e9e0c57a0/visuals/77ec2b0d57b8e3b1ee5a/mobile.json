@@ -7,5 +7,20 @@
     "height": 170,
     "width": 162,
     "tabOrder": 16000
+  },
+  "visualContainerObjects": {
+    "visualLink": [
+      {
+        "properties": {
+          "navigationSection": {
+            "expr": {
+              "Literal": {
+                "Value": "'219398e6a36344abacdc'"
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }
