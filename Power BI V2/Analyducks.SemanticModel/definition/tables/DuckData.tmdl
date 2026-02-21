@@ -199,8 +199,6 @@ table DuckData
 		summarizeBy: none
 		sourceColumn: Image
 
-		changedProperty = Name
-
 		annotation SummarizationSetBy = Automatic
 
 	partition DuckData = m

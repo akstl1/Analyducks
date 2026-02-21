@@ -22,7 +22,7 @@
                     "value": "In programming, “rubber duck debugging” refers to a quirky but effective technique: developers explain their code out loud to a rubber duck in order to find errors. It’s strange — and it works!",
                     "textStyle": {
                       "fontFamily": "Merriweather, georgia, times new roman, serif",
-                      "fontSize": "12pt",
+                      "fontSize": "11pt",
                       "color": "#222222"
                     }
                   }
