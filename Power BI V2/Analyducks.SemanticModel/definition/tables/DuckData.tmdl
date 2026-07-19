@@ -212,7 +212,7 @@ table DuckData
 				    #"Added Index" = Table.AddIndexColumn(#"Added Custom", "Index", 1, 1, Int64.Type),
 				    #"Added Custom2" = Table.AddColumn(#"Added Index", "Dimensions", each Number.ToText(Number.Round([Length],1))&" x "&Number.ToText(Number.Round([Width],1))&" x "&Number.ToText(Number.Round([Height],1))&"cm || "&Number.ToText(Number.Round([Total_Weight],1))&"g "),
 				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom2",{{"Dimensions", type text}, {"Avg Weight", type number}}),
-				    #"Filtered Rows" = Table.SelectRows(#"Changed Type2", each ([Name] <> "7" and [Name] <> "Danny DeviDuck"))
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type2", each ([Name] <> "Danny DeviDuck"))
 				in
 				    #"Filtered Rows"
 
