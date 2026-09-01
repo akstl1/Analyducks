@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "4289c5610225767e01c3",
   "position": {
     "x": 28.966237726138939,
@@ -110,7 +110,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'DuckPNG2.png'"
+                      "Value": "'DuckPNG3.png'"
                     }
                   }
                 },
@@ -119,7 +119,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "DuckPNG29389912550151887.png"
+                      "ItemName": "DuckPNG312245802319814514.png"
                     }
                   }
                 },
@@ -381,5 +381,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b2e00cf56be2eafa4768",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dates"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5da02aa89c851754b104",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Cumulative Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f00dbc201dc6c57f199f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "*Measures"
+              }
+            },
+            "Property": "Difference"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

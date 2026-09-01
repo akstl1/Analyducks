@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY24SU10",
@@ -47,13 +47,13 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "DuckPNG29389912550151887.png",
-          "path": "DuckPNG29389912550151887.png",
+          "name": "2DRubberDuck25840587792795295.png",
+          "path": "2DRubberDuck25840587792795295.png",
           "type": "Image"
         },
         {
-          "name": "2DRubberDuck25840587792795295.png",
-          "path": "2DRubberDuck25840587792795295.png",
+          "name": "DuckPNG312245802319814514.png",
+          "path": "DuckPNG312245802319814514.png",
           "type": "Image"
         },
         {
@@ -67,13 +67,13 @@
           "type": "Image"
         },
         {
-          "name": "lillyRotatedAgain4371974965532226.png",
-          "path": "lillyRotatedAgain4371974965532226.png",
+          "name": "lillyRotated6105552037694897.png",
+          "path": "lillyRotated6105552037694897.png",
           "type": "Image"
         },
         {
-          "name": "lillyRotated6105552037694897.png",
-          "path": "lillyRotated6105552037694897.png",
+          "name": "lillyRotatedAgain4371974965532226.png",
+          "path": "lillyRotatedAgain4371974965532226.png",
           "type": "Image"
         }
       ]
